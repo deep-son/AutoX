@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Files Content</title>
+</head>
+<body>
+    <h1>Files Content:</h1>
+    {% if file_content %}
+    <ul>
+        {% for filename, content in file_content.items() %}
+        <li>
+            <strong>{{ filename }}</strong><br>
+            <pre>{{ content | tojson | safe }}</pre>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No files found.</p>
+    {% endif %}
+</body>
+</html>
