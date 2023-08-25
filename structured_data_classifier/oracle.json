@@ -1,1 +1,150 @@
-{"ongoing_trials": {}, "hyperparameters": {"space": [{"class_name": "Boolean", "config": {"name": "structured_data_block_1/normalize", "default": false, "conditions": []}}, {"class_name": "Boolean", "config": {"name": "structured_data_block_1/dense_block_1/use_batchnorm", "default": false, "conditions": []}}, {"class_name": "Choice", "config": {"name": "structured_data_block_1/dense_block_1/num_layers", "default": 2, "conditions": [], "values": [1, 2, 3], "ordered": true}}, {"class_name": "Choice", "config": {"name": "structured_data_block_1/dense_block_1/units_0", "default": 32, "conditions": [], "values": [16, 32, 64, 128, 256, 512, 1024], "ordered": true}}, {"class_name": "Choice", "config": {"name": "structured_data_block_1/dense_block_1/dropout", "default": 0.0, "conditions": [], "values": [0.0, 0.25, 0.5], "ordered": true}}, {"class_name": "Choice", "config": {"name": "structured_data_block_1/dense_block_1/units_1", "default": 32, "conditions": [], "values": [16, 32, 64, 128, 256, 512, 1024], "ordered": true}}, {"class_name": "Choice", "config": {"name": "classification_head_1/dropout", "default": 0, "conditions": [], "values": [0.0, 0.25, 0.5], "ordered": true}}, {"class_name": "Choice", "config": {"name": "optimizer", "default": "adam", "conditions": [], "values": ["adam", "sgd", "adam_weight_decay"], "ordered": false}}, {"class_name": "Choice", "config": {"name": "learning_rate", "default": 0.001, "conditions": [], "values": [0.1, 0.01, 0.001, 0.0001, 2e-05, 1e-05], "ordered": true}}], "values": {"structured_data_block_1/normalize": false, "structured_data_block_1/dense_block_1/use_batchnorm": false, "structured_data_block_1/dense_block_1/num_layers": 2, "structured_data_block_1/dense_block_1/units_0": 32, "structured_data_block_1/dense_block_1/dropout": 0.0, "structured_data_block_1/dense_block_1/units_1": 32, "classification_head_1/dropout": 0, "optimizer": "adam", "learning_rate": 0.001}}, "start_order": ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09"], "end_order": ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09"], "run_times": {"00": 1, "01": 1, "02": 1, "03": 1, "04": 1, "05": 1, "06": 1, "07": 1, "08": 1, "09": 1}, "retry_queue": [], "seed": 5078, "seed_state": 5113, "tried_so_far": ["df8a9008c0f673a2efe4fc23c43b20e2", "e0ebe55836293cfaea825e414295d6c7", "dd20560fa42198ff25ae77c0497fd29b", "fc3eecc3026ad8343f9e612e9630bc11", "7430287f1f8fc7c736263c46166b2b28", "10a45060bc28819758e789e7f9765d33", "8fe477279387516593834ecb320d0d8f", "2b29f8367e306008db08c15373c42b9b", "b47b0331e7db0af46611f5be7ade66be", "55519680943e999d700cf7a4ab21e24e"], "id_to_hash": {"00": "10a45060bc28819758e789e7f9765d33", "01": "df8a9008c0f673a2efe4fc23c43b20e2", "02": "e0ebe55836293cfaea825e414295d6c7", "03": "2b29f8367e306008db08c15373c42b9b", "04": "7430287f1f8fc7c736263c46166b2b28", "05": "fc3eecc3026ad8343f9e612e9630bc11", "06": "55519680943e999d700cf7a4ab21e24e", "07": "dd20560fa42198ff25ae77c0497fd29b", "08": "b47b0331e7db0af46611f5be7ade66be", "09": "8fe477279387516593834ecb320d0d8f"}, "initial_hps": [{"structured_data_block_1/normalize": true, "structured_data_block_1/dense_block_1/num_layers": 2, "structured_data_block_1/dense_block_1/use_batchnorm": false, "structured_data_block_1/dense_block_1/dropout": 0, "structured_data_block_1/dense_block_1/units_0": 32, "structured_data_block_1/dense_block_1/units_1": 32, "classification_head_1/dropout": 0.0, "optimizer": "adam", "learning_rate": 0.001}], "tried_initial_hps": [true]}
+{
+  "ongoing_trials": {},
+  "hyperparameters": {
+    "space": [
+      {
+        "class_name": "Boolean",
+        "config": {
+          "name": "structured_data_block_1/normalize",
+          "default": false,
+          "conditions": []
+        }
+      },
+      {
+        "class_name": "Boolean",
+        "config": {
+          "name": "structured_data_block_1/dense_block_1/use_batchnorm",
+          "default": false,
+          "conditions": []
+        }
+      },
+      {
+        "class_name": "Choice",
+        "config": {
+          "name": "structured_data_block_1/dense_block_1/num_layers",
+          "default": 2,
+          "conditions": [],
+          "values": [1, 2, 3],
+          "ordered": true
+        }
+      },
+      {
+        "class_name": "Choice",
+        "config": {
+          "name": "structured_data_block_1/dense_block_1/units_0",
+          "default": 32,
+          "conditions": [],
+          "values": [16, 32, 64, 128, 256, 512, 1024],
+          "ordered": true
+        }
+      },
+      {
+        "class_name": "Choice",
+        "config": {
+          "name": "structured_data_block_1/dense_block_1/dropout",
+          "default": 0,
+          "conditions": [],
+          "values": [0, 0.25, 0.5],
+          "ordered": true
+        }
+      },
+      {
+        "class_name": "Choice",
+        "config": {
+          "name": "structured_data_block_1/dense_block_1/units_1",
+          "default": 32,
+          "conditions": [],
+          "values": [16, 32, 64, 128, 256, 512, 1024],
+          "ordered": true
+        }
+      },
+      {
+        "class_name": "Choice",
+        "config": {
+          "name": "classification_head_1/dropout",
+          "default": 0,
+          "conditions": [],
+          "values": [0, 0.25, 0.5],
+          "ordered": true
+        }
+      },
+      {
+        "class_name": "Choice",
+        "config": {
+          "name": "optimizer",
+          "default": "adam",
+          "conditions": [],
+          "values": ["adam", "sgd", "adam_weight_decay"],
+          "ordered": false
+        }
+      },
+      {
+        "class_name": "Choice",
+        "config": {
+          "name": "learning_rate",
+          "default": 0.001,
+          "conditions": [],
+          "values": [0.1, 0.01, 0.001, 0.0001, 0.00002, 0.00001],
+          "ordered": true
+        }
+      }
+    ],
+    "values": {
+      "structured_data_block_1/normalize": false,
+      "structured_data_block_1/dense_block_1/use_batchnorm": false,
+      "structured_data_block_1/dense_block_1/num_layers": 2,
+      "structured_data_block_1/dense_block_1/units_0": 32,
+      "structured_data_block_1/dense_block_1/dropout": 0,
+      "structured_data_block_1/dense_block_1/units_1": 32,
+      "classification_head_1/dropout": 0,
+      "optimizer": "adam",
+      "learning_rate": 0.001
+    }
+  },
+  "start_order": ["0", "1", "2", "3", "4", "5", "6"],
+  "end_order": ["0", "1", "2", "3", "4", "5", "6"],
+  "run_times": {
+    "0": 1,
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "4": 1,
+    "5": 1,
+    "6": 1
+  },
+  "retry_queue": [],
+  "seed": 331,
+  "seed_state": 359,
+  "tried_so_far": [
+    "6f4e1ba75acd8cafd3fdd861caa057ca",
+    "df6290e4212ef84a556f0b1d589cf3b1",
+    "10a45060bc28819758e789e7f9765d33",
+    "df8a9008c0f673a2efe4fc23c43b20e2",
+    "043c1cd35d2cd720e3667247c500fa3f",
+    "aa49bcc6d735521250616b42f1289a46",
+    "0e404373de856e43c6c12900e79eb5c1"
+  ],
+  "id_to_hash": {
+    "0": "10a45060bc28819758e789e7f9765d33",
+    "1": "0e404373de856e43c6c12900e79eb5c1",
+    "2": "df8a9008c0f673a2efe4fc23c43b20e2",
+    "3": "6f4e1ba75acd8cafd3fdd861caa057ca",
+    "4": "043c1cd35d2cd720e3667247c500fa3f",
+    "5": "df6290e4212ef84a556f0b1d589cf3b1",
+    "6": "aa49bcc6d735521250616b42f1289a46"
+  },
+  "initial_hps": [
+    {
+      "structured_data_block_1/normalize": true,
+      "structured_data_block_1/dense_block_1/num_layers": 2,
+      "structured_data_block_1/dense_block_1/use_batchnorm": false,
+      "structured_data_block_1/dense_block_1/dropout": 0,
+      "structured_data_block_1/dense_block_1/units_0": 32,
+      "structured_data_block_1/dense_block_1/units_1": 32,
+      "classification_head_1/dropout": 0,
+      "optimizer": "adam",
+      "learning_rate": 0.001
+    }
+  ],
+  "tried_initial_hps": [true]
+}

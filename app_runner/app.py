@@ -1,53 +1,46 @@
-from flask import Flask, render_template
-import concurrent.futures
+from flask import Flask, render_template, jsonify, send_file
+import sqlite3
 import os
-import time
 import json
 
 app = Flask(__name__)
-
-# Global variable to control the thread
-stop_thread = False
-
-def check_and_display_files():
-    while not stop_thread:
-        file_content = {}
-        for dirname, subdirs, files in os.walk("../structured_data_classifier"):
-            if "trial" in dirname:
-                    for filename in files:
-                        if "mid" in filename:
-                            print(dirname,filename)
-                            file_path = os.path.join(dirname, filename)
-                            if os.path.isfile(file_path):
-                                with open(file_path, "r") as f:
-                                    file_content[filename] = json.load(f)
-        
-        app.config["FILE_CONTENT"] = file_content
-        time.sleep(2)  # Check every 1 second
-
+db_folder_path = "D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner"
+db_path = os.path.join(db_folder_path, 'paths.db')
 
 @app.route('/')
-def display_file():
-    file_content = app.config["FILE_CONTENT"]
-    return render_template("index.html", file_content=file_content)
+def index():
+    return render_template('index.html')
 
-def start_thread():
-    print("Reached Start")
-    file_check_thread = concurrent.futures.ThreadPoolExecutor(max_workers=2)
-    file_check_thread.submit(check_and_display_files)
-    
+@app.route('/get_data')
+def get_data():
+    data = read_data_from_db()
+    return jsonify(data)
 
-def stop_the_thread():
-    global stop_thread
-    stop_thread = True
+@app.route('/get_image/<path:image_path>/<image_name>')
+def get_image(image_path, image_name):
+    full_image_path = f'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\{image_path}\\{image_name}.png'
+    return send_file(full_image_path, mimetype='image/png')
 
-def run_app():
-    start_thread()
-    print("Starting App")
-    app.run(port=8080)
-    
-if __name__=="__main__":
-    # app.run(debug=True, port=8080)
-    run_app()
-    
-    
+def read_data_from_db():
+    conn = sqlite3.connect(db_path)
+    cursor = conn.cursor()
+
+    query = 'SELECT trial, path FROM trials'  
+    cursor.execute(query)
+    data = cursor.fetchall()
+    try:
+        new_data = []
+        for item in data:
+            with open(str(item[1]), 'r') as f:
+                json_file = json.load(f)
+                model_path = os.path.dirname(str(item[1]))
+                new_data.append((item[0] , model_path, json_file['metrics']["metrics"]))
+    except Exception as e:
+        print(e)
+        new_data = []
+
+    conn.close()
+    return new_data
+
+if __name__ == '__main__':
+    app.run(port=8081)

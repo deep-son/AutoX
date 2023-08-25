@@ -1,0 +1,5 @@
+/structured_data_classifier
+/text_classifier
+/frontend/node_modules
+**/__pycache__
+.ipynb_checkpoints

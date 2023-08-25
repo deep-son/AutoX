@@ -1,29 +1,27 @@
-import pandas as pd
-import tensorflow as tf
 import autokeras as ak
-import multiprocessing
-from app_runner.app import run_app
 
+from app_runner.app_runners import AppRunner, SQLDBRunner
+from app_runner.data_generator import DataGenerator
 
 class Wrappers:
     def __init__(self):
-        pass
-        
+        self.stop_thread = False
+        self.app_obj = AppRunner()
+        self.sql_obj = SQLDBRunner()
+                                
     def StructuredDataClassifier(self, *args, **kwargs):
+        self.app_obj.start_flask_app()
+        self.sql_obj.start_sqldb()
         self.clk = ak.StructuredDataClassifier(*args, **kwargs)
+        self.max_trials = kwargs['max_trials']
     
     def sdc_fit(self, *args, **kwargs):
-        self.start_flask_app()
-        self.clk.fit(*args, **kwargs)
-
-    def start_flask_app(self):
-        self.flask_process = multiprocessing.Process(target=run_app)
-        self.flask_process.start()
+        self.data_generator = DataGenerator(self.max_trials,self.stop_thread)
+        self.data_generator.start_the_thread()
+        fit_ret = self.clk.fit(*args, **kwargs)
+        self.data_generator.stop_the_thread()
+        self.app_obj.stop_flask_app()
         
-    def stop_flask_app(self):
-        if self.flask_process:
-            self.flask_process.terminate()
-            self.flask_process.join()
 
 
 
