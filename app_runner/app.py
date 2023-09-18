@@ -21,6 +21,11 @@ def get_image(image_path, image_name):
     full_image_path = f'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\{image_path}\\{image_name}.png'
     return send_file(full_image_path, mimetype='image/png')
 
+@app.route('/get_final_image/<image_name>')
+def get_final_image( image_name):
+    full_image_path = f'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\{image_name}.png'
+    return send_file(full_image_path, mimetype='image/png')
+
 def read_data_from_db():
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
@@ -43,4 +48,4 @@ def read_data_from_db():
     return new_data
 
 if __name__ == '__main__':
-    app.run(port=8081)
+    app.run(port=8082)
