@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Chart</title>
+</head>
+<body>
+    <h1>Interactive Chart</h1>
+    <button id="load-data">Load Data</button>
+    <div id="chart"></div>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#load-data').click(function() {
+                $.post('/load_data', function(data) {
+                    // Parse the JSON data
+                    var chartData = JSON.parse(data);
+
+                    // Render the chart using Plotly
+                    Plotly.newPlot('chart', chartData);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
