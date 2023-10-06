@@ -1,0 +1,374 @@
+ * Restarting with watchdog (windowsapi)
+ * Debugger is active!
+ * Debugger PIN: 113-104-614
+(20952) wsgi starting up on http://127.0.0.1:8082
+(20952) accepted ('127.0.0.1', 50570)
+127.0.0.1 - - [06/Oct/2023 16:05:23] "GET /socket.io/?EIO=4&transport=polling&t=Oi5Jgd3 HTTP/1.1" 200 278 0.000990
+Websocket connected
+127.0.0.1 - - [06/Oct/2023 16:05:23] "POST /socket.io/?EIO=4&transport=polling&t=Oi5JgdS&sid=Yfaj_QHEaPcWDQ9PAAAA HTTP/1.1" 200 219 0.001998
+(20952) accepted ('127.0.0.1', 50571)
+127.0.0.1 - - [06/Oct/2023 16:05:23] "GET /socket.io/?EIO=4&transport=polling&t=Oi5Jgdh&sid=Yfaj_QHEaPcWDQ9PAAAA HTTP/1.1" 200 181 0.001001
+127.0.0.1 - - [06/Oct/2023 16:05:23] "GET /socket.io/?EIO=4&transport=polling&t=Oi5Jgdw&sid=Yfaj_QHEaPcWDQ9PAAAA HTTP/1.1" 200 181 0.000000
+(20952) accepted ('127.0.0.1', 50574)
+127.0.0.1 - - [06/Oct/2023 16:05:26] "GET / HTTP/1.1" 200 105134 0.203486
+(20952) accepted ('127.0.0.1', 50575)
+127.0.0.1 - - [06/Oct/2023 16:05:26] "GET /static/css/now-ui-kit.css HTTP/1.1" 304 246 0.505376
+(20952) accepted ('127.0.0.1', 50576)
+127.0.0.1 - - [06/Oct/2023 16:05:26] "GET /static/css/nucleo-icons.css HTTP/1.1" 304 242 0.004002
+127.0.0.1 - - [06/Oct/2023 16:05:26] "GET /static/js/navbar-ontop.js HTTP/1.1" 304 241 0.002997
+(20952) accepted ('127.0.0.1', 50578)
+127.0.0.1 - - [06/Oct/2023 16:05:26] "GET /socket.io/?EIO=4&transport=polling&t=Oi5JhVy HTTP/1.1" 200 278 0.001528
+(20952) accepted ('127.0.0.1', 50579)
+(20952) accepted ('127.0.0.1', 50580)
+127.0.0.1 - - [06/Oct/2023 16:05:26] "GET /static/img/avatar.jpg HTTP/1.1" 304 237 0.004002
+(20952) accepted ('127.0.0.1', 50581)
+(20952) accepted ('127.0.0.1', 50582)
+(20952) accepted ('127.0.0.1', 50583)
+127.0.0.1 - - [06/Oct/2023 16:05:26] "GET /static/js/parallax.js HTTP/1.1" 304 241 0.007364
+127.0.0.1 - - [06/Oct/2023 16:05:26] "GET /static/img/icons.jpg HTTP/1.1" 404 355 0.002568
+127.0.0.1 - - [06/Oct/2023 16:05:26] "GET /static/img/bg4.jpg HTTP/1.1" 304 234 0.005358
+127.0.0.1 - - [06/Oct/2023 16:05:26] "GET /static/img/bg1.jpg HTTP/1.1" 304 234 0.007542
+127.0.0.1 - - [06/Oct/2023 16:05:26] "GET /static/img/bg3.jpg HTTP/1.1" 304 234 0.006501
+(20952) accepted ('127.0.0.1', 50584)
+(20952) accepted ('127.0.0.1', 50585)
+(20952) accepted ('127.0.0.1', 50586)
+(20952) accepted ('127.0.0.1', 50587)
+127.0.0.1 - - [06/Oct/2023 16:05:26] "GET /assets/img/landing.jpg HTTP/1.1" 404 355 0.002976
+127.0.0.1 - - [06/Oct/2023 16:05:26] "GET /assets/img/profile.jpg HTTP/1.1" 404 355 0.003987
+Websocket connected
+127.0.0.1 - - [06/Oct/2023 16:05:27] "POST /socket.io/?EIO=4&transport=polling&t=Oi5JhWk&sid=DCWHtISM28xHFn90AAAC HTTP/1.1" 200 219 0.002645
+127.0.0.1 - - [06/Oct/2023 16:05:27] "GET /socket.io/?EIO=4&transport=polling&t=Oi5JhWz&sid=DCWHtISM28xHFn90AAAC HTTP/1.1" 200 213 0.013643
+127.0.0.1 - - [06/Oct/2023 16:05:27] "GET / HTTP/1.1" 200 105134 0.007086
+127.0.0.1 - - [06/Oct/2023 16:05:27] "GET /assets/img/bg7.jpg HTTP/1.1" 404 355 0.002166
+127.0.0.1 - - [06/Oct/2023 16:05:27] "GET /static/fonts/nucleo-outline.woff2 HTTP/1.1" 304 246 0.003003
+127.0.0.1 - - [06/Oct/2023 16:05:27] "GET /assets/img/bg11.jpg HTTP/1.1" 404 355 0.002003
+127.0.0.1 - - [06/Oct/2023 16:05:27] "GET /socket.io/?EIO=4&transport=polling&t=Oi5JheA&sid=DCWHtISM28xHFn90AAAC HTTP/1.1" 200 181 0.001007
+(20952) accepted ('127.0.0.1', 50592)
+(20952) accepted ('127.0.0.1', 50593)
+127.0.0.1 - - [06/Oct/2023 16:05:31] "GET /static/css/now-ui-kit.css HTTP/1.1" 304 246 0.004109
+127.0.0.1 - - [06/Oct/2023 16:05:31] "GET /static/css/nucleo-icons.css HTTP/1.1" 304 242 0.003002
+(20952) accepted ('127.0.0.1', 50596)
+D:\Courses\Master_Thesis\automl_exp\MT_Code\structured_data_classifier\trial_0\trial_mid1696601133240.json
+127.0.0.1 - - [06/Oct/2023 16:05:35] "POST /update_data HTTP/1.1" 200 179 0.002013
+(20952) accepted ('127.0.0.1', 50597)
+127.0.0.1 - - [06/Oct/2023 16:05:35] "GET /get_image/trial_0/model HTTP/1.1" 200 10443 0.003035
+(20952) accepted ('127.0.0.1', 50598)
+D:\Courses\Master_Thesis\automl_exp\MT_Code\structured_data_classifier\trial_0\trial_mid1696601133240.json
+127.0.0.1 - - [06/Oct/2023 16:05:35] "POST /update_data HTTP/1.1" 200 179 0.003021
+127.0.0.1 - - [06/Oct/2023 16:05:35] "GET /get_image/trial_0/model HTTP/1.1" 200 10640 0.002996
+(20952) accepted ('127.0.0.1', 50599)
+D:\Courses\Master_Thesis\automl_exp\MT_Code\structured_data_classifier\trial_0\trial_mid1696601133307.json
+127.0.0.1 - - [06/Oct/2023 16:05:35] "POST /update_data HTTP/1.1" 200 179 0.002000
+127.0.0.1 - - [06/Oct/2023 16:05:35] "GET /get_image/trial_0/model HTTP/1.1" 200 10585 0.004019
+(20952) accepted ('127.0.0.1', 50600)
+D:\Courses\Master_Thesis\automl_exp\MT_Code\structured_data_classifier\trial_0\trial_mid1696601133307.json
+127.0.0.1 - - [06/Oct/2023 16:05:35] "POST /update_data HTTP/1.1" 200 179 0.002010
+127.0.0.1 - - [06/Oct/2023 16:05:35] "GET /get_image/trial_0/model HTTP/1.1" 200 10625 0.004265
+(20952) accepted ('127.0.0.1', 50601)
+D:\Courses\Master_Thesis\automl_exp\MT_Code\structured_data_classifier\trial_1\trial_mid1696601133474.json
+127.0.0.1 - - [06/Oct/2023 16:05:36] "POST /update_data HTTP/1.1" 200 179 0.002001
+127.0.0.1 - - [06/Oct/2023 16:05:36] "GET /get_image/trial_1/model HTTP/1.1" 200 10895 0.002994
+(20952) accepted ('127.0.0.1', 50602)
+D:\Courses\Master_Thesis\automl_exp\MT_Code\structured_data_classifier\trial_1\trial_mid1696601133474.json
+127.0.0.1 - - [06/Oct/2023 16:05:36] "POST /update_data HTTP/1.1" 200 179 0.002535
+127.0.0.1 - - [06/Oct/2023 16:05:36] "GET /get_image/trial_1/model HTTP/1.1" 200 10865 0.001998
+(20952) accepted ('127.0.0.1', 50603)
+D:\Courses\Master_Thesis\automl_exp\MT_Code\structured_data_classifier\trial_1\trial_mid1696601133474.json
+127.0.0.1 - - [06/Oct/2023 16:05:36] "POST /update_data HTTP/1.1" 200 179 0.001017
+127.0.0.1 - - [06/Oct/2023 16:05:36] "GET /get_image/trial_1/model HTTP/1.1" 200 10925 0.004627
+(20952) accepted ('127.0.0.1', 50608)
+D:\Courses\Master_Thesis\automl_exp\MT_Code\structured_data_classifier\trial_1\trial_mid1696601142086.json
+127.0.0.1 - - [06/Oct/2023 16:05:42] "POST /update_data HTTP/1.1" 200 179 0.000996
+127.0.0.1 - - [06/Oct/2023 16:05:42] "GET /get_image/trial_1/model HTTP/1.1" 200 10858 0.003257
+(20952) accepted ('127.0.0.1', 50609)
+D:\Courses\Master_Thesis\automl_exp\MT_Code\structured_data_classifier\trial_1\trial_mid1696601142086.json
+127.0.0.1 - - [06/Oct/2023 16:05:43] "POST /update_data HTTP/1.1" 200 179 0.002494
+127.0.0.1 - - [06/Oct/2023 16:05:43] "GET /get_image/trial_1/model HTTP/1.1" 200 10908 0.002997
+(20952) accepted ('127.0.0.1', 50610)
+D:\Courses\Master_Thesis\automl_exp\MT_Code\structured_data_classifier\trial_1\trial_mid1696601142153.json
+127.0.0.1 - - [06/Oct/2023 16:05:43] "POST /update_data HTTP/1.1" 200 179 0.002007
+127.0.0.1 - - [06/Oct/2023 16:05:43] "GET /get_image/trial_1/model HTTP/1.1" 200 10968 0.003975
+(20952) accepted ('127.0.0.1', 50611)
+D:\Courses\Master_Thesis\automl_exp\MT_Code\structured_data_classifier\trial_1\trial_mid1696601142153.json
+127.0.0.1 - - [06/Oct/2023 16:05:43] "POST /update_data HTTP/1.1" 200 179 0.001995
+127.0.0.1 - - [06/Oct/2023 16:05:43] "GET /get_image/trial_1/model HTTP/1.1" 200 10960 0.003002
+(20952) accepted ('127.0.0.1', 50618)
+D:\Courses\Master_Thesis\automl_exp\MT_Code\structured_data_classifier\test_model.png
+127.0.0.1 - - [06/Oct/2023 16:05:55] "POST /update_data HTTP/1.1" 200 179 0.001045
+(20952) accepted ('127.0.0.1', 50619)
+D:\Courses\Master_Thesis\automl_exp\MT_Code\structured_data_classifier\test_model.png
+127.0.0.1 - - [06/Oct/2023 16:05:55] "POST /update_data HTTP/1.1" 200 179 0.002011
+(20952) accepted ('127.0.0.1', 50620)
+(20952) accepted ('127.0.0.1', 50621)
+Traceback (most recent call last):
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 298, in error_router
+    return original_handler(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 298, in error_router
+    return original_handler(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\views.py", line 107, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "d:\Courses\Master_Thesis\automl_exp\MT_Code\app_runner\app.py", line 20, in get
+    return send_file(full_image_path, mimetype='image/png')
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\werkzeug\utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\structured_data_classifier\\structured_data_classifier\\model.png'
+127.0.0.1 - - [06/Oct/2023 16:05:55] "GET /get_image/structured_data_classifier/model HTTP/1.1" 500 24562 0.090771
+127.0.0.1 - - [06/Oct/2023 16:05:55] "GET /get_final_image/final_model HTTP/1.1" 200 22851 0.003425
+(20952) accepted ('127.0.0.1', 50622)
+D:\Courses\Master_Thesis\automl_exp\MT_Code\structured_data_classifier\preprocessing_model.png
+127.0.0.1 - - [06/Oct/2023 16:05:55] "POST /update_data HTTP/1.1" 200 179 0.002003
+Traceback (most recent call last):
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 298, in error_router
+    return original_handler(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 298, in error_router
+    return original_handler(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\views.py", line 107, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "d:\Courses\Master_Thesis\automl_exp\MT_Code\app_runner\app.py", line 20, in get
+    return send_file(full_image_path, mimetype='image/png')
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\werkzeug\utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\structured_data_classifier\\structured_data_classifier\\model.png'
+127.0.0.1 - - [06/Oct/2023 16:05:55] "GET /get_image/structured_data_classifier/model HTTP/1.1" 500 24562 0.041262
+127.0.0.1 - - [06/Oct/2023 16:05:55] "GET /get_final_image/preprocessing_model HTTP/1.1" 200 8155 0.002519
+(20952) accepted ('127.0.0.1', 50623)
+D:\Courses\Master_Thesis\automl_exp\MT_Code\structured_data_classifier\preprocessing_model.png
+127.0.0.1 - - [06/Oct/2023 16:05:55] "POST /update_data HTTP/1.1" 200 179 0.002298
+(20952) accepted ('127.0.0.1', 50624)
+D:\Courses\Master_Thesis\automl_exp\MT_Code\structured_data_classifier\dense_model.png
+127.0.0.1 - - [06/Oct/2023 16:05:55] "POST /update_data HTTP/1.1" 200 179 0.001014
+(20952) accepted ('127.0.0.1', 50625)
+D:\Courses\Master_Thesis\automl_exp\MT_Code\structured_data_classifier\dense_model.png
+127.0.0.1 - - [06/Oct/2023 16:05:55] "POST /update_data HTTP/1.1" 200 179 0.001002
+127.0.0.1 - - [06/Oct/2023 16:05:55] "GET /get_final_image/dense_model HTTP/1.1" 200 18495 0.001999
+Traceback (most recent call last):
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 298, in error_router
+    return original_handler(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 298, in error_router
+    return original_handler(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\views.py", line 107, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "d:\Courses\Master_Thesis\automl_exp\MT_Code\app_runner\app.py", line 20, in get
+    return send_file(full_image_path, mimetype='image/png')
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\werkzeug\utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\structured_data_classifier\\structured_data_classifier\\model.png'
+127.0.0.1 - - [06/Oct/2023 16:05:58] "GET /get_image/structured_data_classifier/model HTTP/1.1" 500 24562 0.018728
+Traceback (most recent call last):
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 298, in error_router
+    return original_handler(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 298, in error_router
+    return original_handler(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\views.py", line 107, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "d:\Courses\Master_Thesis\automl_exp\MT_Code\app_runner\app.py", line 20, in get
+    return send_file(full_image_path, mimetype='image/png')
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\werkzeug\utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\structured_data_classifier\\structured_data_classifier\\model.png'
+127.0.0.1 - - [06/Oct/2023 16:05:58] "GET /get_image/structured_data_classifier/model HTTP/1.1" 500 24562 0.026976
+Traceback (most recent call last):
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 298, in error_router
+    return original_handler(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 298, in error_router
+    return original_handler(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\views.py", line 107, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "d:\Courses\Master_Thesis\automl_exp\MT_Code\app_runner\app.py", line 20, in get
+    return send_file(full_image_path, mimetype='image/png')
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\werkzeug\utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\structured_data_classifier\\structured_data_classifier\\model.png'
+127.0.0.1 - - [06/Oct/2023 16:06:02] "GET /get_image/structured_data_classifier/model HTTP/1.1" 500 24562 0.023044
+Traceback (most recent call last):
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 298, in error_router
+    return original_handler(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 298, in error_router
+    return original_handler(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\views.py", line 107, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "d:\Courses\Master_Thesis\automl_exp\MT_Code\app_runner\app.py", line 20, in get
+    return send_file(full_image_path, mimetype='image/png')
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\werkzeug\utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\structured_data_classifier\\structured_data_classifier\\model.png'
+127.0.0.1 - - [06/Oct/2023 16:06:02] "GET /get_image/structured_data_classifier/model HTTP/1.1" 500 24562 0.020004
+(20952) accepted ('127.0.0.1', 50631)
+Traceback (most recent call last):
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 298, in error_router
+    return original_handler(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 298, in error_router
+    return original_handler(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\views.py", line 107, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "d:\Courses\Master_Thesis\automl_exp\MT_Code\app_runner\app.py", line 20, in get
+    return send_file(full_image_path, mimetype='image/png')
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\werkzeug\utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\structured_data_classifier\\structured_data_classifier\\model.png'
+127.0.0.1 - - [06/Oct/2023 16:06:06] "GET /get_image/structured_data_classifier/model HTTP/1.1" 500 24562 0.022501
+(20952) accepted ('127.0.0.1', 50633)
+Traceback (most recent call last):
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 298, in error_router
+    return original_handler(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 298, in error_router
+    return original_handler(e)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\views.py", line 107, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask_restful\__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "d:\Courses\Master_Thesis\automl_exp\MT_Code\app_runner\app.py", line 20, in get
+    return send_file(full_image_path, mimetype='image/png')
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\flask\helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\werkzeug\utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\structured_data_classifier\\structured_data_classifier\\model.png'
+127.0.0.1 - - [06/Oct/2023 16:06:06] "GET /get_image/structured_data_classifier/model HTTP/1.1" 500 24562 0.024723
+ * Detected change in 'd:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app_runners.py', reloading
+ * Detected change in 'd:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\data_generator.py', reloading
+ * Detected change in 'd:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\model.py', reloading
+ * Detected change in 'd:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+ * Restarting with watchdog (windowsapi)
+ * Debugger is active!
+ * Debugger PIN: 113-104-614
+(30828) wsgi starting up on http://127.0.0.1:8082
+(30828) accepted ('127.0.0.1', 50682)
+127.0.0.1 - - [06/Oct/2023 16:07:15] "GET /socket.io/?EIO=4&transport=polling&t=Oi5K5ga HTTP/1.1" 200 278 0.000000
+127.0.0.1 - - [06/Oct/2023 16:07:15] "GET /socket.io/?EIO=4&transport=polling&t=Oi5K5yv HTTP/1.1" 200 278 0.000998
+Websocket connected
+127.0.0.1 - - [06/Oct/2023 16:07:15] "POST /socket.io/?EIO=4&transport=polling&t=Oi5K5-f&sid=Xq1wotz2-JXu1dV-AAAA HTTP/1.1" 200 219 0.001024
+(30828) accepted ('127.0.0.1', 50684)
+127.0.0.1 - - [06/Oct/2023 16:07:15] "GET /socket.io/?EIO=4&transport=polling&t=Oi5K5-h&sid=Xq1wotz2-JXu1dV-AAAA HTTP/1.1" 200 181 0.000000
+Websocket connected
+127.0.0.1 - - [06/Oct/2023 16:07:15] "POST /socket.io/?EIO=4&transport=polling&t=Oi5K5-j&sid=3myAjZiqugm9KSyiAAAB HTTP/1.1" 200 219 0.001010
+127.0.0.1 - - [06/Oct/2023 16:07:15] "GET /socket.io/?EIO=4&transport=polling&t=Oi5K5-n&sid=3myAjZiqugm9KSyiAAAB HTTP/1.1" 200 213 0.000000
+(30828) accepted ('127.0.0.1', 50685)
+127.0.0.1 - - [06/Oct/2023 16:07:15] "GET /socket.io/?EIO=4&transport=polling&t=Oi5K5-t&sid=Xq1wotz2-JXu1dV-AAAA HTTP/1.1" 200 181 0.000998
+127.0.0.1 - - [06/Oct/2023 16:07:15] "GET /socket.io/?EIO=4&transport=polling&t=Oi5K5-_&sid=3myAjZiqugm9KSyiAAAB HTTP/1.1" 200 181 0.000000
+(30828) accepted ('127.0.0.1', 50681)
+(30828) accepted ('127.0.0.1', 50683)

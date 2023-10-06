@@ -1,51 +1,78 @@
-from flask import Flask, render_template, jsonify, send_file
-import sqlite3
+import sys
+from flask import Flask, request, render_template, send_file, jsonify
+from flask_socketio import SocketIO
+from flask_restful import Api, Resource, reqparse
 import os
 import json
 
 app = Flask(__name__)
-db_folder_path = "D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner"
-db_path = os.path.join(db_folder_path, 'paths.db')
+socketio = SocketIO(app)
+api = Api(app)
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/get_data')
-def get_data():
-    data = read_data_from_db()
-    return jsonify(data)
+# Define a Flask-RESTful resource for getting images
+class GetImageResource(Resource):
+    def get(self, image_path, image_name):
+        full_image_path = f'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\structured_data_classifier\\{image_path}\\{image_name}.png'
+        return send_file(full_image_path, mimetype='image/png')
 
-@app.route('/get_image/<path:image_path>/<image_name>')
-def get_image(image_path, image_name):
-    full_image_path = f'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\{image_path}\\{image_name}.png'
-    return send_file(full_image_path, mimetype='image/png')
+# Define a Flask-RESTful resource for getting the final image
+class GetFinalImageResource(Resource):
+    def get(self, image_type):
+        if image_type == 'final_model':
+            full_image_path = 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\structured_data_classifier\\test_model.png'
+            return send_file(full_image_path, mimetype='image/png')
+        elif image_type == 'preprocessing_model':
+            full_image_path = 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\structured_data_classifier\\preprocessing_model.png'
+            return send_file(full_image_path, mimetype='image/png')
+        elif image_type == 'dense_model':
+            full_image_path = 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\structured_data_classifier\\dense_model.png'
+            return send_file(full_image_path, mimetype='image/png')
 
-@app.route('/get_final_image/<image_name>')
-def get_final_image( image_name):
-    full_image_path = f'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\{image_name}.png'
-    return send_file(full_image_path, mimetype='image/png')
+# Define a Flask-RESTful resource for updating data
+class UpdateDataResource(Resource):
+    def __init__(self):
+        self.models = set()
+        self.keywords = ["test_model", "preprocessing_model", "dense_model"]
 
-def read_data_from_db():
-    conn = sqlite3.connect(db_path)
-    cursor = conn.cursor()
+    def post(self):
+        args = request.get_json()
+        filepath = args['data']['filepath']
+        print(filepath)
+        if any(keyword in filepath for keyword in self.keywords):
+            if filepath not in self.models:
+                socketio.emit('update',filepath)
+                self.models.add(filepath)
+        else:
+            socketio.emit('update',filepath)
 
-    query = 'SELECT trial, path FROM trials'  
-    cursor.execute(query)
-    data = cursor.fetchall()
-    try:
-        new_data = []
-        for item in data:
-            with open(str(item[1]), 'r') as f:
-                json_file = json.load(f)
-                model_path = os.path.dirname(str(item[1]))
-                new_data.append((item[0] , model_path, json_file['metrics']["metrics"]))
-    except Exception as e:
-        print(e)
-        new_data = []
+        return {"message": "Data updated successfully"}, 200
 
-    conn.close()
-    return new_data
 
+class ExplorePreprocessing(Resource):
+    def get(self):
+        # Your preprocessing logic here
+        result = "Preprocessing result"
+        return {"result": result}
+
+# Define a Flask-RESTful resource for closing the app
+@app.route('/close_app', methods=['GET'])
+def close_app():
+    os.kill(os.getpid(), 9)
+    sys.exit()
+
+# Add resources to the API with their respective endpoints
+api.add_resource(GetImageResource, '/get_image/<path:image_path>/<image_name>')
+api.add_resource(GetFinalImageResource, '/get_final_image/<path:image_type>')
+api.add_resource(UpdateDataResource, '/update_data')
+api.add_resource(ExplorePreprocessing, '/explore_preprocessing')
+
+@socketio.on('connect')
+def handle_connect():
+    print("Websocket connected")
+    
 if __name__ == '__main__':
-    app.run(port=8082)
+    socketio.run(app, host='127.0.0.1', port=8082, debug=True)

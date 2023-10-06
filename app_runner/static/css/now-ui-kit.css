@@ -381,6 +381,12 @@ mark,
   .list-inline-item:not(:last-child) {
     margin-right: 0.5rem; }
 
+.image-container {
+      height: auto; /* Set the width of your container as needed */
+      max-width: 100%; /* Limit the maximum width to the container width */
+       /* Hide any overflow outside the container */
+  }
+
 .initialism {
   font-size: 90%;
   text-transform: uppercase; }
