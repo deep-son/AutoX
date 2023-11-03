@@ -5,7 +5,7 @@ import requests
 import logging
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
-from data_generator import DataGenerator
+from model import ModelGenerator
 
 # Configure the logging settings
 log_format = '%(asctime)s [%(levelname)s] - %(message)s'
@@ -14,29 +14,41 @@ logging.basicConfig(filename='watchdog.log', level=logging.DEBUG, format=log_for
 class MyHandler(FileSystemEventHandler):
     def __init__(self):
         self.trials = {}
-        self.generator = DataGenerator()
+        self.generator = ModelGenerator()
         self.FLASK_API_URL = "http://127.0.0.1:8082/update_data"
 
     def on_any_event(self, event):
         # Triggered when a new file is created in the monitored directory
         if not event.is_directory:
             file_path = event.src_path
-            logging.info(f"New file created: {file_path}")
+            # logging.info(f"New file created: {file_path}")
 
             if "trial_" in file_path:
-                logging.info(file_path)
+                # logging.info(file_path)
                 if "trial_mid" in file_path.split()[-1]:
                     logging.info(file_path)
-                    self.generator.generate_architecture(file_path)
-                    message_data = {
-                        "data" : {
-                            "filepath": file_path
-                        }
-                    }
-                    self.publish_data(message_data)
-
+                    arch_status, model_path = self.generator.create_model_architecture(file_path)
+                    logging.info(f"Arch_status {arch_status} and model path {model_path}")
+                    if arch_status:
+                        trial_info = {}
+                        try:
+                            with open(file_path, 'r') as json_file:
+                                data = json.load(json_file)
+                            trial_info["values"] = data["hyperparameters"]["values"]
+                            trial_info["metrics"] = data["metrics"]
+                            trial_info["best_step"] = data.get("best_step","None")
+                            trial_info["model_path"] = model_path
+                            
+                            logging.info(f"Trail Info {trial_info}")
+                            self.publish_data(trial_info)
+                            
+                        except FileNotFoundError:
+                            logging.info(f"File not found: {file_path}")
+                        except json.JSONDecodeError as e:
+                            logging.info(f"Error decoding JSON: {e}")
+                    
+                
             keywords = ["test_model", "preprocessing_model", "dense_model"]
-
             if any(keyword in file_path for keyword in keywords):
                 logging.info(file_path)
                 message_data = {

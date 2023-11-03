@@ -9,17 +9,24 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.standalone.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/now-ui-kit.css') }}" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jerosoler/Drawflow/dist/drawflow.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/jerosoler/Drawflow/dist/drawflow.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/nucleo-icons.css') }}" type="text/css">
     <script src="{{ url_for('static', filename='js/navbar-ontop.js') }}"></script>
+
     <link rel="icon" href="https://templates.pingendo.com/assets/Pingendo_favicon.ico">
     <title>AutoML Explainability</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
 
     <script>
         const socket = io.connect('http://127.0.0.1:8082');
         var trials = {};
         var models = {};
+        var bestValues = {};
 
         // Function to create a tab element
         function createTabElement(tabId, tabText, cardID) {
@@ -38,26 +45,111 @@
             $(cardID).append($li);
         }
 
-        // Function to create and append a tab-pane
-        function createAndAppendTabPane(tabId, imageUrl, cardID) {
-            const $tabPane = $('<div>', {
-                class: 'tab-pane fade text-center show',
-                id: `tab-${tabId}`,
-                role: 'tabpanel',
-            });
+        // // Function to create and append a tab-pane
+        // function createAndAppendTabPane(tabId, imageUrl, cardID, values, metrics) {
+        //     const $tabPane = $('<div>', {
+        //         class: 'tab-pane fade text-center show',
+        //         id: `tab-${tabId}`,
+        //         role: 'tabpanel',
+        //     });
 
-            // Create the inner HTML structure
-            const innerHTML = `
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class=""><img src="${imageUrl}" alt="Model Image" style="max-width: 100%; max-height: 100%;"></p>
+        //     // Create the inner HTML structure for values
+        //     var valuesTable = '<table><tr><th>Component</th><th>Value</th></tr>';
+        //     for (var key in values) {
+        //         if (values.hasOwnProperty(key)) {
+        //             valuesTable += `<tr><td style="text-align: left;">${key}</td><td style="text-align: left;">${values[key]}</td></tr>`;
+        //         }
+        //     }
+        //     valuesTable += '</table>';
+
+        //     // Create the inner HTML structure for metrics
+        //     var metricsTable = '<table><tr><th>Metric</th><th>Value</th></tr>';
+        //     for (var metricKey in metrics.metrics) {
+        //         if (metrics.metrics.hasOwnProperty(metricKey)) {
+        //             var metric = metrics.metrics[metricKey];
+        //             metricsTable += `<tr><td style="text-align: left;">${metricKey}</td><td style="text-align: left;">${metric.observations[0].value[0]}</td></tr>`;
+        //         }
+        //     }
+        //     metricsTable += '</table';
+
+
+        //     // Create the inner HTML structure
+        //     const innerArch = `
+        //         <div class="row">
+        //             <div class="col-md-12">
+        //                 <p class=""><img src="${imageUrl}" alt="Model Image" style="max-width: 100%; max-height: 100%;"></p>
+        //             </div>
+        //         </div>
+        //         <div class="row">
+        //             <div class="col-md-6">
+        //                 <h6><b>Values</b></h6>
+        //                 ${valuesTable}
+        //             </div>
+        //             <div class="col-md-6">
+        //                 <h6><b>Metrics</b></h6>
+        //                 ${metricsTable}
+        //             </div>
+        //         </div>
+        //     `;
+
+        //     $tabPane.html(innerArch); // Set the HTML content
+        //     $(cardID).append($tabPane);
+        // };
+
+        function createAndAppendTabPaneCarousel(tabId, imageUrl, cardID, values, metrics) {
+            try {
+                const $tabPane = $('<div >', {
+                    class: 'carousel-item',
+                    id: `tab-${tabId}`,
+                });
+
+                // Create the inner HTML structure for values
+                var valuesTable = '<table><tr><th>Component</th><th>Value</th></tr>';
+                for (var key in values) {
+                    if (values.hasOwnProperty(key)) {
+                        valuesTable += `<tr><td style="text-align: left;">${key}</td><td style="text-align: left;">${values[key]}</td></tr>`;
+                    }
+                }
+                valuesTable += '</table>';
+
+                // Create the inner HTML structure for metrics
+                var metricsTable = '<table><tr><th>Metric</th><th>Value</th></tr>';
+                for (var metricKey in metrics.metrics) {
+                    if (metrics.metrics.hasOwnProperty(metricKey)) {
+                        var metric = metrics.metrics[metricKey];
+                        metricsTable += `<tr><td style="text-align: left;">${metricKey}</td><td style="text-align: left;">${metric.observations[0].value[0]}</td></tr>`;
+                    }
+                }
+                metricsTable += '</table';
+
+                // Create the inner HTML structure
+                const innerArch = `
+                    <div class="row">
+                        <div class="col-md-10">
+                            <p class=""><img src="${imageUrl}" alt="Model Image" style="max-width: 100%; max-height: 100%;"></p>
+                        </div>
                     </div>
-                </div>
-            `;
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h6><b>Values</b></h6>
+                            ${valuesTable}
+                        </div>
+                        <div class="col-md-5">
+                            <h6><b>Metrics</b></h6>
+                            ${metricsTable}
+                        </div>
+                    </div>
+                `;
 
-            $tabPane.html(innerHTML); // Set the HTML content
-            $(cardID).append($tabPane);
-        }
+                $tabPane.html(innerArch); // Set the HTML content
+                $(cardID).append($tabPane);
+            } catch (error) {
+                console.error("Error occurred in createAndAppendTabPaneCarousel:", error);
+                // Optionally, handle the error or log more details about the error.
+            }
+        };
+
+
 
         function createAndAppendTabPaneFinalArch(tabId, imageUrl, cardID) {
             const $tabPane = $('<div>', {
@@ -78,120 +170,236 @@
 
             $tabPane.html(innerHTML); // Set the HTML content
             $(cardID).append($tabPane);
-        }
 
-        function fetchImageWithRetry(imageUrl, maxRetries, retryDelay) {
-            return new Promise((resolve, reject) => {
-                let retries = 0;
+        };
 
-                function fetchImage() {
-                    fetch(imageUrl)
-                        .then((response) => {
-                            if (!response.ok) {
-                                if (retries < maxRetries) {
-                                    retries++;
-                                    setTimeout(fetchImage, retryDelay); // Retry after a delay
-                                } else {
-                                    reject(new Error('Max retries reached'));
-                                }
-                            } else {
-                                return response.blob();
-                            }
-                        })
-                        .then((blob) => {
-                            if (blob) {
-                                resolve(URL.createObjectURL(blob));
-                            }
-                        })
-                        .catch((error) => {
-                            reject(error);
-                        });
-                }
-
-
-                fetchImage(); // Start the initial fetch
+        function createTabElementExplorePipeline(tabId, tabText, cardID) {
+            const $li = $('<li>', {
+                class: 'nav-item',
+                id: tabId,
             });
+            const $a = $('<a>', {
+                class: 'nav-link show',
+                'data-toggle': 'tab',
+                'data-target': `#ex-trial_${tabId}`,
+                html: `<i class="now-ui-icons objects_umbrella-13 mr-1"></i>trial_${tabText}`,
+            });
+            $li.append($a);
+            $(cardID).append($li);
         }
 
+        function createAndAppendTabPaneExplorePipeline(tabId, value, cardID, callback) {
+
+            console.log("Creating tab for tabId:", tabId); // Debug statement
+            const $tabPane = $('<div>', {
+                class: 'tab-pane fade text-center show',
+                id: `ex-trial_${tabId}`,
+                role: 'tabpanel',
+            });
+
+            // Create the inner HTML structure
+            const innerHTML = `
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="img" id="tree_${tabId}" style="width: 100%; height: 500px; overflow: hidden;">
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <p class="">Probability Table Here</p>
+                </div>
+            </div>
+        `;
+
+            $tabPane.html(innerHTML); // Set the HTML content
+            $(cardID).append($tabPane);
+
+            callback(value, tabId);
+        };
+
+        function initializeElement(value, tabId) {
+            const chartContainer = document.getElementById(`tree_${tabId}`);
+            if (chartContainer) {
+                // Element exists, proceed with further operations
+                const chartData = JSON.parse(value["plotly_figure"]);
+                Plotly.newPlot(chartContainer, chartData, { responsive: true });
+            } else {
+                console.error(`Element with ID 'tree_${tabId}' not found.`);
+            }
+        }
+
+        function addDropdownOption(tabId) {
+            console.log("In callback")
+            var option = $('<a>').addClass('dropdown-item').attr('href', '#').text(tabId);
+            option.on('click', function () {
+                $('#myCarousel').carousel(`tab-${tabId}`);
+            });
+            $('#dropdownOptions').append(option);
+
+        }
+
+        function updateBestValuesDisplay(Values) {
+            var valuesTable = '<table><tr><th>Component</th><th>Value</th></tr>';
+            for (var key in Values) {
+                if (Values.hasOwnProperty(key)) {
+                    valuesTable += `<tr><td style="text-align: left;">${key}</td><td style="text-align: left;">${Values[key][0].value[0]}</td><td style="text-align: left;">${Values[key][0].trialValue}</td></tr>`;
+                }
+            }
+            valuesTable += '</table>';
+
+            $('#metrics_values').append(valuesTable);
+        };
+
+        function updateBestValues(bestValues, newValues) {
+            for (const metricName in newValues) {
+                if (newValues.hasOwnProperty(metricName)) {
+                    const newObservations = newValues[metricName];
+
+                    if (!bestValues[metricName]) {
+                        bestValues[metricName] = [];
+                        bestValues[metricName].push(...newObservations);
+                    }
+
+                    if (newValues[metricName][0].direction === 'max') {
+                        if (newValues[metricName][0].value[0] > bestValues[metricName][0].value[0]) {
+                            bestValues[metricName][0].value[0] = newValues[metricName][0].value[0];
+                            bestValues[metricName][0].trialValue = newValues[metricName][0].trialValue;
+                        }
+                    } else {
+                        if (newValues[metricName][0].value[0] < bestValues[metricName][0].value[0]) {
+                            bestValues[metricName][0].value[0] = newValues[metricName][0].value[0];
+                            bestValues[metricName][0].trialValue = newValues[metricName][0].trialValue;
+                        }
+                    }
+                }
+            }
+            $('#metrics_values').empty();
+            updateBestValuesDisplay(bestValues);
+            return bestValues;
+        };
+
+        function createEvaluationElements(data) {
+            const cm_container = document.getElementById("cm");
+            var chartData = JSON.parse(data.confusion_matrix);
+            Plotly.newPlot(cm_container, chartData, { responsive: true });
+            const prc_container = document.getElementById("prc");
+            var chartData = JSON.parse(data.precision_recall_curve);
+            Plotly.newPlot(prc_container, chartData, { responsive: true });
+            const roc_container = document.getElementById("roc");
+            var chartData = JSON.parse(data.roc);
+            Plotly.newPlot(roc_container, chartData, { responsive: true });
+        };
 
         socket.on('connect', () => {
             console.log("WebSocket connected");
         });
 
-        socket.on('update', (data) => {
-
+        socket.on('evaluation', (data) => {
             console.log(data);
-            const final_arch = data;
+            createEvaluationElements(data)
+        });
 
-            if (final_arch.includes("test_model")) {
-                const finalArchImageUrl = `/get_final_image/final_model`;
-                const tValue = 'test_model';
-                if (!(tValue in models)) {
-                    createTabElement('arch', 'Architecture', '#final-arch-card-ul');
-                    createAndAppendTabPaneFinalArch('arch', finalArchImageUrl, '#final-arch-card');
-                    models[tValue] = finalArchImageUrl;
+        socket.on('update', (data) => {
+            console.log(data)
+            if (data.hasOwnProperty("data")) {
+                const final_arch = data["data"]["filepath"];
 
+                if (final_arch.includes("test_model")) {
+                    const finalArchImageUrl = `/get_final_image/final_model`;
+                    const tValue = 'test_model';
+                    if (!(tValue in models)) {
+                        createTabElement('arch', 'Architecture', '#final-arch-card-ul');
+                        createAndAppendTabPaneFinalArch('arch', finalArchImageUrl, '#final-arch-card');
+                        models[tValue] = finalArchImageUrl;
+
+                    }
                 }
-            }
-            else if (final_arch.includes("preprocessing_model")) {
-                const finalArchImageUrl = `/get_final_image/preprocessing_model`;
-                const tValue = 'preprocessing_model'
-                if (!(tValue in models)) {
-                    // call element here to add
-                    const $imageElementPreProcess = $('<p>', {
-                        html: `<img src="${finalArchImageUrl}" alt="Model Image" style="max-width: 100%; max-height: 100%;">`,
-                    });
-                    $('#preprocessing-arch-card').append($imageElementPreProcess);
+                else if (final_arch.includes("preprocessing_model")) {
+                    const finalArchImageUrl = `/get_final_image/preprocessing_model`;
+                    const tValue = 'preprocessing_model'
+                    if (!(tValue in models)) {
+                        // call element here to add
+                        const $imageElementPreProcess = $('<p>', {
+                            html: `<img src="${finalArchImageUrl}" alt="Model Image" style="max-width: 100%; max-height: 100%;">`,
+                        });
+                        $('#preprocessing-arch-card').append($imageElementPreProcess);
 
-                    models[tValue] = finalArchImageUrl
+                        models[tValue] = finalArchImageUrl
+                    }
                 }
-            }
-            else if (final_arch.includes("dense_model")) {
-                const finalArchImageUrl = `/get_final_image/dense_model`;
-                const tValue = 'dense_model'
-                if (!(tValue in models)) {
-                    // call element here to add
-                    const $imageElementDense = $('<p>', {
-                        html: `<img src="${finalArchImageUrl}" alt="Model Image" style="max-width: 100%; max-height: 100%;">`,
-                    });
-                    $('#dense-arch-card').append($imageElementDense);
-                    models[tValue] = finalArchImageUrl
+                else if (final_arch.includes("dense_model")) {
+                    const finalArchImageUrl = `/get_final_image/dense_model`;
+                    const tValue = 'dense_model'
+                    if (!(tValue in models)) {
+                        // call element here to add
+                        const $imageElementDense = $('<p>', {
+                            html: `<img src="${finalArchImageUrl}" alt="Model Image" style="max-width: 100%; max-height: 100%;">`,
+                        });
+                        $('#dense-arch-card').append($imageElementDense);
+                        models[tValue] = finalArchImageUrl
+                    }
                 }
             }
             else {
-                var trialValue = data.split('\\').slice(-2)[0];
-                console.log(trialValue)
+                var newValues = {};
+                var trialValue = data["model_path"].split('\\').slice(-2)[0];
+                if (data["metrics"].metrics && Object.keys(data["metrics"].metrics).length > 0) {
+                    for (const metricName in data["metrics"].metrics) {
+                        if (data["metrics"].metrics.hasOwnProperty(metricName)) {
+                            const metric = data["metrics"].metrics[metricName];
+                            const observations = metric.observations.map(observation => {
+                                return {
+                                    direction: metric.direction,
+                                    trialValue: trialValue,
+                                    value: observation.value,
+                                    step: observation.step
+
+                                };
+                            });
+                            newValues[metricName] = observations;
+                        }
+                    }
+                };
+                if (Object.keys(newValues).length > 0) {
+                    console.log("Sending to funtion")
+                    console.log(newValues)
+                    bestValues = updateBestValues(bestValues, newValues);
+                    console.log(bestValues);  // Corrected variable name to "bestValues"
+                };
+
                 const imageUrl = `/get_image/${encodeURIComponent(trialValue)}/model`;
                 if (!(trialValue in trials)) {
-                    createTabElement(trialValue, trialValue, '#arch-card-ul');
+                    var element = document.getElementById(trialValue);
+                    var elementTabPane = document.getElementById(`tab-${trialValue}`);
+                    if (element) {
+                        element.parentNode.removeChild(element);
+                    }
+                    if (elementTabPane) {
+                        elementTabPane.parentNode.removeChild(elementTabPane);
+                    }
+                    createAndAppendTabPaneCarousel(trialValue, imageUrl, '#arch-carousel', data["values"], data["metrics"]);
                 }
 
-                // Fetch the image with retry
-                fetchImageWithRetry(imageUrl, 3, 3000) // Retry 3 times with a 1-second delay
-                    .then((imageSrc) => {
-                        if (!(trialValue in trials)) {
-                            createAndAppendTabPane(trialValue, imageSrc, '#arch-img-div');
-                            trials[trialValue] = imageUrl;
-                        }
-                    })
-                    .catch((error) => {
-                        console.error('Error fetching image:', error);
-                    });
             }
-
-
         });
 
+
+
         document.addEventListener("DOMContentLoaded", function () {
-            const button = document.getElementById("explore-preprocessing");
+            const explorePreprocessingbutton = document.getElementById("explore-preprocessing");
             const resultContainer = document.getElementById("explore-preprocessing-result");
             const closeAppButton = document.getElementById('disconnect-button');
+            const igGraphButton = document.getElementById('ig-graph-button');
+            const aleGraphButton = document.getElementById('ale-graph-button');
+            const explorePiplineButton = document.getElementById('explore-pipline-button');
+            const testbutton = document.getElementById('test-button');
+
 
             closeAppButton.addEventListener('click', () => {
                 window.location.href = '/close_app'; // Send a request to the server to close the Flask app
             });
 
-            button.addEventListener("click", function () {
+            explorePreprocessingbutton.addEventListener("click", function () {
                 // Make an AJAX request to your Flask-RESTful API endpoint
                 fetch("/explore_preprocessing", {
                     method: "GET",
@@ -209,13 +417,105 @@
                         console.error("Error:", error);
                     });
             });
+
+            explorePiplineButton.addEventListener("click", function () {
+                console.log("Explore Pipeline Clicked")
+                fetch('/explore_pipeline', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json(); // Parse the response as JSON
+                    })
+                    .then(data => {
+                        // console.log(data)
+                        Object.entries(data).forEach(function ([key, value]) {
+                            console.log(key, value)
+                            createTabElementExplorePipeline(key, key, "#explore-pipeline-ul")
+                            createAndAppendTabPaneExplorePipeline(key, value, "#explore-pipeline-card", initializeElement)
+                        })
+                            .catch(error => {
+                                // Handle errors
+                                console.error('There was a problem with the fetch operation:', error);
+                            });
+
+                    });
+
+            });
+
+
+            igGraphButton.addEventListener("click", function () {
+
+                fetch('/load_data_ig', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json(); // Parse the response as JSON
+                    })
+                    .then(data => {
+                        // Work with the JSON data here
+                        // Render the chart using Plotly
+                        const chartContainer = document.getElementById("ig-graph");
+                        var chartData = JSON.parse(data);
+                        Plotly.newPlot(chartContainer, chartData, { responsive: true });
+                    })
+                    .catch(error => {
+                        // Handle errors
+                        console.error('There was a problem with the fetch operation:', error);
+                    });
+
+            });
+
+            aleGraphButton.addEventListener("click", function () {
+
+                fetch('/load_data_ale', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json(); // Parse the response as JSON
+                    })
+                    .then(data => {
+                        // Work with the JSON data here
+                        // Render the chart using Plotly
+                        const chartContainer = document.getElementById("ale-graph");
+                        var chartData = JSON.parse(data);
+                        Plotly.newPlot(chartContainer, chartData, { responsive: true });
+                    })
+                    .catch(error => {
+                        // Handle errors
+                        console.error('There was a problem with the fetch operation:', error);
+                    });
+
+            });
+
+
         });
+
+
     </script>
 
 
 </head>
 
 <body class="">
+
     <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-dark">
         <div class="container">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -241,9 +541,7 @@
             </div>
         </div>
     </nav>
-    <div class="py-5 text-center parallax cover gradient-overlay" style="background-image: url(" {{url_for('static',
-        filename='img/header2.jpg' ) }}"); position: relative; background-position: 50% calc(50% + 0px);
-        background-size: cover; background-repeat: repeat;">
+    <div class="py-5 text-center parallax cover gradient-overlay">
         <div class="container d-flex flex-column">
             <div class="row my-auto">
                 <div class="col-md-12 text-black">
@@ -253,9 +551,127 @@
             </div>
         </div>
     </div>
+
+    <div class="container" style="display: flex; width: 100%; height: 120vh;">
+        <div class="col-md-4">
+            <section class="card"
+                style="height: 30%; padding: 20px; background-color: #f4f4f4; border: 1px solid #ccc; border-radius: 5px;">
+                <p style="margin-top: 5px; font-weight: bold;">Training Model</p>
+                <p style="margin-top: 5px; font-weight: bold;">Start Time: <span
+                        style="font-weight: normal;">--:--:--</span></p>
+                <p style="margin-top: 5px; font-weight: bold;">End Time: <span
+                        style="font-weight: normal;">--:--:--</span></p>
+            </section>
+            <section class="card"
+                style="height: 70%; padding: 20px; background-color: #f4f4f4; border: 1px solid #ccc; border-radius: 5px;">
+                <p style="margin-top: 10px; font-weight: bold;">Data</p>
+                <!-- Your bar graph display code or placeholder goes here -->
+                <p style="margin-top: 10px; font-weight: bold;">Max Trial <span style="font-weight: normal;">--</span>
+                </p>
+                <div style="margin-top: 10px; padding: 10px; border: 1px solid #aaa;">Your Bar Graph Display</div>
+            </section>
+        </div>
+        <div class="col-md-8">
+            <section class="card" style="height: 25%; padding: 20px; border-radius: 5px;">
+                <p style="margin-top: 5px; font-weight: bold;">Training Model</p>
+                <div class="col-md-12" id="metrics_values">
+                    <!-- Dynamically add table here -->
+                </div>
+            </section>
+            <div class="card" style="height: 75%;">
+                <div class="dropdown" style="padding: 10px 20px;">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select an Option
+                    </button>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownOptions">
+                        <!-- Dynamically added dropdown options will appear here -->
+                    </div>
+                </div>
+
+                <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false"
+                    style="padding: 10px 20px;">
+                    <div class="carousel-inner" id="arch-carousel">
+                        <div class="carousel-item active">
+                            <p>Here we show the architectures..add a visual here later</p>
+                        </div>
+                        <!-- Add more carousel items as needed -->
+                    </div>
+                    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" ariahidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="padding-top: 20px; display: flex; width: 100%; height: auto; overflow: hidden;">
+        <div class="col-md-12">
+            <section class="card" style="padding: 20px; border-radius: 5px; overflow: hidden;">
+                <div class="row">
+                    <div class="col-md-4" id="cm">
+                        <!-- Content for column 1 -->
+                    </div>
+                    <div class="col-md-4" id="prc">
+                        <!-- Content for column 2 -->
+                    </div>
+                    <div class="col-md-4" id="roc">
+                        <!-- Content for column 3 -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+
     <div class="pt-5">
         <div class="container">
+            <div id="drawflow"></div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const drawflow = new Drawflow(document.getElementById('drawflow'), {
+                        render: true
+                    });
+
+                    // Add nodes and connections
+                    drawflow.addNode('start', 1, 0, 100, 100, 'Start', 0);
+                    drawflow.addNode('step', 2, 200, 100, 150, 'Step 1', 1);
+                    drawflow.addNode('end', 3, 400, 100, 100, 'End', 0);
+                    drawflow.addConnection(1, 0, 2, 0, 0);
+                    drawflow.addConnection(2, 0, 3, 0, 0);
+
+                    // Handle node creation event
+                    drawflow.on('nodeCreated', (id) => {
+                        console.log(`Node created: ${id}`);
+                    });
+
+                    // Save and load functions (for demonstration)
+                    document.getElementById('saveBtn').addEventListener('click', function () {
+                        const data = drawflow.save();
+                        console.log('Saved data:', data);
+                    });
+
+                    document.getElementById('loadBtn').addEventListener('click', function () {
+                        const data = prompt('Enter the saved data:');
+                        if (data) {
+                            drawflow.load(JSON.parse(data));
+                        }
+                    });
+                });
+            </script>
+
+            <button id="saveBtn">Save</button>
+            <button id="loadBtn">Load</button>
+
             <div class="row">
+
                 <div class="col-md-12">
                     <h5 class="mb-2"> Now Training..</h5>
                     <div class="row">
@@ -312,7 +728,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -326,6 +741,7 @@
                     <div class="row">
                         <div class="col-md-10 image-container" id="preprocessing-arch-card"
                             style="min-width: 100%; min-height: 50%;">
+                            <p id="desc-preprocessing">Preprocessing architecture is shown here</p>
                             <!-- Ajax will add image here -->
                         </div>
                     </div>
@@ -336,13 +752,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row my-5">
                 <div class="col-md-12">
                     <h5 class="mb-2"> Working Model </h5>
                     <div class="row">
                         <div class="col-md-10 image-container" id="dense-arch-card"
                             style="min-width: 100%; min-height: 50%;">
+                            <p id="desc-working_model">Model architecture is shown here</p>
                             <!-- Ajax will add image here -->
                         </div>
                     </div>
@@ -351,17 +766,53 @@
                             <button class="btn btn-primary" type="button">Explore Model</button>
                         </div>
                     </div>
+
                 </div>
             </div>
-
-            <div class="row my-5">
-                <div class="col-md-12" id="explore-preprocessing-result">
-                    <h5 class="mb-2"> Explore-preprocessing</h5>
-                </div>
-
-            </div>
-
         </div>
+
+        <div class="container">
+
+            <div class="row" style="min-width: 100%; min-height: 50%;">
+                <div class="col-md-12 ">
+                    <h5 class="mb-2"> Explore The Autokeras Pipeline</h5>
+                    <div class="row">
+                        <div class="col-md-12 image-container">
+                            <div class="card mb-4">
+                                <ul id="explore-pipeline-ul"
+                                    class="nav nav-tabs px-1 py-3  bg-light flex-column flex-lg-row justify-content-md-center text-center">
+                                    <li class="nav-item">
+                                        <a class="nav-link active show" href="" data-toggle="tab"
+                                            data-target="#ex-tab1">
+                                            <i class="now-ui-icons objects_umbrella-13 mr-1"></i>INFO</a>
+                                    </li>
+                                </ul>
+                                <div class="card-body">
+                                    <div class="tab-content mt-2" id="explore-pipeline-card">
+                                        <div class="tab-pane fade text-center active show" id="ex-tab1" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <p class="">The Autokeras Tuner Pipeline can be seen here</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <button class="btn btn-primary" type="button"
+                                                        id="explore-pipline-button">Explore Pipeline</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <div class="py-5 bg-gray">
             <div class="container">
                 <div class="row">
@@ -386,18 +837,17 @@
                                                         data-delay="100">Integrated Gradients</b>
                                                 </p>
                                                 <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="img" style="width: 100%; height: 300px;">
-                                                            <div class="" id="ig-graph">
+                                                    <div class="col-md-12">
+                                                        <div class="img" id="ig-graph"
+                                                            style="width: 100%; height: 500px; overflow: hidden;">
 
-                                                            </div>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <button class="btn btn-info" type="button"
                                                             id="ig-graph-button">Get Data</button>
-                                                        <p>List of data here to choose from</p>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -410,6 +860,19 @@
                                                         data-placement="right" data-animation="true"
                                                         data-delay="100">Accumulated Local Effects</b>
                                                 </p>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="img" id="ale-graph"
+                                                            style="width: 100%; height: 500px; overflow: hidden;">
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <button class="btn btn-info" type="button"
+                                                            id="ale-graph-button">Get Data</button>
+
+                                                    </div>
+                                                </div>
 
                                             </div>
                                         </div>
@@ -433,6 +896,7 @@
             </div>
 
             <div class="container">
+
                 <div class="row my-4">
                     <div class="col-md-12" style="transition: all 0.25s;">
                         <h4 class="mb-2">Buttons</h4>
@@ -740,8 +1204,7 @@
                 </div>
             </div>
         </div>
-        <div style="background-image: url(&quot;assets/img/bg7.jpg&quot;); background-position: center center; background-size: cover;"
-            class="pb-5">
+        <div class="pb-5">
             <nav class="navbar navbar-expand-md bg-primary navbar-dark mb-4">
                 <div class="container">
                     <a class="navbar-brand" href="#">PRIMARY COLOR</a>
@@ -1678,7 +2141,7 @@
         </div>
         <div class="pt-5 bg-dark">
             <div class="container">
-                <div class="row my-5 py-5">
+                <!-- <div class="row my-5 py-5">
                     <div class="col-6 text-center">
                         <img src="assets/img/landing.jpg" class="img-fluid">
                         <a class="btn btn-outline-light my-4 rounded" href="#">View Landing Page</a>
@@ -1687,7 +2150,7 @@
                         <img src="assets/img/profile.jpg" class="img-fluid">
                         <a class="btn btn-outline-light my-4 rounded" href="#">View Login Page</a>
                     </div>
-                </div>
+                </div> -->
                 <div class="row my-5 pt-5" id="download">
                     <div class="col-12 text-center mx-auto col-md-10 col-xl-8">
                         <h3 class="mb-4">
@@ -1810,6 +2273,28 @@
                     </div>
                     <div class="modal-footer d-flex flex-row justify-content-between">
                         <button type="button" class="btn btn-secondary">Nice Button</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="finalArchExpand">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header pb-0">
+                        <h4 class="modal-title text-dark mx-auto">
+                            <b>Final Architecture</b>
+                        </h4>
+                        <button type="button" class="close text-danger pt-4 ml-0" data-dismiss="modal">
+                            <span>
+                                <i class="now-ui-icons ui-1_simple-remove lg"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="modal-body" , id="finalArchExpandInner">
+                        <!-- add data dynamically -->
+                    </div>
+                    <div class="modal-footer d-flex flex-row justify-content-between">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                     </div>
                 </div>

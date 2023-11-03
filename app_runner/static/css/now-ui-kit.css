@@ -3027,6 +3027,20 @@ tbody.collapse.show {
     .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
       color: #fff; }
 
+  .carousel-inner {
+    /* Apply your custom styles to the .carousel-inner class here */
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden; /* To prevent overflowing content */
+}
+.carousel-item > div {
+    /* Apply styles to the content within the .carousel-item */
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden; /* To prevent overflowing content */
+    border: 1px solid #ddd; /* For visualization */
+}
+
 .card {
   position: relative;
   display: flex;

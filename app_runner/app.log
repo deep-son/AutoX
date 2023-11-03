@@ -1,0 +1,859 @@
+2023-10-13 22:22:07,826 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-13 22:22:16,687 [WARNING] -  * Debugger is active!
+2023-10-13 22:22:16,694 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-13 22:22:38,071 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\re.py', reloading
+2023-10-13 22:22:38,616 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\requests\\__init__.py', reloading
+2023-10-13 22:22:39,791 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-13 22:22:52,124 [WARNING] -  * Debugger is active!
+2023-10-13 22:22:52,137 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-13 22:28:55,842 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\random.py', reloading
+2023-10-13 22:28:57,294 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-13 22:29:06,040 [WARNING] -  * Debugger is active!
+2023-10-13 22:29:06,043 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-13 22:30:03,329 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-13 22:30:03,330 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-13 22:30:03,332 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-13 22:30:04,672 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-13 22:30:14,713 [WARNING] -  * Debugger is active!
+2023-10-13 22:30:14,717 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-13 22:30:15,453 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-13 22:30:15,453 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-13 22:30:15,454 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-13 22:30:16,468 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-13 22:30:26,718 [WARNING] -  * Debugger is active!
+2023-10-13 22:30:26,722 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-13 22:30:47,407 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-13 22:30:47,409 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-13 22:30:47,409 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-13 22:30:48,727 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-13 22:30:57,352 [WARNING] -  * Debugger is active!
+2023-10-13 22:30:57,357 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-13 22:31:08,876 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-13 22:31:08,877 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-13 22:31:08,878 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-13 22:31:10,193 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-13 22:31:17,961 [WARNING] -  * Debugger is active!
+2023-10-13 22:31:17,965 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-15 14:46:45,750 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\file_monitor.py', reloading
+2023-10-15 14:46:46,580 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\file_monitor.py', reloading
+2023-10-15 14:47:39,370 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-15 15:06:43,019 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-15 15:07:00,773 [WARNING] -  * Debugger is active!
+2023-10-15 15:07:00,779 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-15 15:09:21,728 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\file_monitor.py', reloading
+2023-10-15 15:09:21,734 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\file_monitor.py', reloading
+2023-10-15 15:09:23,278 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-15 15:09:42,250 [WARNING] -  * Debugger is active!
+2023-10-15 15:09:42,258 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-15 15:11:37,343 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\utils\\generic_utils.py', reloading
+2023-10-15 15:11:38,786 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-15 15:12:01,024 [WARNING] -  * Debugger is active!
+2023-10-15 15:12:01,032 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-15 15:12:23,229 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\tasks\\structured_data.py', reloading
+2023-10-15 15:12:23,230 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\auto_model.py', reloading
+2023-10-15 15:12:23,234 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\engine\\base_tuner.py', reloading
+2023-10-15 15:12:23,235 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\engine\\tuner.py', reloading
+2023-10-15 15:12:23,238 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\layers\\preprocessing\\string_lookup.py', reloading
+2023-10-15 15:12:23,244 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\trackable\\base.py', reloading
+2023-10-15 15:12:23,245 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\util\\traceback_utils.py', reloading
+2023-10-15 15:12:23,248 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\variables.py', reloading
+2023-10-15 15:12:23,250 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\variable_scope.py', reloading
+2023-10-15 15:12:23,254 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\gen_resource_variable_ops.py', reloading
+2023-10-15 15:12:23,258 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\IPython\\core\\interactiveshell.py', reloading
+2023-10-15 15:12:24,521 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-15 15:12:42,564 [WARNING] -  * Debugger is active!
+2023-10-15 15:12:42,573 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-15 15:15:32,337 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-15 15:15:32,340 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-15 15:15:32,345 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-15 15:15:34,234 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-15 15:16:06,708 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-15 15:16:21,768 [WARNING] -  * Debugger is active!
+2023-10-15 15:16:21,776 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-15 15:17:54,871 [WARNING] - Model was constructed with shape (None, 9) for input KerasTensor(type_spec=TensorSpec(shape=(None, 9), dtype=tf.string, name='input_1'), name='input_1', description="created by layer 'input_1'"), but it was called on an input with incompatible shape (None,).
+2023-10-15 15:17:54,998 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\alibi\\explainers\\integrated_gradients.py', reloading
+2023-10-15 15:17:56,166 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-15 15:18:17,921 [WARNING] -  * Debugger is active!
+2023-10-15 15:18:17,927 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-15 15:22:00,582 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-15 15:22:19,819 [WARNING] -  * Debugger is active!
+2023-10-15 15:22:19,827 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-15 15:33:09,443 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\flask\\app.py', reloading
+2023-10-15 15:33:09,465 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\flask_restful\\__init__.py', reloading
+2023-10-15 15:33:09,467 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\flask\\views.py', reloading
+2023-10-15 15:33:09,588 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\flask\\helpers.py', reloading
+2023-10-15 15:33:09,594 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\werkzeug\\utils.py', reloading
+2023-10-15 15:33:44,128 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-15 15:34:21,098 [WARNING] -  * Debugger is active!
+2023-10-15 15:34:21,102 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-15 20:51:25,542 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\file_monitor.py', reloading
+2023-10-15 20:52:52,278 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-15 20:53:23,280 [WARNING] -  * Debugger is active!
+2023-10-15 20:53:23,286 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-15 20:53:41,851 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\file_monitor.py', reloading
+2023-10-15 20:53:41,852 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\file_monitor.py', reloading
+2023-10-15 20:53:41,853 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\file_monitor.py', reloading
+2023-10-15 20:53:43,345 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-15 20:53:58,106 [WARNING] -  * Debugger is active!
+2023-10-15 20:53:58,109 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-15 20:56:51,636 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\keras_layers.py', reloading
+2023-10-15 20:56:52,604 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-15 20:57:08,376 [WARNING] -  * Debugger is active!
+2023-10-15 20:57:08,379 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-15 20:57:15,527 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\utils\\data_utils.py', reloading
+2023-10-15 20:57:15,578 [INFO] -  * Detected change in 'C:\\Users\\DEEPAN~1\\AppData\\Local\\Temp\\__autograph_generated_filenarzdyyl.py', reloading
+2023-10-15 20:57:15,580 [INFO] -  * Detected change in 'C:\\Users\\DEEPAN~1\\AppData\\Local\\Temp\\__autograph_generated_filenarzdyyl.py', reloading
+2023-10-15 20:57:15,760 [INFO] -  * Detected change in 'C:\\Users\\DEEPAN~1\\AppData\\Local\\Temp\\__autograph_generated_filefr767zp8.py', reloading
+2023-10-15 20:57:15,762 [INFO] -  * Detected change in 'C:\\Users\\DEEPAN~1\\AppData\\Local\\Temp\\__autograph_generated_filefr767zp8.py', reloading
+2023-10-15 20:57:16,196 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\engine\\training.py', reloading
+2023-10-15 20:57:16,235 [INFO] -  * Detected change in 'C:\\Users\\DEEPAN~1\\AppData\\Local\\Temp\\__autograph_generated_filez7_o0l3h.py', reloading
+2023-10-15 20:57:16,236 [INFO] -  * Detected change in 'C:\\Users\\DEEPAN~1\\AppData\\Local\\Temp\\__autograph_generated_filez7_o0l3h.py', reloading
+2023-10-15 20:57:16,267 [WARNING] - Model was constructed with shape (None, 9) for input KerasTensor(type_spec=TensorSpec(shape=(None, 9), dtype=tf.string, name='input_1'), name='input_1', description="created by layer 'input_1'"), but it was called on an input with incompatible shape (None,).
+2023-10-15 20:57:16,571 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\alibi\\explainers\\integrated_gradients.py', reloading
+2023-10-15 20:57:17,747 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-15 20:57:32,643 [WARNING] -  * Debugger is active!
+2023-10-15 20:57:32,648 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-15 20:58:30,445 [WARNING] - Model was constructed with shape (None, 9) for input KerasTensor(type_spec=TensorSpec(shape=(None, 9), dtype=tf.string, name='input_1'), name='input_1', description="created by layer 'input_1'"), but it was called on an input with incompatible shape (None,).
+2023-10-15 21:30:59,928 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\flask\\app.py', reloading
+2023-10-15 21:30:59,936 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\flask_restful\\__init__.py', reloading
+2023-10-15 21:30:59,939 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\flask\\views.py', reloading
+2023-10-15 21:31:00,069 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\flask\\helpers.py', reloading
+2023-10-15 21:31:00,074 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\werkzeug\\utils.py', reloading
+2023-10-15 21:31:03,960 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-15 21:31:30,487 [WARNING] -  * Debugger is active!
+2023-10-15 21:31:30,501 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-15 21:31:55,761 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\traitlets\\traitlets.py', reloading
+2023-10-15 21:31:57,455 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-15 21:32:22,497 [WARNING] -  * Debugger is active!
+2023-10-15 21:32:22,511 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-15 21:32:37,042 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-15 21:32:37,044 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\tasks\\structured_data.py', reloading
+2023-10-15 21:32:37,046 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\auto_model.py', reloading
+2023-10-15 21:32:37,050 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\engine\\base_tuner.py', reloading
+2023-10-15 21:32:37,052 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\engine\\tuner.py', reloading
+2023-10-15 21:32:37,055 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\utils\\utils.py', reloading
+2023-10-15 21:32:37,056 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\utils\\traceback_utils.py', reloading
+2023-10-15 21:32:37,061 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\engine\\data_adapter.py', reloading
+2023-10-15 21:32:37,066 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\gen_resource_variable_ops.py', reloading
+2023-10-15 21:32:37,070 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\IPython\\core\\interactiveshell.py', reloading
+2023-10-15 21:32:39,131 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-15 21:32:59,863 [WARNING] -  * Debugger is active!
+2023-10-15 21:32:59,873 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-16 01:00:04,894 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\traitlets\\traitlets.py', reloading
+2023-10-16 01:00:16,351 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-16 01:00:50,495 [WARNING] -  * Debugger is active!
+2023-10-16 01:00:50,500 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-16 01:08:36,205 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\file_monitor.py', reloading
+2023-10-16 01:08:37,611 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-16 01:09:04,540 [WARNING] -  * Debugger is active!
+2023-10-16 01:09:04,547 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-16 01:09:17,852 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-16 01:09:17,853 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\tasks\\structured_data.py', reloading
+2023-10-16 01:09:17,855 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\auto_model.py', reloading
+2023-10-16 01:09:17,858 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\engine\\base_tuner.py', reloading
+2023-10-16 01:09:17,860 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\engine\\oracle.py', reloading
+2023-10-16 01:09:17,862 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\engine\\stateful.py', reloading
+2023-10-16 01:09:17,865 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\lib\\io\\file_io.py', reloading
+2023-10-16 01:09:17,868 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\IPython\\core\\interactiveshell.py', reloading
+2023-10-16 01:09:19,718 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-16 01:09:34,758 [WARNING] -  * Debugger is active!
+2023-10-16 01:09:34,763 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-16 01:11:35,111 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\saving\\saving_utils.py', reloading
+2023-10-16 01:11:36,790 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-16 01:11:56,117 [WARNING] -  * Debugger is active!
+2023-10-16 01:11:56,123 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-16 01:27:13,350 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\_pytest\\cacheprovider.py', reloading
+2023-10-16 01:28:11,794 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-16 01:28:39,582 [WARNING] -  * Debugger is active!
+2023-10-16 01:28:39,592 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-16 02:06:52,006 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\traitlets\\traitlets.py', reloading
+2023-10-16 02:09:07,663 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-16 02:09:20,967 [WARNING] -  * Debugger is active!
+2023-10-16 02:09:20,970 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-16 02:09:45,613 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\file_monitor.py', reloading
+2023-10-16 02:09:47,586 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-16 02:10:22,167 [WARNING] -  * Debugger is active!
+2023-10-16 02:10:22,234 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-16 02:11:23,522 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-16 02:11:23,522 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-16 02:11:23,523 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-16 02:11:25,240 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-16 02:11:55,635 [WARNING] -  * Debugger is active!
+2023-10-16 02:11:55,641 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-16 02:13:37,110 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\saving\\saving_utils.py', reloading
+2023-10-16 02:13:38,484 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-16 02:14:00,964 [WARNING] -  * Debugger is active!
+2023-10-16 02:14:00,970 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:41:56,010 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:47:02,726 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:48:04,116 [WARNING] -  * Debugger is active!
+2023-10-17 00:48:04,121 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:48:39,052 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\utils\\utils.py', reloading
+2023-10-17 00:48:39,349 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\blocks\\__init__.py', reloading
+2023-10-17 00:48:40,474 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:48:55,419 [WARNING] -  * Debugger is active!
+2023-10-17 00:48:55,424 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:49:37,254 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\pipeline.py', reloading
+2023-10-17 00:49:38,637 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:49:57,711 [WARNING] -  * Debugger is active!
+2023-10-17 00:49:57,720 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:51:23,527 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\saving\\saved_model\\constants.py', reloading
+2023-10-17 00:51:23,586 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\__init__.py', reloading
+2023-10-17 00:51:25,061 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:51:39,423 [WARNING] -  * Debugger is active!
+2023-10-17 00:51:39,426 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:51:49,574 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\engine\\preprocessor.py', reloading
+2023-10-17 00:51:50,432 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:52:05,351 [WARNING] -  * Debugger is active!
+2023-10-17 00:52:05,357 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:52:11,628 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\protobuf\\versions_pb2.py', reloading
+2023-10-17 00:52:12,369 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\optimizers\\optimizer_v2\\optimizer_v2.py', reloading
+2023-10-17 00:52:13,566 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:52:32,839 [WARNING] -  * Debugger is active!
+2023-10-17 00:52:32,849 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:53:07,037 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\engine\\training.py', reloading
+2023-10-17 00:53:08,174 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:53:24,134 [WARNING] -  * Debugger is active!
+2023-10-17 00:53:24,140 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:53:38,062 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:53:38,064 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:53:38,064 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:53:39,371 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:53:56,585 [WARNING] -  * Debugger is active!
+2023-10-17 00:53:56,590 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:53:59,194 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:53:59,231 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:54:00,749 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:54:16,733 [WARNING] -  * Debugger is active!
+2023-10-17 00:54:16,738 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:54:21,792 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:54:21,793 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:54:21,794 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:54:22,652 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:54:35,142 [WARNING] -  * Debugger is active!
+2023-10-17 00:54:35,147 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:54:40,643 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:54:40,644 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:54:40,645 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:54:41,839 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:55:00,371 [WARNING] -  * Debugger is active!
+2023-10-17 00:55:00,376 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:55:01,671 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:55:01,671 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:55:01,672 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:55:03,287 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:55:20,362 [WARNING] -  * Debugger is active!
+2023-10-17 00:55:20,368 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:55:44,125 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:55:44,126 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:55:44,127 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:55:45,397 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:55:58,072 [WARNING] -  * Debugger is active!
+2023-10-17 00:55:58,080 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:56:05,382 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:56:05,382 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:56:05,383 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:56:07,251 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:56:20,265 [WARNING] -  * Debugger is active!
+2023-10-17 00:56:20,270 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:56:20,862 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:56:20,864 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:56:20,865 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:56:22,228 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:56:36,573 [WARNING] -  * Debugger is active!
+2023-10-17 00:56:36,578 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:56:43,997 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:56:43,998 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:56:43,999 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:56:45,386 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:57:00,079 [WARNING] -  * Debugger is active!
+2023-10-17 00:57:00,089 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:57:01,395 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:57:01,397 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:57:01,397 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:57:02,882 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:57:21,856 [WARNING] -  * Debugger is active!
+2023-10-17 00:57:21,861 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:57:22,859 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:57:22,859 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:57:22,860 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:57:23,705 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:57:36,221 [WARNING] -  * Debugger is active!
+2023-10-17 00:57:36,226 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:57:43,248 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:57:43,248 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:57:43,249 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:57:44,062 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:58:00,633 [WARNING] -  * Debugger is active!
+2023-10-17 00:58:00,638 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:58:03,576 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:58:03,580 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:58:03,581 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:58:04,559 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:58:18,673 [WARNING] -  * Debugger is active!
+2023-10-17 00:58:18,677 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:58:41,258 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:58:41,352 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:58:41,353 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:58:42,775 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:58:56,990 [WARNING] -  * Debugger is active!
+2023-10-17 00:58:56,995 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:58:58,977 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:58:58,978 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:58:58,979 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:58:59,994 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:59:14,644 [WARNING] -  * Debugger is active!
+2023-10-17 00:59:14,653 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:59:17,214 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:59:17,216 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:59:17,216 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:59:18,468 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:59:32,183 [WARNING] -  * Debugger is active!
+2023-10-17 00:59:32,190 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:59:33,326 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:59:33,327 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:59:33,327 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:59:35,057 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 00:59:52,556 [WARNING] -  * Debugger is active!
+2023-10-17 00:59:52,563 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 00:59:53,148 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:59:53,149 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:59:53,149 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 00:59:54,375 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 01:00:09,351 [WARNING] -  * Debugger is active!
+2023-10-17 01:00:09,355 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 01:00:33,851 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\file_monitor.py', reloading
+2023-10-17 01:00:35,577 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 01:00:55,661 [WARNING] -  * Debugger is active!
+2023-10-17 01:00:55,666 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 01:02:50,041 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\pandas\\io\\parsers\\readers.py', reloading
+2023-10-17 01:02:51,193 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 01:03:10,545 [WARNING] -  * Debugger is active!
+2023-10-17 01:03:10,550 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 01:03:16,952 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 01:03:16,954 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 01:03:16,955 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-17 01:03:18,664 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 01:03:35,426 [WARNING] -  * Debugger is active!
+2023-10-17 01:03:35,432 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 01:04:36,210 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\traitlets\\traitlets.py', reloading
+2023-10-17 01:04:37,586 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 04:05:05,097 [WARNING] -  * Debugger is active!
+2023-10-17 04:05:05,105 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 10:53:10,482 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\traitlets\\traitlets.py', reloading
+2023-10-17 10:53:19,788 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 10:53:52,835 [WARNING] -  * Debugger is active!
+2023-10-17 10:53:52,844 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 10:54:08,773 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\file_monitor.py', reloading
+2023-10-17 10:54:10,280 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 10:54:43,458 [WARNING] -  * Debugger is active!
+2023-10-17 10:54:43,473 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 10:56:44,647 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\saving\\saving_utils.py', reloading
+2023-10-17 10:56:46,425 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 10:57:09,854 [WARNING] -  * Debugger is active!
+2023-10-17 10:57:09,865 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 10:58:27,297 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-17 10:58:27,316 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-17 10:58:27,317 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-17 10:58:28,778 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 10:58:44,952 [WARNING] -  * Debugger is active!
+2023-10-17 10:58:44,955 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 10:59:06,722 [INFO] -  * Detected change in 'C:\\Users\\DEEPAN~1\\AppData\\Local\\Temp\\__autograph_generated_file9s2kp4b8.py', reloading
+2023-10-17 10:59:06,724 [INFO] -  * Detected change in 'C:\\Users\\DEEPAN~1\\AppData\\Local\\Temp\\__autograph_generated_file9s2kp4b8.py', reloading
+2023-10-17 10:59:06,749 [WARNING] - Model was constructed with shape (None, 9) for input KerasTensor(type_spec=TensorSpec(shape=(None, 9), dtype=tf.string, name='input_1'), name='input_1', description="created by layer 'input_1'"), but it was called on an input with incompatible shape (None,).
+2023-10-17 10:59:06,944 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\alibi\\explainers\\integrated_gradients.py', reloading
+2023-10-17 10:59:08,575 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 10:59:28,859 [WARNING] -  * Debugger is active!
+2023-10-17 10:59:28,865 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-17 11:01:49,457 [INFO] -  * Detected change in 'C:\\Users\\DEEPAN~1\\AppData\\Local\\Temp\\__autograph_generated_filekd79yalr.py', reloading
+2023-10-17 11:01:49,458 [INFO] -  * Detected change in 'C:\\Users\\DEEPAN~1\\AppData\\Local\\Temp\\__autograph_generated_filekd79yalr.py', reloading
+2023-10-17 11:01:49,474 [WARNING] - Model was constructed with shape (None, 9) for input KerasTensor(type_spec=TensorSpec(shape=(None, 9), dtype=tf.string, name='input_1'), name='input_1', description="created by layer 'input_1'"), but it was called on an input with incompatible shape (None,).
+2023-10-17 11:01:51,730 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-17 11:02:12,343 [WARNING] -  * Debugger is active!
+2023-10-17 11:02:12,352 [INFO] -  * Debugger PIN: 156-083-472
+2023-10-19 13:13:59,872 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-19 13:14:29,618 [WARNING] -  * Debugger is active!
+2023-10-19 13:14:29,652 [INFO] -  * Debugger PIN: 444-443-572
+2023-10-19 13:15:08,481 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\preprocessors\\common.py', reloading
+2023-10-19 13:15:09,260 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\keras_layers.py', reloading
+2023-10-19 13:15:10,913 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-19 13:15:40,137 [WARNING] -  * Debugger is active!
+2023-10-19 13:15:40,670 [INFO] -  * Debugger PIN: 444-443-572
+2023-10-19 13:16:39,681 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\saved_model\\signature_serialization.py', reloading
+2023-10-19 13:16:40,959 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-19 13:17:09,430 [WARNING] -  * Debugger is active!
+2023-10-19 13:17:09,438 [INFO] -  * Debugger PIN: 444-443-572
+2023-10-19 13:17:14,673 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\_pytest\\cacheprovider.py', reloading
+2023-10-19 13:17:14,788 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\_pytest\\capture.py', reloading
+2023-10-19 13:17:14,899 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\_pytest\\doctest.py', reloading
+2023-10-19 13:17:15,046 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\_pytest\\junitxml.py', reloading
+2023-10-19 13:17:15,122 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\_pytest\\legacypath.py', reloading
+2023-10-19 13:17:15,200 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\_pytest\\logging.py', reloading
+2023-10-19 13:17:15,312 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\_pytest\\recwarn.py', reloading
+2023-10-19 13:17:16,700 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-19 13:17:42,103 [WARNING] -  * Debugger is active!
+2023-10-19 13:17:42,120 [INFO] -  * Debugger PIN: 444-443-572
+2023-10-19 13:21:32,558 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\plotly\\graph_objs\\_heatmap.py', reloading
+2023-10-19 13:21:32,724 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\plotly\\io\\__init__.py', reloading
+2023-10-19 13:21:32,950 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\plotly\\io\\_renderers.py', reloading
+2023-10-19 13:21:33,109 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\plotly\\__init__.py', reloading
+2023-10-19 13:21:33,140 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\plotly\\optional_imports.py', reloading
+2023-10-19 13:21:33,172 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\_plotly_utils\\optional_imports.py', reloading
+2023-10-19 13:21:33,296 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\packaging\\version.py', reloading
+2023-10-19 13:21:35,763 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-19 13:22:02,069 [WARNING] -  * Debugger is active!
+2023-10-19 13:22:02,074 [INFO] -  * Debugger PIN: 444-443-572
+2023-10-19 13:23:47,225 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\flask\\__init__.py', reloading
+2023-10-19 13:23:47,381 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\flask\\app.py', reloading
+2023-10-19 13:23:47,868 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\flask\\scaffold.py', reloading
+2023-10-19 13:23:50,429 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-19 17:05:40,374 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-19 17:06:02,740 [WARNING] -  * Debugger is active!
+2023-10-19 17:06:02,781 [INFO] -  * Debugger PIN: 444-443-572
+2023-10-19 17:07:38,262 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\traitlets\\traitlets.py', reloading
+2023-10-19 17:07:39,680 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-19 17:08:04,342 [WARNING] -  * Debugger is active!
+2023-10-19 17:08:04,350 [INFO] -  * Debugger PIN: 444-443-572
+2023-10-19 17:08:05,854 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-19 17:08:05,856 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-19 17:08:05,856 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-19 17:08:07,488 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-19 17:08:30,061 [WARNING] -  * Debugger is active!
+2023-10-19 17:08:30,069 [INFO] -  * Debugger PIN: 444-443-572
+2023-10-19 17:08:33,507 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\IPython\\core\\interactiveshell.py', reloading
+2023-10-19 17:08:35,397 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-19 17:08:58,021 [WARNING] -  * Debugger is active!
+2023-10-19 17:08:58,029 [INFO] -  * Debugger PIN: 444-443-572
+2023-10-19 17:09:31,992 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-19 17:09:31,993 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-19 17:09:31,994 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-19 17:09:33,657 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-19 17:09:58,210 [WARNING] -  * Debugger is active!
+2023-10-19 17:09:58,215 [INFO] -  * Debugger PIN: 444-443-572
+2023-10-19 17:11:01,015 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\preprocessors\\common.py', reloading
+2023-10-19 17:11:02,632 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-19 17:11:29,231 [WARNING] -  * Debugger is active!
+2023-10-19 17:11:29,239 [INFO] -  * Debugger PIN: 444-443-572
+2023-10-19 17:12:54,900 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\saved_model\\signature_serialization.py', reloading
+2023-10-19 17:12:56,922 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-19 17:13:22,504 [WARNING] -  * Debugger is active!
+2023-10-19 17:13:22,512 [INFO] -  * Debugger PIN: 444-443-572
+2023-10-19 17:16:59,096 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-19 17:16:59,097 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-19 17:16:59,098 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-19 17:17:01,053 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-19 17:17:30,635 [WARNING] -  * Debugger is active!
+2023-10-19 17:17:30,642 [INFO] -  * Debugger PIN: 444-443-572
+2023-10-19 17:17:36,501 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-19 17:17:36,502 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-19 17:17:36,510 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-19 17:17:36,511 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-19 17:17:37,807 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-19 17:17:58,586 [WARNING] -  * Debugger is active!
+2023-10-19 17:17:58,592 [INFO] -  * Debugger PIN: 444-443-572
+2023-10-19 17:18:44,812 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\data\\__init__.py', reloading
+2023-10-19 17:18:44,816 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\data\\experimental\\__init__.py', reloading
+2023-10-19 17:18:44,821 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\data\\experimental\\service\\__init__.py', reloading
+2023-10-19 17:18:44,826 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\data\\experimental\\ops\\data_service_ops.py', reloading
+2023-10-19 17:18:44,833 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\data\\experimental\\ops\\compression_ops.py', reloading
+2023-10-19 17:18:44,842 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\tensor_array_ops.py', reloading
+2023-10-19 17:18:44,851 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\traceback.py', reloading
+2023-10-19 17:18:44,854 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\linecache.py', reloading
+2023-10-19 17:18:46,669 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-19 17:19:09,711 [WARNING] -  * Debugger is active!
+2023-10-19 17:19:09,721 [INFO] -  * Debugger PIN: 444-443-572
+2023-10-19 17:19:25,903 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-19 17:19:25,904 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-19 17:19:25,905 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-10-19 17:19:26,898 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-19 17:19:53,091 [WARNING] -  * Debugger is active!
+2023-10-19 17:19:53,109 [INFO] -  * Debugger PIN: 444-443-572
+2023-10-19 17:20:49,069 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\plots.py', reloading
+2023-10-19 17:20:49,070 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\plots.py', reloading
+2023-10-19 17:20:49,071 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\plots.py', reloading
+2023-10-19 17:20:50,381 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-19 17:21:14,968 [WARNING] -  * Debugger is active!
+2023-10-19 17:21:14,974 [INFO] -  * Debugger PIN: 444-443-572
+2023-10-19 17:23:34,820 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\requests\\models.py', reloading
+2023-10-19 17:23:34,822 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\json\\__init__.py', reloading
+2023-10-19 17:23:34,827 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\json\\encoder.py', reloading
+2023-10-19 17:23:36,257 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-19 17:23:58,841 [WARNING] -  * Debugger is active!
+2023-10-19 17:23:58,849 [INFO] -  * Debugger PIN: 444-443-572
+2023-10-19 17:26:59,594 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\plots.py', reloading
+2023-10-19 17:26:59,597 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\plots.py', reloading
+2023-10-19 17:26:59,598 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\plots.py', reloading
+2023-10-19 17:27:01,254 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-19 17:27:29,361 [WARNING] -  * Debugger is active!
+2023-10-19 17:27:29,367 [INFO] -  * Debugger PIN: 444-443-572
+2023-10-19 17:27:29,517 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\plots.py', reloading
+2023-10-19 17:27:29,518 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\plots.py', reloading
+2023-10-19 17:27:29,519 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\plots.py', reloading
+2023-10-19 17:27:31,617 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-19 17:27:57,074 [WARNING] -  * Debugger is active!
+2023-10-19 17:27:57,086 [INFO] -  * Debugger PIN: 444-443-572
+2023-10-19 17:29:27,422 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\plots.py', reloading
+2023-10-19 17:29:27,423 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\plots.py', reloading
+2023-10-19 17:29:27,424 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\plots.py', reloading
+2023-10-19 17:29:28,883 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-19 17:29:55,200 [WARNING] -  * Debugger is active!
+2023-10-19 17:29:55,211 [INFO] -  * Debugger PIN: 444-443-572
+2023-10-26 15:26:21,584 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-26 15:26:32,163 [WARNING] -  * Debugger is active!
+2023-10-26 15:26:32,167 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-26 16:04:21,881 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\json\\__init__.py', reloading
+2023-10-26 16:04:21,882 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\json\\decoder.py', reloading
+2023-10-26 16:04:24,099 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-26 16:04:37,759 [WARNING] -  * Debugger is active!
+2023-10-26 16:04:37,762 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-26 16:12:10,010 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\networkx\\drawing\\nx_agraph.py', reloading
+2023-10-26 16:12:10,939 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-26 16:12:23,463 [WARNING] -  * Debugger is active!
+2023-10-26 16:12:23,468 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-26 19:03:30,161 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-26 19:03:44,721 [WARNING] -  * Debugger is active!
+2023-10-26 19:03:44,730 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-26 19:11:28,884 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\traitlets\\traitlets.py', reloading
+2023-10-26 19:11:30,258 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-26 19:11:51,184 [WARNING] -  * Debugger is active!
+2023-10-26 19:11:51,190 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-27 19:40:07,700 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-27 19:40:23,818 [WARNING] -  * Debugger is active!
+2023-10-27 19:40:23,859 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-27 20:06:10,858 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\keras_layers.py', reloading
+2023-10-27 20:06:10,999 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\utils\\data_utils.py', reloading
+2023-10-27 20:06:11,386 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\engine\\training.py', reloading
+2023-10-27 20:06:11,452 [WARNING] - Model was constructed with shape (None, 9) for input KerasTensor(type_spec=TensorSpec(shape=(None, 9), dtype=tf.string, name='input_1'), name='input_1', description="created by layer 'input_1'"), but it was called on an input with incompatible shape (None,).
+2023-10-27 20:06:12,491 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-27 20:06:27,265 [WARNING] -  * Debugger is active!
+2023-10-27 20:06:27,270 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-27 20:06:37,461 [WARNING] - Model was constructed with shape (None, 9) for input KerasTensor(type_spec=TensorSpec(shape=(None, 9), dtype=tf.string, name='input_1'), name='input_1', description="created by layer 'input_1'"), but it was called on an input with incompatible shape (None,).
+2023-10-27 20:06:37,571 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\alibi\\explainers\\integrated_gradients.py', reloading
+2023-10-27 20:06:39,399 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-27 20:06:51,313 [WARNING] -  * Debugger is active!
+2023-10-27 20:06:51,319 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-27 23:45:21,259 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\traitlets\\traitlets.py', reloading
+2023-10-27 23:45:50,705 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-27 23:46:06,120 [WARNING] -  * Debugger is active!
+2023-10-27 23:46:06,130 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-27 23:46:06,310 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\file_monitor.py', reloading
+2023-10-27 23:46:08,277 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-27 23:46:29,051 [WARNING] -  * Debugger is active!
+2023-10-27 23:46:29,060 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-27 23:47:10,290 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\saving\\saving_utils.py', reloading
+2023-10-27 23:47:11,817 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-27 23:47:31,496 [WARNING] -  * Debugger is active!
+2023-10-27 23:47:31,501 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-27 23:51:13,920 [INFO] -  * Detected change in 'C:\\Users\\DEEPAN~1\\AppData\\Local\\Temp\\__autograph_generated_filewbs2aqe_.py', reloading
+2023-10-27 23:51:13,921 [INFO] -  * Detected change in 'C:\\Users\\DEEPAN~1\\AppData\\Local\\Temp\\__autograph_generated_filewbs2aqe_.py', reloading
+2023-10-27 23:51:13,935 [WARNING] - Model was constructed with shape (None, 9) for input KerasTensor(type_spec=TensorSpec(shape=(None, 9), dtype=tf.string, name='input_1'), name='input_1', description="created by layer 'input_1'"), but it was called on an input with incompatible shape (None,).
+2023-10-27 23:51:14,052 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\alibi\\explainers\\integrated_gradients.py', reloading
+2023-10-27 23:51:16,008 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-27 23:51:30,563 [WARNING] -  * Debugger is active!
+2023-10-27 23:51:30,567 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-27 23:53:05,221 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-27 23:53:06,708 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-27 23:53:17,627 [WARNING] -  * Debugger is active!
+2023-10-27 23:53:17,631 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-28 00:02:18,745 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\sklearn_tuner.py', reloading
+2023-10-28 00:02:20,109 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-28 00:02:34,479 [WARNING] -  * Debugger is active!
+2023-10-28 00:02:34,496 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-28 20:16:29,906 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-28 20:18:01,498 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-28 20:18:43,390 [WARNING] -  * Debugger is active!
+2023-10-28 20:18:43,411 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-28 20:20:21,429 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\sklearn\\gaussian_process\\__init__.py', reloading
+2023-10-28 20:20:22,702 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-28 20:20:42,586 [WARNING] -  * Debugger is active!
+2023-10-28 20:20:42,591 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-28 20:25:33,411 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\sklearn\\base.py', reloading
+2023-10-28 20:25:33,434 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\sklearn\\utils\\validation.py', reloading
+2023-10-28 20:25:35,063 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-28 20:25:51,442 [WARNING] -  * Debugger is active!
+2023-10-28 20:25:51,451 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-28 20:29:58,722 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-28 20:29:58,722 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-28 20:29:58,728 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-28 20:29:59,720 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-28 20:30:11,186 [WARNING] -  * Debugger is active!
+2023-10-28 20:30:11,189 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-28 20:32:30,613 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\sklearn\\gaussian_process\\kernels.py', reloading
+2023-10-28 20:32:32,682 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-28 20:32:47,865 [WARNING] -  * Debugger is active!
+2023-10-28 20:32:47,872 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-28 20:33:44,953 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\engine\\hypermodel.py', reloading
+2023-10-28 20:33:46,455 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-28 20:33:58,191 [WARNING] -  * Debugger is active!
+2023-10-28 20:33:58,195 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-28 20:34:24,798 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-28 20:34:24,800 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-28 20:34:24,801 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-28 20:34:26,285 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-28 20:34:36,930 [WARNING] -  * Debugger is active!
+2023-10-28 20:34:36,934 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-28 20:34:38,782 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-28 20:34:38,786 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-28 20:34:38,787 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-28 20:34:39,678 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-28 20:34:51,270 [WARNING] -  * Debugger is active!
+2023-10-28 20:34:51,275 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-28 20:35:05,686 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-28 20:35:05,687 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-28 20:35:05,689 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-28 20:35:05,690 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-28 20:35:07,161 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-28 20:35:18,178 [WARNING] -  * Debugger is active!
+2023-10-28 20:35:18,182 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-28 20:35:19,885 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-28 20:35:19,886 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-28 20:35:19,937 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-28 20:35:20,889 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-28 20:35:32,006 [WARNING] -  * Debugger is active!
+2023-10-28 20:35:32,010 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-28 20:35:36,783 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-28 20:35:36,787 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-28 20:35:36,788 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-28 20:35:36,789 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-28 20:35:37,785 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-29 19:56:38,325 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-29 19:57:10,391 [WARNING] -  * Debugger is active!
+2023-10-29 19:57:10,617 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-29 19:57:31,074 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-29 19:57:31,076 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-29 19:57:31,083 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\tuners\\bayesian.py', reloading
+2023-10-29 19:57:33,275 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-29 19:58:05,560 [WARNING] -  * Debugger is active!
+2023-10-29 19:58:05,568 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-29 19:58:31,712 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\saving\\saving_utils.py', reloading
+2023-10-29 19:58:33,126 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-29 19:58:55,446 [WARNING] -  * Debugger is active!
+2023-10-29 19:58:55,452 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-29 20:05:15,992 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-29 20:05:15,994 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-29 20:05:15,995 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-29 20:05:16,845 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-29 20:05:39,154 [WARNING] -  * Debugger is active!
+2023-10-29 20:05:39,159 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-29 20:05:45,116 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-29 20:05:45,117 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-29 20:05:45,118 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-29 20:05:45,118 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-29 20:05:46,041 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-29 20:20:24,354 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-29 20:20:41,526 [WARNING] -  * Debugger is active!
+2023-10-29 20:20:41,536 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-29 20:23:42,993 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-29 20:23:56,575 [WARNING] -  * Debugger is active!
+2023-10-29 20:23:56,584 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-29 20:26:59,208 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-29 20:27:11,637 [WARNING] -  * Debugger is active!
+2023-10-29 20:27:11,641 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-29 20:44:11,447 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\widgetsnbextension\\_version.py', reloading
+2023-10-29 20:44:11,447 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\widgetsnbextension\\__init__.py', reloading
+2023-10-29 20:44:12,913 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-29 20:44:33,441 [WARNING] -  * Debugger is active!
+2023-10-29 20:44:33,446 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-29 21:17:50,856 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-29 21:18:32,681 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-29 21:20:47,241 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-29 21:20:59,197 [WARNING] -  * Debugger is active!
+2023-10-29 21:20:59,205 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-29 21:22:52,300 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-29 21:22:52,301 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-29 21:22:52,306 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-29 21:22:52,310 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-29 21:22:53,665 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-29 21:23:13,718 [WARNING] -  * Debugger is active!
+2023-10-29 21:23:13,724 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-29 21:23:48,989 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-29 21:23:48,991 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-29 21:23:48,992 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-29 21:23:48,992 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-10-29 21:23:50,140 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-10-29 21:24:05,755 [WARNING] -  * Debugger is active!
+2023-10-29 21:24:05,762 [INFO] -  * Debugger PIN: 811-696-751
+2023-10-30 10:47:24,533 [ERROR] - Invalid session fM75I8jPeloNAGexAAAN (further occurrences of this error will be logged with level INFO)
+2023-11-01 12:10:45,970 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\traitlets\\traitlets.py', reloading
+2023-11-01 12:12:18,404 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-01 12:13:23,170 [WARNING] -  * Debugger is active!
+2023-11-01 12:13:23,185 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-01 12:13:25,492 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 12:13:25,494 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\tasks\\structured_data.py', reloading
+2023-11-01 12:13:25,498 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\auto_model.py', reloading
+2023-11-01 12:13:25,503 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\engine\\base_tuner.py', reloading
+2023-11-01 12:13:25,505 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\engine\\tuner.py', reloading
+2023-11-01 12:13:25,506 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\utils\\utils.py', reloading
+2023-11-01 12:13:25,510 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\utils\\traceback_utils.py', reloading
+2023-11-01 12:13:25,519 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\util\\traceback_utils.py', reloading
+2023-11-01 12:13:25,521 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\eager\\def_function.py', reloading
+2023-11-01 12:13:25,523 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\eager\\function.py', reloading
+2023-11-01 12:13:25,527 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\framework\\func_graph.py', reloading
+2023-11-01 12:13:25,534 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\autograph\\impl\\api.py', reloading
+2023-11-01 12:13:25,537 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\distribute\\distribute_lib.py', reloading
+2023-11-01 12:13:25,542 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\optimizers\\optimizer_v2\\optimizer_v2.py', reloading
+2023-11-01 12:13:25,546 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\eager\\backprop.py', reloading
+2023-11-01 12:13:25,549 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\eager\\imperative_grad.py', reloading
+2023-11-01 12:13:25,553 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\util\\dispatch.py', reloading
+2023-11-01 12:13:25,563 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\gen_math_ops.py', reloading
+2023-11-01 12:13:25,566 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\framework\\op_def_library.py', reloading
+2023-11-01 12:13:25,574 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\IPython\\core\\interactiveshell.py', reloading
+2023-11-01 12:13:27,933 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-01 12:14:01,394 [WARNING] -  * Debugger is active!
+2023-11-01 12:14:01,401 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-01 12:15:19,677 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\custom_gradient.py', reloading
+2023-11-01 12:15:22,269 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-01 12:15:58,303 [WARNING] -  * Debugger is active!
+2023-11-01 12:15:58,306 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-01 12:18:25,691 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\saving\\saving_utils.py', reloading
+2023-11-01 12:18:28,781 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-01 12:19:17,955 [WARNING] -  * Debugger is active!
+2023-11-01 12:19:18,691 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-01 17:39:40,161 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\file_monitor.py', reloading
+2023-11-01 17:49:42,896 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-01 17:49:57,390 [WARNING] -  * Debugger is active!
+2023-11-01 17:49:57,396 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-01 18:02:29,325 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\traitlets\\traitlets.py', reloading
+2023-11-01 18:02:30,676 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-01 18:02:51,331 [WARNING] -  * Debugger is active!
+2023-11-01 18:02:51,343 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-01 18:02:51,919 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\engine\\tuner.py', reloading
+2023-11-01 18:02:52,371 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\engine\\base_preprocessing_layer.py', reloading
+2023-11-01 18:02:53,536 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-01 18:03:18,230 [WARNING] -  * Debugger is active!
+2023-11-01 18:03:18,238 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-01 18:03:18,646 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 18:03:18,649 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\tasks\\structured_data.py', reloading
+2023-11-01 18:03:18,651 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\auto_model.py', reloading
+2023-11-01 18:03:18,653 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\engine\\base_tuner.py', reloading
+2023-11-01 18:03:18,655 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_tuner\\engine\\tuner.py', reloading
+2023-11-01 18:03:18,655 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\utils\\utils.py', reloading
+2023-11-01 18:03:18,657 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\utils\\traceback_utils.py', reloading
+2023-11-01 18:03:18,661 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\util\\traceback_utils.py', reloading
+2023-11-01 18:03:18,663 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\eager\\def_function.py', reloading
+2023-11-01 18:03:18,665 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\eager\\function.py', reloading
+2023-11-01 18:03:18,666 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\framework\\func_graph.py', reloading
+2023-11-01 18:03:18,668 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\autograph\\impl\\api.py', reloading
+2023-11-01 18:03:18,671 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\distribute\\distribute_lib.py', reloading
+2023-11-01 18:03:18,674 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\engine\\base_layer.py', reloading
+2023-11-01 18:03:18,677 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\engine\\functional.py', reloading
+2023-11-01 18:03:18,679 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\layers\\preprocessing\\normalization.py', reloading
+2023-11-01 18:03:18,681 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\util\\dispatch.py', reloading
+2023-11-01 18:03:18,687 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\gen_math_ops.py', reloading
+2023-11-01 18:03:18,688 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\framework\\op_def_library.py', reloading
+2023-11-01 18:03:18,689 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\profiler\\trace.py', reloading
+2023-11-01 18:03:18,695 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\framework\\constant_op.py', reloading
+2023-11-01 18:03:18,698 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\IPython\\core\\interactiveshell.py', reloading
+2023-11-01 18:03:20,345 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-01 18:03:43,941 [WARNING] -  * Debugger is active!
+2023-11-01 18:03:43,952 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-01 18:05:35,517 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\saving\\saving_utils.py', reloading
+2023-11-01 18:05:36,943 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-01 18:05:58,078 [WARNING] -  * Debugger is active!
+2023-11-01 18:05:58,083 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-01 18:15:31,547 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\flask\\app.py', reloading
+2023-11-01 18:15:31,766 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\flask_restful\\__init__.py', reloading
+2023-11-01 18:15:31,770 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\flask\\views.py', reloading
+2023-11-01 18:15:32,157 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\flask\\helpers.py', reloading
+2023-11-01 18:15:32,565 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\werkzeug\\utils.py', reloading
+2023-11-01 18:16:22,671 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-01 18:16:51,365 [WARNING] -  * Debugger is active!
+2023-11-01 18:16:51,371 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-01 18:42:05,934 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\framework\\registry.py', reloading
+2023-11-01 18:42:05,959 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\framework\\ops.py', reloading
+2023-11-01 18:42:05,960 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\array_ops.py', reloading
+2023-11-01 18:42:05,966 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\list_ops.py', reloading
+2023-11-01 18:42:06,004 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\math_ops.py', reloading
+2023-11-01 18:42:06,068 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\control_flow_ops.py', reloading
+2023-11-01 18:42:06,074 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\check_ops.py', reloading
+2023-11-01 18:42:06,084 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\ragged\\ragged_tensor.py', reloading
+2023-11-01 18:42:06,174 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\bitwise_ops.py', reloading
+2023-11-01 18:42:06,181 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\stateless_random_ops.py', reloading
+2023-11-01 18:42:06,185 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\random_ops.py', reloading
+2023-11-01 18:42:06,211 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\resource_variable_ops.py', reloading
+2023-11-01 18:42:06,232 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\io_ops.py', reloading
+2023-11-01 18:42:06,241 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\string_ops.py', reloading
+2023-11-01 18:42:06,309 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\tpu\\ops\\tpu_ops.py', reloading
+2023-11-01 18:42:06,327 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\framework\\auto_control_deps.py', reloading
+2023-11-01 18:42:06,352 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\training\\saver.py', reloading
+2023-11-01 18:42:06,360 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\script_ops.py', reloading
+2023-11-01 18:42:06,367 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\logging_ops.py', reloading
+2023-11-01 18:42:06,370 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\data\\ops\\dataset_ops.py', reloading
+2023-11-01 18:42:06,435 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\lookup_ops.py', reloading
+2023-11-01 18:42:06,478 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\special_math_ops.py', reloading
+2023-11-01 18:42:06,504 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\nn_ops.py', reloading
+2023-11-01 18:42:06,582 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\autograph\\utils\\ag_logging.py', reloading
+2023-11-01 18:42:06,601 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\ragged\\ragged_math_ops.py', reloading
+2023-11-01 18:42:06,607 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\ops\\parsing_ops.py', reloading
+2023-11-01 18:42:10,750 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-01 18:42:29,224 [WARNING] -  * Debugger is active!
+2023-11-01 18:42:29,231 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-01 18:43:22,833 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\file_monitor.py', reloading
+2023-11-01 18:43:24,145 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-01 18:43:46,536 [WARNING] -  * Debugger is active!
+2023-11-01 18:43:46,547 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-01 19:05:29,101 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\traitlets\\traitlets.py', reloading
+2023-11-01 19:05:44,495 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-01 19:06:03,749 [WARNING] -  * Debugger is active!
+2023-11-01 19:06:03,792 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-01 19:06:54,150 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\utils\\data_utils.py', reloading
+2023-11-01 19:06:54,247 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\pipeline.py', reloading
+2023-11-01 19:06:54,370 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\preprocessors\\common.py', reloading
+2023-11-01 19:06:55,879 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-01 19:07:26,204 [WARNING] -  * Debugger is active!
+2023-11-01 19:07:26,214 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-01 19:08:30,751 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\saving\\saving_utils.py', reloading
+2023-11-01 19:08:32,540 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-01 19:08:51,886 [WARNING] -  * Debugger is active!
+2023-11-01 19:08:51,900 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-01 22:47:14,305 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 22:49:46,424 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-01 22:50:25,385 [WARNING] -  * Debugger is active!
+2023-11-01 22:50:25,392 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-01 22:50:38,986 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 22:50:38,987 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 22:50:38,990 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 22:50:40,401 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-01 22:50:53,874 [WARNING] -  * Debugger is active!
+2023-11-01 22:50:53,879 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-01 22:51:31,861 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 22:51:31,862 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 22:51:32,269 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 22:51:33,156 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-01 22:51:46,873 [WARNING] -  * Debugger is active!
+2023-11-01 22:51:46,876 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-01 22:51:52,447 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 22:51:52,448 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 22:51:52,474 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 22:51:53,729 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-01 22:52:08,063 [WARNING] -  * Debugger is active!
+2023-11-01 22:52:08,067 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-01 22:53:43,149 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 22:53:43,150 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 22:53:43,151 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 22:53:43,152 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 22:53:44,268 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-01 22:54:10,649 [WARNING] -  * Debugger is active!
+2023-11-01 22:54:10,748 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-01 22:54:11,111 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 22:54:11,112 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 22:54:11,113 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 22:54:11,113 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 22:54:11,340 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\client\\session.py', reloading
+2023-11-01 22:54:12,760 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-01 22:54:37,398 [WARNING] -  * Debugger is active!
+2023-11-01 22:54:37,404 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-01 22:54:40,475 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 22:54:40,476 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 22:54:40,477 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 22:54:40,478 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\wrapper.py', reloading
+2023-11-01 22:54:42,560 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-01 22:55:03,593 [WARNING] -  * Debugger is active!
+2023-11-01 22:55:03,598 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-02 00:03:22,495 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-02 00:03:40,372 [WARNING] -  * Debugger is active!
+2023-11-02 00:03:40,381 [INFO] -  * Debugger PIN: 811-696-751
+2023-11-02 00:45:39,149 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Scripts\\pip-script.py', reloading
+2023-11-02 00:47:36,020 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-02 00:48:49,627 [WARNING] -  * Debugger is active!
+2023-11-02 00:48:49,632 [INFO] -  * Debugger PIN: 811-696-751

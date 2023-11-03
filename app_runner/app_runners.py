@@ -1,6 +1,8 @@
 import subprocess
 import os
 import sys
+import time
+import requests
 
 class AppRunner:
     def __init__(self):
@@ -14,6 +16,22 @@ class AppRunner:
 
     def stop_flask_app(self):
         self.flask_app.terminate()
+    
+    def check_if_started(self, port):
+        is_started = False
+        while True:
+            try:
+                if is_started:
+                    return True
+                # Make a GET request to the Flask app
+                response = requests.get(f"http://127.0.0.1:{port}")
+                # Check if the response status code is 200 (OK)
+                if response.status_code == 200:
+                    is_started = True
+                else:
+                    is_started = False
+            except requests.exceptions.RequestException:
+                is_started = False
 
 class SQLDBRunner:
     @staticmethod

@@ -3,7 +3,10 @@ from keras.utils import vis_utils
 from keras.models import Sequential
 from keras.layers import Dense
 from tensorflow.keras.models import Model
+from tensorflow.keras.models import save_model
 import json
+import numpy as np
+import autokeras as ak
 
 class ModelGenerator:
     def __init__(self):
@@ -34,20 +37,23 @@ class ModelGenerator:
             # Visualize the model architecture
             model_path = os.path.join(os.path.dirname(mid_path), "model.png")
             vis_utils.plot_model(model, to_file=model_path, show_shapes=True, show_layer_names=True,rankdir='LR', expand_nested=True, show_layer_activations=True )
+            return True, model_path
         except Exception as e:
             print("Cannot find it")
+            return False, None
+            
 
-    @staticmethod
-    def seperate_model_index(model):
+    
+    def seperate_model_index(self,model):
         layer_names = [layer.name for layer in model.layers]
         for index, name in enumerate(layer_names):
             if 'dense' in name:
                 return index - 1
             
-    def generate_final_architecture_dense(self, model):
+    def generate_final_architecture(self, model):
         index = self.seperate_model_index(model)
         vis_utils.plot_model(model, to_file='./structured_data_classifier/test_model.png', show_shapes=True, show_layer_names=True,rankdir='LR', expand_nested=True, show_layer_activations=True)
-        preprocessing_model = Model(inputs=model.input, outputs=model.layers[index].output)  
+        preprocessing_model = Model(inputs=model.input, outputs=model.layers[index].output) 
         vis_utils.plot_model(preprocessing_model, to_file='./structured_data_classifier/preprocessing_model.png', show_shapes=True, show_layer_names=True,rankdir='LR', expand_nested=True, show_layer_activations=True)
         dense_model = Model(inputs=model.layers[index+1].input, outputs=model.output) 
         vis_utils.plot_model(dense_model, to_file='./structured_data_classifier/dense_model.png', show_shapes=True, show_layer_names=True,rankdir='LR', expand_nested=True, show_layer_activations=True)
