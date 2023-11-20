@@ -1,0 +1,18 @@
+digraph {
+	"structured_data_block_1/normalize" [label=True]
+	"structured_data_block_1/dense_block_1/num_layers" [label=2]
+	"structured_data_block_1/dense_block_1/use_batchnorm" [label=False]
+	"structured_data_block_1/dense_block_1/dropout" [label=0]
+	"structured_data_block_1/dense_block_1/units_0" [label=32]
+	"structured_data_block_1/dense_block_1/units_1" [label=32]
+	"classification_head_1/dropout" [label=0]
+	optimizer [label=adam]
+	learning_rate [label=0.001]
+	structured_data_block_1 -> "structured_data_block_1/normalize"
+	"structured_data_block_1/dense_block_1" -> "structured_data_block_1/dense_block_1/num_layers"
+	"structured_data_block_1/dense_block_1" -> "structured_data_block_1/dense_block_1/use_batchnorm"
+	"structured_data_block_1/dense_block_1" -> "structured_data_block_1/dense_block_1/dropout"
+	"structured_data_block_1/dense_block_1" -> "structured_data_block_1/dense_block_1/units_0"
+	"structured_data_block_1/dense_block_1" -> "structured_data_block_1/dense_block_1/units_1"
+	classification_head_1 -> "classification_head_1/dropout"
+}

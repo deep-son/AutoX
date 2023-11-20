@@ -6,12 +6,17 @@ import numpy as np
 from functools import partial
 import autokeras as ak
 import logging
-import networkx as nx
+from causalnex.structure import StructureModel
+from causalnex.plots import plot_structure, NODE_STYLE, EDGE_STYLE
 import plotly.graph_objects as go
 import json
+import plotly.express as px
+import tensorflow as tf
+import traceback
+
 from flask import Flask, request, render_template, send_file
 from flask_socketio import SocketIO
-from flask_restful import Api, Resource
+from flask_restful import Api, Resource, reqparse
 import plotly.graph_objects as go
 from tensorflow.keras.models import load_model
 from tensorflow.keras.models import Model
@@ -22,6 +27,7 @@ app = Flask(__name__)
 socketio = SocketIO(app)
 api = Api(app)
 
+app.config['EXTRA_FILES'] = ['C:\\']
 log_format = '%(asctime)s [%(levelname)s] - %(message)s'
 logging.basicConfig(filename='app.log', level=logging.DEBUG, format=log_format)
 
@@ -29,6 +35,7 @@ logging.basicConfig(filename='app.log', level=logging.DEBUG, format=log_format)
 def index():
     return render_template('index.html')
 
+    
 # Define a Flask-RESTful resource for getting images
 class GetImageResource(Resource):
     def get(self, image_path, image_name):
@@ -68,6 +75,15 @@ class UpdateDataResource(Resource):
         
         return {"message": "Data updated successfully"}, 200
 
+
+class SendInitialInfo(Resource):
+
+    def post(self):
+        args = request.get_json()
+        print(args)
+        socketio.emit('initial',args) 
+        return {"message": "Data updated successfully"}, 200
+    
 class UpdateEvaluationResource(Resource):
     def post(self):
         args = request.get_json()
@@ -195,15 +211,96 @@ class ExploreModelALE(Resource):
             print("Error here")
             print(e)
 
-class ExplorePipeline(Resource):
+class ExplorePreprocessing(Resource):
+    def seperate_model_index(self,model):
+        layer_names = [layer.name for layer in model.layers]
+        for index, name in enumerate(layer_names):
+            if 'dense' in name:
+                return index - 1
+
+    def post(self):
+        try:
+            logging.info("Status: Received Request")
+            project_name = request.args.get('project_name')
+            train_file_path = request.args.get('train_file_path')
+            
+            current_directory = os.path.dirname(os.path.abspath(__file__))
+            model_directory = os.path.dirname(current_directory)
+            best_model_path = os.path.join(model_directory, project_name, 'best_model')
+            print(best_model_path)
+            model = load_model(best_model_path, custom_objects=ak.CUSTOM_OBJECTS)
+            
+            index = self.seperate_model_index(model) 
+            preprocessing_model = Model(inputs=model.input, outputs=model.layers[index].output)
+            x_train = pd.read_csv(train_file_path.strip(" '"))
+            
+            cat_to_num = {}
+            # Calculate the number of nulls in each column
+            null_counts = x_train.isnull().sum()
+
+            # Plot the number of nulls using Plotly
+            fig = px.bar(y=null_counts.index, x=null_counts.values, orientation='h', labels={'x': 'Number of Nulls', 'y': 'Columns'},
+                title='Number of Nulls in DataFrame Columns')
+            cat_to_num['null_graph'] = fig.to_json()
+            
+
+            feature_type = {feature: 'numerical' if x_train[feature].dtype in ['int64', 'float64'] else 'categorical' for feature in x_train.columns}
+            
+            cat_to_num['feature_type'] = feature_type
+
+            x_train[x_train.select_dtypes(include='object').columns] = x_train.select_dtypes(include='object').fillna('0')
+            
+            # Create a dictionary to store unique values and their string lookup values as strings
+            encoded_dict = {}
+
+            
+            # Iterate through columns, obtain unique values, and apply StringLookup
+            for col in x_train.select_dtypes(include='object').columns:
+                unique_values = x_train[col].unique()  # Get unique values
+                string_lookup = tf.keras.layers.StringLookup(output_mode='int')  # Create StringLookup instance
+                string_lookup.adapt(unique_values)  # Adapt the layer to the data
+                encoded_values = string_lookup(unique_values)  # Get string lookup integer values
+                # Convert integer values to strings and store in the dictionary
+                encoded_dict[col] = {str(val): enc.numpy() for val, enc in zip(unique_values, encoded_values)}
+
+            encoded_dict = {k: {inner_key: str(value) for inner_key, value in v.items()} for k, v in encoded_dict.items()}
+            
+            
+            cat_to_num['encoded_dict'] = encoded_dict
+            
+            layers = preprocessing_model.layers
+            norm_layer_info = {}
+            for layer in layers:
+                if layer.name=='normalization':
+                    variables = layer.non_trainable_variables
+                    for var in variables:
+                        norm_layer_info[var.name] = {"shape":str(var.shape), "data":var.numpy().tolist()}
+            logging.info(f"CategoricalToNumerical:{cat_to_num}")
+            logging.info(f"normalization:{norm_layer_info}")
+            data_json = {"CategoricalToNumerical": cat_to_num, "Normalization": norm_layer_info}
+
+            logging.info("Done: Returned")
+            return data_json
+            
+        
+        except Exception as e:
+            logging.error(f"An error occurred: {e}")
+            logging.error(traceback.format_exc())
+
+
+class ExploreTuner(Resource):
 
     def __init__(self):
         self.json_package = {}
     
     def post(self):
         try:
-            # Specify the directory where your JSON files are located
-            directory_path = "D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\structured_data_classifier"
+            logging.info("Status: Received Request")
+            project_name = request.args.get('project_name')
+            current_directory = os.path.dirname(os.path.abspath(__file__))
+            model_directory = os.path.dirname(current_directory)
+            directory_path = os.path.join(model_directory, project_name)
+            
 
             # List all JSON files that start with "decision_factors"
             decision_factors_files = [file for file in os.listdir(directory_path) if file.startswith("decision_factors") and file.endswith(".json")]
@@ -219,6 +316,11 @@ class ExplorePipeline(Resource):
                 print(e)
             
             if tuner_type == "greedy":
+
+                tuner_graphs_directory = os.path.join(directory_path, 'tuner_graphs')
+                if not os.path.exists(tuner_graphs_directory):
+                    os.makedirs(tuner_graphs_directory)
+
                 for file_name in decision_factors_files:
                     file_path = os.path.join(directory_path, file_name)
 
@@ -227,109 +329,105 @@ class ExplorePipeline(Resource):
                             data = json.load(json_file)
                             # Process the data from the JSON fil
                             trie_data = data["trie_json"]
-                        
-                        # Function to add nodes and edges to the graph
-                        def add_nodes(graph, node_data, parent=None):
+                            best = data["hp_names"]
+
+                        def add_nodes_to_causalnex(graph, node_data, parent=None):
                             for key, value in node_data['children'].items():
+                                # Add nodes to the StructureModel
                                 graph.add_node(key, num_leaves=value['num_leaves'], hp_name=value['hp_name'])
+                                
                                 if parent is not None:
+                                    # Add edges to the StructureModel
                                     graph.add_edge(parent, key)
-                                add_nodes(graph, value, key)
+                                
+                                # Recursively add nodes and edges
+                                add_nodes_to_causalnex(graph, value, key)
 
-                        # Create a directed graph
-                        G = nx.DiGraph()
+                        split_best = best[0].split('/')
+                        node_attributes = {i : {"borderWidth": 10,"color":"#0b61bc"} for i in split_best}
+                        edge_attributes = {(split_best[i],split_best[i+1]) : {"color":"#0b61bc"} for i in range(len(split_best)-1)}
+                        # Create an empty StructureModel
+                        sm = StructureModel()
+                        all_edge_attributes = {
+                            "color":{
+                                "color": "#FFFFFFD9",
+                                "highlight": "#3c4a59",
+                            },
+                            "length": 100,
+                        }
+                        # Add nodes and edges to the StructureModel
+                        add_nodes_to_causalnex(sm, trie_data)
 
-                        # Add nodes and edges to the graph
-                        add_nodes(G, trie_data)
+                        # Visualize the StructureModel
 
-                        # Define a custom layout with a top-down orientation
-                        pos = nx.nx_agraph.graphviz_layout(G, prog="dot", args="-Grankdir=TB")
+                        viz = plot_structure(
+                            sm,
+                            all_node_attributes=NODE_STYLE.WEAK,
+                            all_edge_attributes=all_edge_attributes,
+                            node_attributes=node_attributes,
+                            edge_attributes=edge_attributes,
+                        )
+                        opt = {
+                            "layout":
+                                {
+                                    "hierarchical": {
+                                        "enabled": True,
+                                        "direction": "UD", #UD means that the hierarchy is displayed up to down
+                                        "sortMethod": "directed",
+                                        "nodeSpacing": 100,
+                                        "treeSpacing": 200,
+                                        "levelSeparation": 170,
+                                    }
+                                },
+                        }
 
-                        # Create a Plotly figure for the Trie visualization
-                        edge_x = []
-                        edge_y = []
-                        labels = {}
-                        for edge in G.edges():
-                            x0, y0 = pos[edge[0]]
-                            x1, y1 = pos[edge[1]]
-                            edge_x.extend([x0, x1, None])
-                            edge_y.extend([y0, y1, None])
-                        for node in G.nodes(data=True):
-                            x, y = pos[node[0]]
-                            labels[node[0]] = f"{node[0]}<br>Leaves: {node[1]['num_leaves']}<br>hp_name: {node[1]['hp_name']}"
+                        viz.set_options(options=json.dumps(opt))
+                        
+                        trial_id = data["trial_id"]
+                        graph_file_name = f'tuner_{trial_id}.html'
+                        graph_file_path = os.path.join(tuner_graphs_directory, graph_file_name)
 
-                        edge_trace = go.Scatter(
-                            x=edge_x, y=edge_y,
-                            line=dict(width=0.5, color='#888'),
-                            hoverinfo='none',
-                            mode='lines')
+                        # viz.save_graph(graph_file_path)
+                        data["casualnex_graph_path"] = viz.to_json()
 
-                        node_x = []
-                        node_y = []
-                        node_colors = []  # Store node colors
-                        hp_names = data.get("hp_names", [])
-                        for node in pos:
-                            x, y = pos[node]
-                            node_x.append(x)
-                            node_y.append(y)
-                            # Check if hp_name is similar to any hp_name in hp_names
-                            if node in data["hp_names"][0]:
-                                node_colors.append("red")  # Color the node red
-                            else:
-                                node_colors.append("lightblue")  # Default color
-
-                        node_trace = go.Scatter(
-                            x=node_x, y=node_y,
-                            mode='markers+text',
-                            text=list(labels.values()),
-                            textposition="bottom center",  # Shift labels below the nodes
-                            marker=dict(
-                                showscale=False,
-                                size=20,
-                                colorbar=dict(
-                                    thickness=15,
-                                    title='Node Connections',
-                                    xanchor='left',
-                                    titleside='right'
-                                ),
-                                color=node_colors  # Set node colors
-                            ))
-
-                        fig = go.Figure(data=[edge_trace, node_trace],
-                                        layout=go.Layout(
-                                            showlegend=False,
-                                            hovermode='closest',
-                                            margin=dict(b=0, l=0, r=0, t=0),
-                                            xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
-                                            yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
-                                            height=500,
-                                            width=500))
-
-                        # Show the interactive Trie visualization
-                        data["plotly_figure"] = fig.to_json()
                         data.pop('trie_json', "Not found")
                         
                         self.json_package[data["trial_id"]] = data
+
                     except Exception as e:
                         print(e)
 
                 return self.json_package
             
-            # explanation for bayesian
+            # explanation for bayesian tuner
             else:
-                try:
-                    with open("D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\flowchart.json", "r") as json_file:
-                        data = json.load(json_file)
-                        # Process the data from the JSON file
-                        return data
+                for file_name in decision_factors_files:
+                    file_path = os.path.join(directory_path, file_name)
 
-                except Exception as e:
-                    print(e)
-                
+                    try:
+                        with open(file_path, "r") as json_file:
+                            data = json.load(json_file)
+                        
+                        # data = addGraph(data)
+
+                        self.json_package[data["trial_id"]] = data
+
+                    except Exception as e:
+                        print(e)
+
+                return self.json_package 
+
             
         except Exception as e:
             print("Error here")
             print(e)
+
+class HTMLFile(Resource):
+    def get(self):
+        with open("D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\output.json", "r") as json_file:
+            data = json.load(json_file)
+            # Process the data from the JSON file
+            return data
 
 # Define a Flask-RESTful resource for closing the app
 @app.route('/close_app', methods=['GET'])
@@ -344,7 +442,10 @@ api.add_resource(UpdateDataResource, '/update_data')
 api.add_resource(UpdateEvaluationResource, '/update_evaluation')
 api.add_resource(ExploreModelIG, '/load_data_ig')
 api.add_resource(ExploreModelALE, '/load_data_ale')
-api.add_resource(ExplorePipeline, '/explore_pipeline')
+api.add_resource(ExplorePreprocessing, '/explore_preprocessing/') 
+api.add_resource(ExploreTuner, '/explore_tuner/') 
+api.add_resource(SendInitialInfo, '/pre_information')
+api.add_resource(HTMLFile, '/return_html')
 
 
 @socketio.on('connect')
@@ -353,3 +454,4 @@ def handle_connect():
 
 if __name__ == '__main__':
     socketio.run(app, host='127.0.0.1', port=8082, debug=True)
+# , use_reloader=False

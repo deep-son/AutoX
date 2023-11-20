@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Network Graph with vis.js</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <!-- The above URL loads the specific version 4.21.0 of vis.js -->
+    <style>
+        #network-container {
+            width: 800px;
+            height: 600px;
+            border: 1px solid lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div id="network-container"></div>
+
+    <script>
+        // JavaScript code to display the network graph using vis.js
+        const jsonData = {
+            nodes: [
+                { id: 1, label: "Node 1" },
+                { id: 2, label: "Node 2" },
+                // Add more nodes as needed
+            ],
+            edges: [
+                { from: 1, to: 2 },
+                // Add more edges as needed
+            ]
+        };
+
+        const container = document.getElementById("network-container");
+        const options = {}; // You can add options if needed
+
+        const network = new vis.Network(container, jsonData, options);
+    </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<div class="row">
+    <div class="col-md-12">
+        <nav aria-label="breadcrumb" role="navigation">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Model</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Training</li>
+            </ol>
+          </nav>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="card card-pricing">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3 d-flex justify-content-center align-items-center" style="height: 100px;">
+                        <i class="fa fa-tasks" style="color: #ffa500; font-size: xx-large; padding: 5px;"></i>
+
+                    </div>
+                    <div class="col-md-9">
+                        <div class="d-flex flex-column justify-content-center align-items-center"
+                            style="height: 100px;">
+                            <h6 class="category">Task</h6>
+                            <span class="badge badge-primary badge-pill mr-1"
+                                id="training-task">Current_running_task</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card card-pricing">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3 d-flex justify-content-center align-items-center" style="height: 100px;">
+                        <i class="fa-solid fa-hourglass-start"
+                            style="color: #ffa500; font-size: xx-large; padding: 5px;"></i>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="d-flex flex-column justify-content-center align-items-center"
+                            style="height: 100px;">
+                            <h6 class="category">Start Time</h6>
+                            <span id="training-start-time" style="font-weight: normal;">--:--:--</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card card-pricing">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3 d-flex justify-content-center align-items-center" style="height: 100px;">
+                        <i class="fa-solid fa-hourglass-end"
+                            style="color: #ffa500; font-size: xx-large; padding: 5px;"></i>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="d-flex flex-column justify-content-center align-items-center"
+                            style="height: 100px;">
+                            <h6 class="category">End Time</h6>
+                            <span id="training-end-time" style="font-weight: normal;">--:--:--</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card card-pricing">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3 d-flex justify-content-center align-items-center" style="height: 100px;">
+                        <i class="fa-solid fa-maximize" style="color: #ffa500; font-size: xx-large; padding: 5px;"></i>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="d-flex flex-column justify-content-center align-items-center"
+                            style="height: 100px;">
+                            <h6 class="category">Max Trials</h6>
+                            <span id="training-max-trial" style="font-weight: normal;">--:--:--</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <section class="card" style="min-height: 150px; padding: 20px; border-radius: 5px;">
+
+            <div class="col-md-12" id="metrics_values">
+                <div style="position: relative;">
+                    <button type="button" class="btn btn-primary btn-icon btn-round" data-toggle="modal" data-target="#exampleModal" style="position: absolute; top: 0; right: 0; margin: 5px;">
+                        <i class="fa-solid fa-circle-info"></i>
+                    </button>
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">
+                            "View All the Key Metrics from the Run Here"</p>
+                        <footer class="blockquote-footer">Conveniently Displayed in a Table</footer>
+                    </blockquote>
+                </div>
+                
+            </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <h5>Popover in a modal</h5>
+                        <p>This <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p>
+                        <hr>
+                        <h5>Tooltips in a modal</h5>
+                        <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> have tooltips on hover.</p>
+                      </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
+        <div class="card" style="height: 75%;">
+            <div class="dropdown" style="padding: 10px 20px;">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select an Option
+                </button>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownOptions">
+                    <!-- Dynamically added dropdown options will appear here -->
+                </div>
+            </div>
+
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false"
+                style="padding: 10px 20px;">
+                <div class="carousel-inner" id="arch-carousel">
+                    <div class="carousel-item active">
+                        <p>Here we show the architectures..add a visual here later</p>
+                    </div>
+                    <!-- Add more carousel items as needed -->
+                </div>
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" ariahidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <section class="card" style="padding: 20px; border-radius: 5px; min-height:200px; overflow: hidden;">
+            <div class="row">
+                <div class="col-md-4" id="cm">
+                    <!-- Content for column 1 -->
+                </div>
+                <div class="col-md-4" id="prc">
+                    <!-- Content for column 2 -->
+                </div>
+                <div class="col-md-4" id="roc">
+                    <!-- Content for column 3 -->
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

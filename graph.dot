@@ -1,0 +1,9 @@
+strict digraph  {
+A;
+B;
+C;
+D;
+A -> B  [origin=unknown];
+B -> C  [origin=unknown];
+C -> D  [origin=unknown];
+}

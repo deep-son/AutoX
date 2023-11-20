@@ -1,0 +1,214 @@
+.hidden-row {
+    display: none;
+  }
+
+  .tab-pane {
+    background-color: #fff; /* Set background color to white */
+    padding: 20px; /* Add some padding for better visibility */
+    border-radius: 5px; /* Optionally, round the corners */
+    margin-bottom: 10px;
+  }
+
+  .card{
+    margin-bottom: 10px;
+  }
+
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#sidebar {
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    height: 100%; /* Full-height */
+    width: 250px; /* Set the width of the sidebar */
+    background: #FF6A00; /* Fallback color */
+    background: linear-gradient(135deg, #FF9D2F, #FF6A00); /* Gradient background */
+    color: white;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3); /* Sidebar shadow */
+}
+
+#sidebar .profile {
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#sidebar .profile img {
+    border-radius: 50%; /* Circular profile image */
+    margin-bottom: 10px;
+    width: 60px; /* Adjust as needed */
+    height: 60px; /* Adjust as needed */
+    border: 3px solid white; /* White border around the image */
+}
+
+#sidebar h2, #sidebar h4 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    text-align: center;
+}
+
+#sidebar a {
+    padding: 12px 15px 12px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: all 0.3s;
+}
+
+.team-player{
+  padding: 50px;
+}
+
+#sidebar a:hover {
+    background: #ffa500; /* Lighter orange */
+}
+
+#sidebar a i {
+    margin-right: 10px;
+}
+
+#main-content {
+    margin-left: 250px; /* Same as the width of the sidebar */
+    padding: 1rem;
+}
+
+.content-section {
+  display: none;
+}
+
+.content-section.active {
+  display: block;
+}
+
+
+#navbar {
+    margin-left: 250px;
+    height: 50px; /* Or the height of your navbar */
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.brand-logo {
+    font-size: 1.5rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.navbar-nav {
+    display: inline;
+}
+
+.navbar-nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+.navbar-nav a:hover {
+    text-decoration: underline;
+}
+
+.navbar-user {
+    display: flex;
+    align-items: center;
+}
+
+.user-image {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+.user-name {
+    font-size: 1rem;
+    color: #333;
+}
+
+
+/* Add this to your existing sidebar styles */
+.dropdown-btn {
+  padding: 12px 15px 12px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: #ffa500;
+  padding-left: 0;
+}
+
+.dropdown-container a {
+  padding: 15px 15px;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-container a:hover {
+  background-color: #ddd;
+  color: #ffa500; ;
+}
+
+.dropdown-btn:hover {
+  background-color:#ffa500; ;
+}
+
+/* Optionally: if you want to have the dropdown icon */
+.dropdown-btn:after {
+  content: '\25BC';
+  float: right;
+}
+
+/* When dropdown is clicked, we can add this class using JavaScript */
+.show {display: block;}
+
+
+@media screen and (max-height: 450px) {
+    #sidebar {padding-top: 15px;}
+    #sidebar a {font-size: 18px;}
+}
+
+
+.btn-round {
+  border-width: 5px;
+  border-radius: 40px!important;
+}
+
+.icon{
+  margin: 20px;
+}
+
+.category{
+  font-family: inherit;
+}

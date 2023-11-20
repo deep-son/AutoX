@@ -1,59 +1,26 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Drawflow Example</title>
-    <script src="https://unpkg.com/drawflow/dist/drawflow.min.js"></script>
-    <style>
-        #drawflow {
-            width: 600px;
-            height: 400px;
-            border: 1px solid #ccc;
-        }
-    </style>
+    <title>Render HTML in a Div from File</title>
 </head>
-
 <body>
-    <div id="drawflow"></div>
+    <h1>Hello</h1>
+    <div id="myDiv"></div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const drawflowElement = document.getElementById('drawflow');
-
-            if (drawflowElement !== null) {
-                const drawflow = new Drawflow(drawflowElement, {
-                    render: true
-                });
-
-                drawflow.addNode('start', 1, 0, 100, 100, 'Start', 0);
-                drawflow.addNode('step', 2, 200, 100, 150, 'Step 1', 1);
-                drawflow.addNode('end', 3, 400, 100, 100, 'End', 0);
-                drawflow.addConnection(1, 0, 2, 0, 0);
-                drawflow.addConnection(2, 0, 3, 0, 0);
-
-                drawflow.on('nodeCreated', (id) => {
-                    console.log(`Node created: ${id}`);
-                });
-
-                document.getElementById('saveBtn').addEventListener('click', function () {
-                    const data = drawflow.save();
-                    console.log('Saved data:', data);
-                });
-
-                document.getElementById('loadBtn').addEventListener('click', function () {
-                    const data = prompt('Enter the saved data:');
-                    if (data) {
-                        drawflow.load(JSON.parse(data));
-                    }
-                });
-            } else {
-                console.error('Element with ID "drawflow" not found.');
-            }
-        });
+        // Fetch the HTML content from a file
+        fetch('D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\01_simple_plot.html')
+            .then(response => response.text())
+            .then(data => {
+                // Find the div element
+                var divElement = document.getElementById("myDiv");
+                
+                // Set the innerHTML property of the div to the content retrieved from the file
+                divElement.innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
     </script>
-
-    <button id="saveBtn">Save</button>
-    <button id="loadBtn">Load</button>
 </body>
-
 </html>
