@@ -3,91 +3,240 @@ var trials = {};
 var models = {};
 var bestValues = {};
 var project_name = "structured_data_classifier"
-var train_file_path = "'C:\\Users\\Deepanshu\\.keras\\datasets\\train.csv'"
+var train_file_path = "C:\\Users\\Deepanshu\\.keras\\datasets\\train.csv"
 
-// Function to create a tab element
-function createTabElement(tabId, tabText, cardID) {
-    const $li = $('<li>', {
-        class: 'nav-item',
-        id: tabId,
-    });
-    const $a = $('<a>', {
-        class: 'nav-link show',
-        href: '',
-        'data-toggle': 'tab',
-        'data-target': `#tab-${tabId}`,
-        html: `<i class="now-ui-icons objects_umbrella-13 mr-1"></i>${tabText}`,
-    });
-    $li.append($a);
-    $(cardID).append($li);
+
+function createArchModal(tabId, imageUrl){
+        // Create the modal structure (hidden by default)
+        const modal = document.createElement('div');
+        modal.className = 'modal fade';
+        modal.id = `arch-${tabId}`;
+        modal.tabIndex = '-1';
+        modal.role = 'dialog';
+        modal.innerHTML = `
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Trial Architecture</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class=""><img src="${imageUrl}" alt="Model Image" style="max-width: 100%; max-height: 100%;"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        `;
+    
+        // Append the modal to the body
+        document.body.appendChild(modal);
+    
+        // Create and return the anchor tag
+        const anchorTag = document.createElement('a');
+        anchorTag.href = `#arch-${tabId}`;
+        // anchorTag.className = 'btn btn-primary btn-round';
+        anchorTag.dataset.toggle = 'modal';
+        anchorTag.innerText = `${tabId} architecture`;
+    
+        return anchorTag;
+
 }
 
-
-function createAndAppendTabPaneCarousel(tabId, imageUrl, cardID, values, metrics) {
-        const $tabPane = $('<div >', {
-            class: 'carousel-item',
-            id: `tab-${tabId}`,
-        });
-
-        // Create the inner HTML structure for values
-        // var valuesTable = '<table><tr><th>Component</th><th>Value</th></tr>';
-        // for (var key in values) {
-        //     if (values.hasOwnProperty(key)) {
-        //         valuesTable += `<tr><td style="text-align: left;">${key}</td><td style="text-align: left;">${values[key]}</td></tr>`;
-        //     }
-        // }
-        // valuesTable += '</table>';
-
-        // // Create the inner HTML structure for metrics
-        // var metricsTable = '<table><tr><th>Metric</th><th>Value</th></tr>';
-        // for (var metricKey in metrics.metrics) {
-        //     if (metrics.metrics.hasOwnProperty(metricKey)) {
-        //         var metric = metrics.metrics[metricKey];
-        //         metricsTable += `<tr><td style="text-align: left;">${metricKey}</td><td style="text-align: left;">${metric.observations[0].value[0]}</td></tr>`;
-        //     }
-        // }
-        // metricsTable += '</table';
-
-        var valuesTable = '<table class="table table-striped"><thead class="text-primary"><tr><th>Component</th><th>Value</th></tr></thead><tbody>';
+function createHyperModal(tabId, values){
+    // Create the modal structure (hidden by default)
+    var valuesTable = '<table class="table table-striped"><thead class="text-primary"><tr><th>Component</th><th>Value</th></tr></thead><tbody>';
         for (var key in values) {
             if (values.hasOwnProperty(key)) {
                 valuesTable += `<tr><td>${key}</td><td>${values[key]}</td></tr>`;
             }
         }
         valuesTable += '</tbody></table>';
+        
+    const modal = document.createElement('div');
+    modal.className = 'modal fade';
+    modal.id = `hyper-${tabId}`;
+    modal.tabIndex = '-1';
+    modal.role = 'dialog';
+    modal.innerHTML = `
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Hyperparameters</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            ${valuesTable}
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    `;
 
-        var metricsTable = '<table class="table table-striped"><thead class="text-primary"><tr><th>Metric</th><th>Value</th></tr></thead><tbody>';
-        for (var metricKey in metrics.metrics) {
-            if (metrics.metrics.hasOwnProperty(metricKey)) {
-                var metric = metrics.metrics[metricKey];
-                metricsTable += `<tr><td>${metricKey}</td><td>${metric.observations[0].value[0]}</td></tr>`;
-            }
+    // Append the modal to the body
+    document.body.appendChild(modal);
+
+    // Create and return the anchor tag
+    const anchorTag = document.createElement('a');
+    anchorTag.href = `#hyper-${tabId}`;
+    // anchorTag.className = 'btn btn-primary btn-round';
+    anchorTag.dataset.toggle = 'modal';
+    anchorTag.innerText = `${tabId} hps`;
+
+    return anchorTag;
+
+}
+
+function createMetricModal(tabId, metrics){
+    // Create the modal structure (hidden by default)
+    var metricsTable = '<table class="table table-striped"><thead class="text-primary"><tr><th>Metric</th><th>Value</th></tr></thead><tbody>';
+    for (var metricKey in metrics.metrics) {
+        if (metrics.metrics.hasOwnProperty(metricKey)) {
+            var metric = metrics.metrics[metricKey];
+            metricsTable += `<tr><td>${metricKey}</td><td>${metric.observations[0].value[0]}</td></tr>`;
         }
-        metricsTable += '</tbody></table>';
-
-        // Create the inner HTML structure
-        const innerArch = `
-            <div class="row">
-                <div class="col-md-12">
-                    <p class=""><img src="${imageUrl}" alt="Model Image" style="max-width: 100%; max-height: 100%;"></p>
+    }
+    metricsTable += '</tbody></table>';
+        
+    const modal = document.createElement('div');
+    modal.className = 'modal fade';
+    modal.id = `metric-${tabId}`;
+    modal.tabIndex = '-1';
+    modal.role = 'dialog';
+    modal.innerHTML = `
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Best Metrics</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            ${metricsTable}
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <h6><b>Values</b></h6>
-                    ${valuesTable}
+        </div>
+    `;
+
+    // Append the modal to the body
+    document.body.appendChild(modal);
+
+    // Create and return the anchor tag
+    const anchorTag = document.createElement('a');
+    anchorTag.href = `#metric-${tabId}`;
+    // anchorTag.className = 'btn btn-primary btn-round';
+    anchorTag.dataset.toggle = 'modal';
+    anchorTag.innerText = `${tabId} metrics`;
+
+    return anchorTag;
+
+}
+
+function createGraphModal(tabId){
+
+    const modal = document.createElement('div');
+    modal.className = 'modal fade';
+    modal.id = `graph-${tabId}`;
+    modal.tabIndex = '-1';
+    modal.role = 'dialog';
+    modal.innerHTML = `
+        <div class="modal-dialog modal-xxl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Epoch Graphs</h5>
+                <button class="btn btn-secondary tensor-api-class" type="button" id="btn-${tabId}" aria-expanded="false">
+                    Refresh
+                </button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div class="col-md-6">
-                    <h6><b>Metrics</b></h6>
-                    ${metricsTable}
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 plot-container" style="min-height:300px;" id="accuracy-${tabId}">
+                        </div>
+                        <div class="col-md-12 plot-container" style="min-height:300px;" id="loss-${tabId}">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
-        `;
+        </div>
+    `;
 
-        $tabPane.html(innerArch); // Set the HTML content
-        $(cardID).append($tabPane);
-};
+    // Append the modal to the body
+    document.body.appendChild(modal);
 
+    // Create and return the anchor tag
+    const anchorTag = document.createElement('a');
+    anchorTag.href = `#graph-${tabId}`;
+    // anchorTag.className = 'btn btn-primary btn-round';
+    anchorTag.dataset.toggle = 'modal';
+    anchorTag.innerText = `${tabId} epochs`;
+
+    return anchorTag;
+
+}
+
+function addTrialToTable(tabId, imageUrl, values, metrics){
+    const tableBody = document.getElementById('myTable').getElementsByTagName('tbody')[0];
+    
+    // Check if a row with this item's ID already exists
+    if (!document.getElementById(`row-${tabId}`)) {
+        const row = tableBody.insertRow();
+        row.id = `row-${tabId}`; // Assign a unique ID to the row
+
+        row.insertCell(0).innerHTML = tabId;
+
+        const archAnchor = createArchModal(tabId, imageUrl);
+        const archCell = row.insertCell(1);
+        archCell.appendChild(archAnchor);
+
+        const hyperAnchor = createHyperModal(tabId, values)
+        const hyperCell = row.insertCell(2);
+        hyperCell.appendChild(hyperAnchor);
+
+        const metricAnchor = createMetricModal(tabId, metrics)
+        const metricCell = row.insertCell(3);
+        metricCell.appendChild(metricAnchor);
+
+        const graphAnchor = createGraphModal(tabId)
+        const graphCell = row.insertCell(4);
+        graphCell.appendChild(graphAnchor);
+    }
+    else{
+        const existingRow = document.getElementById(`row-${tabId}`);
+        const metricAnchor = createMetricModal(tabId, metrics);
+        const metricCell = existingRow.cells[3];
+        metricCell.innerHTML = '';
+        metricCell.appendChild(metricAnchor);
+    }
+}
 
 
 function createAndAppendTabPaneFinalArch(tabId, imageUrl, cardID) {
@@ -112,82 +261,6 @@ function createAndAppendTabPaneFinalArch(tabId, imageUrl, cardID) {
 
 };
 
-// function createTabElementExplorePipeline(tabId, tabText, cardID) {
-//     const $li = $('<li>', {
-//         class: 'nav-item',
-//         id: tabId,
-//     });
-//     const $a = $('<a>', {
-//         class: 'nav-link show',
-//         'data-toggle': 'tab',
-//         'data-target': `#ex-trial_${tabId}`,
-//         html: `<i class="now-ui-icons objects_umbrella-13 mr-1"></i>trial_${tabText}`,
-//     });
-//     $li.append($a);
-//     $(cardID).append($li);
-// }
-
-// function createAndAppendTabPaneExplorePipeline(tabId, value, cardID, callback) {
-
-//     console.log("Creating tab for tabId:", tabId); // Debug statement
-//     const $tabPane = $('<div>', {
-//         class: 'tab-pane fade text-center show',
-//         id: `ex-trial_${tabId}`,
-//         role: 'tabpanel',
-//     });
-
-//     // Create the inner HTML structure
-//     const innerHTML = `
-//     <div class="row">
-//         <div class="col-md-6">
-//             <div class="img" id="tree_${tabId}" style="width: 100%; height: 500px; overflow: hidden;">
-
-//             </div>
-//         </div>
-//         <div class="col-md-4">
-//             <p class="">Probability Table Here</p>
-//         </div>
-//     </div>
-// `;
-
-//     $tabPane.html(innerHTML); // Set the HTML content
-//     $(cardID).append($tabPane);
-
-//     callback(value, tabId);
-// };
-
-function initializeElement(value, tabId) {
-    const chartContainer = document.getElementById(`tree_${tabId}`);
-    if (chartContainer) {
-        // Element exists, proceed with further operations
-        const chartData = JSON.parse(value["plotly_figure"]);
-        Plotly.newPlot(chartContainer, chartData, { responsive: true });
-    } else {
-        console.error(`Element with ID 'tree_${tabId}' not found.`);
-    }
-}
-
-function addDropdownOption(tabId) {
-    console.log("In callback")
-    var option = $('<a>').addClass('dropdown-item').attr('href', '#').text(tabId);
-    option.on('click', function () {
-        $('#myCarousel').carousel(`tab-${tabId}`);
-    });
-    $('#dropdownOptions').append(option);
-
-}
-
-// function updateBestValuesDisplay(Values) {
-//     var valuesTable = '<table><tr><th>Component</th><th>Value</th></tr>';
-//     for (var key in Values) {
-//         if (Values.hasOwnProperty(key)) {
-//             valuesTable += `<tr><td style="text-align: left;">${key}</td><td style="text-align: left;">${Values[key][0].value[0]}</td><td style="text-align: left;">${Values[key][0].trialValue}</td></tr>`;
-//         }
-//     }
-//     valuesTable += '</table>';
-
-//     $('#metrics_values').append(valuesTable);
-// };
 
 function updateBestValuesDisplay(Values) {
     // Start the table with Now UI classes
@@ -247,14 +320,26 @@ function createEvaluationElements(data) {
 };
 
 
-function update_training_ui(data) {
+function update_training_ui_start(data) {
     $('#training-task').text(data['task'])
-    $('#training-start-time').find('span').text(data['start_time']);
+    $('#training-start-time').text(data['start_time']);
     // $('#training-end-time').find('span').text(endTime);
-    $('#training-max-trial').find('span').text(data['max_trials']);
+    $('#training-max-trial').text(data['max_trials']);
+};
+function update_training_ui_end(data) {
+    $('#training-end-time').text(data['end_time']);
+    document.getElementById("explore-preprocessing").removeAttribute("disabled");
+    document.getElementById("explore-tuner").removeAttribute("disabled");
+
 };
 
 function displayNormalizationDataWithAccordion(data) {
+    if (Object.keys(data).length === 0) {
+        var div = document.createElement('div');
+        div.textContent = 'Normalization is not used in this model';
+        return div;
+
+    };
     const accordion = $('<div>').addClass('accordion');
 
     Object.keys(data).forEach((key, index) => {
@@ -399,7 +484,7 @@ function createAndUpdatePreprocessing(data, callback){
                 const col2 = $('<div>').addClass('col-md-12');
                 const card2 = $('<div>').addClass('card');
                 const cardHeader2 = $('<div>').addClass('card-header');
-                const h4_2 = $('<h4>').text('Chart 2');
+                const h4_2 = $('<h4>').text('Encoding Details');
                 const cardBody2 = $('<div>').addClass('card-body').text('Add another chart here');
                 
                 cardHeader2.append(h4_2);
@@ -408,7 +493,7 @@ function createAndUpdatePreprocessing(data, callback){
 
                 const card3 = $('<div>').addClass('card');
                 const cardHeader3 = $('<div>').addClass('card-header');
-                const h4_3 = $('<h4>').text('Additional Card');
+                const h4_3 = $('<h4>').text('Type of features');
                 const cardBody3 = $('<div>').addClass('card-body').text('Content for the additional card');
 
                 cardHeader3.append(h4_3);
@@ -452,410 +537,436 @@ function createAndUpdatePreprocessing(data, callback){
 
 };
 
-function createFigureCardWithAccordion(value) {
-    const card = document.createElement('div');
-    card.classList.add('col-md-12', 'figure-card');
-    card.style.padding = '20px';
-
-    const cardHeader = document.createElement('div');
-    cardHeader.classList.add('card-header');
-    cardHeader.textContent = `Trial ${value["trial_id"]}`; // Set the card header text
-    cardHeader.style.background = 'white';
-
-    const cardContent = document.createElement('div');
-    cardContent.classList.add('card');
-
-
-    const cardBody = document.createElement('div');
-    cardBody.classList.add('card-body');
-
-    // Create a unique ID for the graph container using the trial_id
-    const graphContainerId = `graphContainer${value["trial_id"]}`;
-
-    // Create a container for the Vis.js graph
-    const graphContainer = document.createElement('div');
-    graphContainer.style.height = '600px'; // Set a height for the graph
-    graphContainer.style.width = '100%';
-    graphContainer.style.background = '#001521';
-    graphContainer.id = graphContainerId; // Assign the unique ID
-    cardBody.appendChild(graphContainer);
-
-
-    const jsonData = JSON.parse(value['casualnex_graph_path']);
-
-
-    // Convert the JSON data into vis.js format
-    // You may need to adapt this part based on the structure of your JSON data
-    var nodes = jsonData.nodes;
-    var edges = jsonData.edges;
-
-    var nodeString = nodes.replace(/'/g, '"');
-    nodeString = nodeString.replace(/True/g, 'true');
-    nodeString = nodeString.replace(/False/g, 'false');
-    var edgeString = edges.replace(/'/g, '"');
-    edgeString = edgeString.replace(/True/g, 'true');
-    edgeString = edgeString.replace(/False/g, 'false');
-
-// Parse the JSON string into a JavaScript array
-    const nodeFormat = JSON.parse(nodeString);
-    const edgeFormat = JSON.parse(edgeString);
-
-    console.log(nodeFormat);
-    console.log(edgeFormat);
-
-        // Create data object for vis.js
-        var data = {
-            nodes: nodeFormat,
-            edges: edgeFormat
-        };
-
-        // Create options for the graph (customize as needed)
-        var options = {
-            layout: {
-                hierarchical: {
-                    direction: "UD",
-                    sortMethod: "directed"
-                }
-            }
-        };
-
-    const network = new vis.Network(graphContainer, data, options);
-    
-
-    // cardBody.innerHTML += `<p>Trial ${value["trial_id"]}</p>`;
-
-    const accordionSection = document.createElement('div');
-    accordionSection.classList.add('collapse');
-    accordionSection.setAttribute('id', `collapse${value["trial_id"]}`);
-    accordionSection.setAttribute('data-parent', '.figure-card');
-  
-    const accordionCardBody = document.createElement('div');
-    accordionCardBody.classList.add('card-body');
-    accordionCardBody.innerHTML = `<p>Accordion content for Trial ${value["trial_id"]} goes here...</p>`;
-  
-    accordionSection.appendChild(accordionCardBody);
-  
-    const accordionButton = document.createElement('button');
-    accordionButton.classList.add('btn', 'btn-link');
-    accordionButton.setAttribute('data-toggle', 'collapse');
-    accordionButton.setAttribute('data-target', `#collapse${value["trial_id"]}`);
-    accordionButton.setAttribute('aria-expanded', 'true');
-    accordionButton.setAttribute('aria-controls', `collapse${value["trial_id"]}`);
-    accordionButton.textContent = 'Accordion Toggle';
-  
-    cardBody.appendChild(accordionButton);
-    cardBody.appendChild(accordionSection);
-  
-    
-    cardContent.appendChild(cardBody);
-    card.appendChild(cardHeader);
-    card.appendChild(cardContent);
-    
-
-    return card;
-
-};
-
 
 function createDynamicTabsGreedy(targetElement) {
-    var tabPane = document.createElement("div");
-    tabPane.innerHTML = `
-        <div class="tabs">
-            <ul>
-                <li class="tab-link current" data-tab="tab-1">Tab One</li>
-                <li class="tab-link" data-tab="tab-2">Tab Two</li>
-                <li class="tab-link" data-tab="tab-3">Tab Three</li>
-            </ul>
-            <div id="tab-1" class="tab-content current">
-                Content for Tab One
-            </div>
-            <div id="tab-2" class="tab-content">
-                Content for Tab Two
-            </div>
-            <div id="tab-3" class="tab-content">
-                Content for Tab Three
-            </div>
-        </div>
-    `;
-    targetElement.appendChild(tabPane);
-  };
-
-
-
-  function createDynamicTabsBayesian(targetElement) {
-    // var tabPane = document.createElement("div");
     targetElement.innerHTML = `
     <div class="col-md-12">
-    <div class="card mb-4">
-        <ul
-            class="nav nav-tabs px-1 py-3  bg-light flex-column flex-lg-row justify-content-md-center text-center">
-            <li class="nav-item">
-                <a class="nav-link active show" href="" data-toggle="tab" data-target="#tabone">
-                    Tuner</a>
-                <!-- <i class="now-ui-icons travel_info mr-1"></i> -->
-            </li>
-            <li class="nav-item ">
-                <a href="" class="nav-link" data-toggle="tab" data-target="#tabtwo">
-                    Description</a>
-            </li>
-        </ul>
-        <div class="card-body">
-            <div class="tab-content mt-2">
-                <div class="tab-pane fade text-center active show" id="tabone" role="tabpanel">
-
-                    <div class="info info-hover">
-
-                        <h4 class="info-title">Your Current Tuner:<p style="color: #f96332;">Greedy</p>
-                        </h4>
-                        <!-- Greedy Tuner Information Section with Creative Styling -->
-                        <div class="info-section"
-                            style="background-color: #f4f5f7; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
-
-                            <h4 class="info-title" style="color: #32325d; margin-top: 10px ;">Greedy Tuner
-                                in
-                                AutoKeras</h4>
-                            <div class="description" style="color: #525f7f;">
-
-                                <strong>Efficient:</strong> Selects optimal parameters quickly. </br>
-                                <strong>Balanced:</strong> Precision with less computation.</br>
-                                <strong>Streamlined:</strong> Ideal for complex models.</br>
-                            </div>
-
-                            <a href="#tabtwo" style="margin:20px ;" class="btn btn-primary"
-                                id="learnMoreButton">Learn More</a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="tab-pane fade text-center" id="tabtwo" role="tabpanel">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card" data-background-color="red">
-                                <div class="card-body">
-                                    <p style="text-align: left;color: #f96332; font-size: x-large;">
-                                        1 <span style="text-align: left;color: #f96332; font-size: large;">
-                                            Start Trial
-                                        </span>
-                                    </p>
-
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <ul
+                        class="nav nav-tabs px-1 py-3  bg-light flex-column flex-lg-row justify-content-md-center text-center">
+                        <li class="nav-item">
+                            <a class="nav-link active show" href="" data-toggle="tab" data-target="#tabone">
+                                Bayesian</a>
+                            <!-- <i class="now-ui-icons travel_info mr-1"></i> -->
+                        </li>
+                        <li class="nav-item ">
+                            <a href="" class="nav-link" data-toggle="tab" data-target="#tabtwo">
+                                Description</a>
+                        </li>
+                    </ul>
+                    <div class="card-body">
+                        <div class="tab-content mt-2">
+                            <div class="tab-pane fade text-center active show" id="tabone" role="tabpanel">
+                                <div class="info info-hover">
+                                    <h4 class="info-title">Your Current Tuner:<p style="color: #f96332;">Bayesian</p>
                                     </h4>
-                                    <p class="card-description">
-                                        Start the trial if no of trials< max_trails </p>
+                                    <!-- Greedy Tuner Information Section with Creative Styling -->
+                                    <div class="info-section"
+                                        style="background-color: #f4f5f7; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+                                        <h4 class="info-title" style="color: #32325d; margin-top: 10px ;">Bayesian Tuner
+                                            in
+                                            AutoKeras</h4>
+                                        <div class="description" style="color: #525f7f;">
+                                            <strong>Smart Prediction: </strong> Learns from past evaluations for optimal
+                                            hyperparameter choices. </br>
+                                            <strong>Balanced Search:</strong> Efficiently navigates between exploring
+                                            and exploiting hyperparameters.</br>
+                                            <strong>Adaptive Tuning:</strong> Customizes search based on results and
+                                            prior knowledge.</br>
+                                        </div>
+                                        <a href="#tabtwo" style="margin:20px ;" class="btn btn-primary"
+                                            id="learnMoreButton">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
 
-                                </div>
-                            </div>
-                            <div class="card card-blog">
-                                <div class="card-image">
-                                    <img class="img rounded" src="assets/img/project13.jpg">
-                                </div>
-                                <div class="card-body">
-                                    <p style="text-align: left;color: #f96332; font-size: x-large;">
-                                        4 <span style="text-align: left;color: #f96332; font-size: large;">
-                                            Get Best Hyperparameters
-                                        </span>
-                                    </p>
-                                    <h5 class="card-title">
-                                        <a href="#nuk">Stay Focused: Train Your Brain</a>
-                                    </h5>
-                                    <p class="card-description">
-                                        Our brains are finely attuned to distraction, so today's digital
-                                        environment makes it especially hard to focus...
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <p style="text-align: left;color: #f96332; font-size: x-large;">
-                                        7 <span style="text-align: left;color: #f96332; font-size: large;">
-                                            Return Node
-                                        </span>
-                                    </p>
-                                    <h6 class="category text-danger">
-                                        <i class="now-ui-icons media-2_sound-wave"></i> Trending
-                                    </h6>
-                                    <h5 class="card-title">
-                                        <a href="#pablo">Here Be Dragons</a>
-                                    </h5>
-                                    <p class="card-description">
-                                        An immersive production studio focused on virtual reality content,
-                                        has closed a $10 million Series A round led by Discovery
-                                        Communications
-                                    </p>
-                                    <div class="card-footer">
-                                        <div class="author">
-                                            <img src="assets/img/olivia.jpg" alt="..."
-                                                class="avatar img-raised">
-                                            <span>Lord Alex</span>
+                            <div class="tab-pane fade text-center" id="tabtwo" role="tabpanel">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Note: Bayesian tuner works on the history of previous trial, if the
+                                                numer of trials are not enough to fit a probabilistic model, then it
+                                                would do a random sampling.
+                                            </div>
                                         </div>
-                                        <div class="stats stats-right">
-                                            <i class="now-ui-icons ui-2_favourite-28"></i> 342 ·
-                                            <i class="now-ui-icons files_single-copy-04"></i> 45
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-4">
+                                        <!-- Bayesian Tuner: Trial Initialization -->
+                                        <div class="card">
+                                            <div class="card-header" style="background-color: #007bff; color: white;">
+                                                <h5 class="card-title">Trial Initialization Process</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
+                                                    1 <span style="text-align: left;color: #007bff; font-size: large;">
+                                                        Start Bayesian Trial
+                                                    </span>
+                                                </p>
+                                                <p class="card-description">
+                                                    Initializes a Bayesian trial to efficiently explore the
+                                                    hyperparameter space based on prior probability models.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Bayesian Tuner: Probabilistic Modeling -->
+                                        <div class="card">
+                                            <div class="card-header" style="background-color: #007bff; color: white;">
+                                                <h5 class="card-title">Probabilistic Modeling</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
+                                                    2 <span style="text-align: left;color: #007bff; font-size: large;">
+                                                        Generate Probabilistic Model
+                                                    </span>
+                                                </p>
+                                                <p class="card-description">
+                                                    Constructs a probabilistic model to predict performance and guide
+                                                    the search towards promising hyperparameters.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Bayesian Tuner: Optimal Hyperparameter Selection -->
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
+                                                    3 <span style="text-align: left;color: #007bff; font-size: large;">
+                                                        Optimal Hyperparameter Selection
+                                                    </span>
+                                                </p>
+                                                <p class="card-description">
+                                                    Selects hyperparameters that maximize the acquisition function,
+                                                    balancing exploration and exploitation.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-lg-4">
+                                        <!-- Bayesian Tuner: Model Training and Evaluation -->
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
+                                                    4 <span style="text-align: left;color: #007bff; font-size: large;">
+                                                        Model Training and Evaluation
+                                                    </span>
+                                                </p>
+                                                <p class="card-description">
+                                                    Trains models using selected hyperparameters and evaluates their
+                                                    performance to update the probabilistic model.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Bayesian Tuner: Updating Probabilistic Model -->
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
+                                                    5 <span style="text-align: left;color: #007bff; font-size: large;">
+                                                        Updating Probabilistic Model
+                                                    </span>
+                                                </p>
+                                                <p class="card-description">
+                                                    Updates the probabilistic model with new evaluation results,
+                                                    refining predictions for subsequent trials.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Bayesian Tuner: Iterative Process -->
+                                        <div class="card">
+                                            <div class="card-header" style="background-color: #007bff; color: white;">
+                                                <h5 class="card-title">Iterative Optimization Process</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
+                                                    6 <span style="color: #007bff; font-size: large;">
+                                                        Iterate Until Convergence
+                                                    </span>
+                                                </p>
+                                                <p class="card-description">
+                                                    Continuously iterates the selection, training, evaluation, and
+                                                    update process until reaching convergence or exhausting the trial
+                                                    limit.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-8 offset-md-2 col-lg-4 offset-lg-0">
+                                        <!-- Bayesian Tuner: Final Hyperparameter Selection -->
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
+                                                    7 <span style="text-align: left;color: #007bff; font-size: large;">
+                                                        Final Hyperparameter Selection
+                                                    </span>
+                                                </p>
+                                                <p class="card-description">
+                                                    Selects the best hyperparameter configuration based on the highest
+                                                    performing trials.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Bayesian Tuner: Training Final Model -->
+                                        <div class="card">
+                                            <div class="card-header" style="background-color: #007bff; color: white;">
+                                                <h5 class="card-title">Training the Final Model</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
+                                                    8 <span style="text-align: left;color: #007bff; font-size: large;">
+                                                        Train Final Model
+                                                    </span>
+                                                </p>
+                                                <p class="card-description">
+                                                    Trains the final model using the best hyperparameter set discovered
+                                                    during the Bayesian optimization process.
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card" data-background-color="black">
-                                <div class="card-body content-danger">
-                                    <p style="text-align: left;color: #f96332; font-size: x-large;">
-                                        2 <span style="text-align: left;color: #f96332; font-size: large;">
-                                            Populate Space
-                                        </span>
-                                    </p>
-                                    <h6 class="category-social">
-                                        <i class="fab fa-apple"></i> New Apps
-                                    </h6>
-                                    <h4 class="card-title">
-                                        <a href="#nuk">FiftyThree Files For Paper</a>
-                                    </h4>
-                                    <p class="card-description">
-                                        Yesterday, as Facebook launched its news reader app Paper,
-                                        design-focused startup FiftyThree called out Facebook publicly for
-                                        using their brand name...
-                                    </p>
-                                    <div class="card-footer text-center">
-                                        <a href="#pablo" class="btn btn-default btn-round">Read Article</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card card-blog">
-                                <div class="card-image">
-                                    <a href="#pablo">
-                                        <img class="img rounded" src="assets/img/card-blog2.jpg">
-                                    </a>
-                                </div>
-                                <div class="card-body">
-                                    <p style="text-align: left;color: #f96332; font-size: x-large;">
-                                        5 <span style="text-align: left;color: #f96332; font-size: large;">
-                                            Populate Trie
-                                        </span>
-                                    </p>
-                                    <h6 class="category text-primary">Features</h6>
-                                    <h5 class="card-title">
-                                        That’s One Way To Ditch Your Passenger
-                                    </h5>
-                                    <p class="card-description">
-                                        As near as we can tell, this guy must have thought he was going over
-                                        backwards and tapped the rear break to bring the nose down...
-                                    </p>
-                                    <div class="card-footer">
-                                        <div class="author">
-                                            <img src="assets/img/julie.jpg" alt="..."
-                                                class="avatar img-raised">
-                                            <span>Mike John</span>
-                                        </div>
-                                        <div class="stats stats-right">
-                                            <i class="now-ui-icons tech_watch-time"></i> 5 min read
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card" data-background-color="blue">
-                                <div class="card-body">
-                                    <p style="text-align: left;color: #f96332; font-size: x-large;">
-                                        8 <span style="text-align: left;color: #f96332; font-size: large;">
-                                            Return Value
-                                        </span>
-                                    </p>
-                                    <h6 class="category-social">
-                                        <i class="fab fa-twitter"></i> Twitter
-                                    </h6>
-                                    <p>
-                                        "You Don't Have to Sacrifice Joy to Build a Fabulous Business and
-                                        Life"
-                                    </p>
-                                    <div class="card-footer">
-                                        <div class="author">
-                                            <img src="assets/img/james.jpg" alt="..."
-                                                class="avatar img-raised">
-                                            <span>Tania Andrew</span>
-                                        </div>
-                                        <div class="stats stats-right">
-                                            <i class="now-ui-icons ui-2_favourite-28"></i> 2.4K ·
-                                            <i class="now-ui-icons files_single-copy-04"></i> 45
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-8 offset-md-2 col-lg-4 offset-lg-0">
-                            <div class="card card-blog">
-                                <div class="card-body text-center">
-                                    <p style="text-align: left;color: #f96332; font-size: x-large;">
-                                        3 <span style="text-align: left;color: #f96332; font-size: large;">
-                                            Create a Trie
-                                        </span>
-                                    </p>
-                                    <h6 class="category text-danger">
-                                        <i class="now-ui-icons media-2_sound-wave"></i> Business
-                                    </h6>
-                                    <h5 class="card-title">
-                                        Axel Springer Spends $343M To Buy Business Insider
-                                    </h5>
-                                    <p class="card-description">
-                                        German media giant Axel Springer has announced it’s acquiring online
-                                        business news publication Business Inside...
-                                    </p>
-                                    <div class="card-footer">
-                                        <a href="#nuk" class="btn btn-primary">Read Article</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card card-blog">
-                                <div class="card-image">
-                                    <img class="img rounded" src="assets/img/card-blog3.jpg">
-                                </div>
-                                <div class="card-body">
-                                    <p style="text-align: left;color: #f96332; font-size: x-large;">
-                                        6 <span style="text-align: left;color: #f96332; font-size: large;">
-                                            Convert to Probabilities
-                                        </span>
-                                    </p>
-                                    <h6 class="category text-warning">
-                                        <i class="now-ui-icons media-1_camera-compact"></i> Photo
-                                    </h6>
-                                    <h5 class="card-title">
-                                        <a href="#pablo">Indispensible to nature photography: the hide</a>
-                                    </h5>
-                                    <div class="card-footer">
-                                        <div class="stats stats-right">
-                                            <i class="now-ui-icons ui-2_favourite-28"></i> 342 ·
-                                            <i class="now-ui-icons files_single-copy-04"></i> 45
-                                        </div>
-                                        <div class="author">
-                                            <img src="assets/img/james.jpg" alt="..."
-                                                class="avatar img-raised">
-                                            <span>Devin Coldewey</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
     `;
-    targetElement.appendChild(tabPane);
+    const learnMoreButton = document.getElementById('learnMoreButton');
+    
+    // button for tuner description
+    learnMoreButton.addEventListener("click", function(event) {
+        console.log("in here");
+        event.preventDefault(); // Prevent the default anchor behavior
+    
+        // Deactivate current active tab and tab content
+        document.querySelector('.nav-link.active').classList.remove('active', 'show');
+        document.querySelector('.tab-pane.active').classList.remove('active', 'show');
+    
+        // Activate the tabtwo tab and content
+        document.querySelector('a[data-target="#tabtwo"]').classList.add('active', 'show');
+        document.getElementById("tabtwo").classList.add('active', 'show');
+    });
+    
   };
 
-  
-function createAndUpdateTunerGreedy(data, callback){
-    const casualnexContainer = document.getElementById('tuner-explanation-div');
-    createDynamicTabsGreedy(casualnexContainer);
-    Object.entries(data).forEach(function ([key, value]) {
-        console.log(key, value)
-        const figureCard = createFigureCardWithAccordion(value);
-        casualnexContainer.appendChild(figureCard);
-    })
-};
+function createDynamicTabsBayesian(targetElement) {
+    // var tabPane = document.createEl++ement("div");
+    targetElement.innerHTML = `
+    <div class="col-md-12">
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <ul
+                        class="nav nav-tabs px-1 py-3  bg-light flex-column flex-lg-row justify-content-md-center text-center">
+                        <li class="nav-item">
+                            <a class="nav-link active show" href="" data-toggle="tab" data-target="#tabone">
+                                Bayesian</a>
+                            <!-- <i class="now-ui-icons travel_info mr-1"></i> -->
+                        </li>
+                        <li class="nav-item ">
+                            <a href="" class="nav-link" data-toggle="tab" data-target="#tabtwo">
+                                Description</a>
+                        </li>
+                    </ul>
+                    <div class="card-body">
+                        <div class="tab-content mt-2">
+                            <div class="tab-pane fade text-center active show" id="tabone" role="tabpanel">
+                                <div class="info info-hover">
+                                    <h4 class="info-title">Your Current Tuner:<p style="color: #f96332;">Bayesian</p>
+                                    </h4>
+                                    <!-- Greedy Tuner Information Section with Creative Styling -->
+                                    <div class="info-section"
+                                        style="background-color: #f4f5f7; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+                                        <h4 class="info-title" style="color: #32325d; margin-top: 10px ;">Bayesian Tuner
+                                            in
+                                            AutoKeras</h4>
+                                        <div class="description" style="color: #525f7f;">
+                                            <strong>Smart Prediction: </strong> Learns from past evaluations for optimal
+                                            hyperparameter choices. </br>
+                                            <strong>Balanced Search:</strong> Efficiently navigates between exploring
+                                            and exploiting hyperparameters.</br>
+                                            <strong>Adaptive Tuning:</strong> Customizes search based on results and
+                                            prior knowledge.</br>
+                                        </div>
+                                        <a href="#tabtwo" style="margin:20px ;" class="btn btn-primary"
+                                            id="learnMoreButton">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="tab-pane fade text-center" id="tabtwo" role="tabpanel">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Note: Bayesian tuner works on the history of previous trial, if the
+                                                numer of trials are not enough to fit a probabilistic model, then it
+                                                would do a random sampling.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-4">
+                                        <!-- Bayesian Tuner: Trial Initialization -->
+                                        <div class="card">
+                                            <div class="card-header" style="background-color: #007bff; color: white;">
+                                                <h5 class="card-title">Trial Initialization Process</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
+                                                    1 <span style="text-align: left;color: #007bff; font-size: large;">
+                                                        Start Bayesian Trial
+                                                    </span>
+                                                </p>
+                                                <p class="card-description">
+                                                    Initializes a Bayesian trial to efficiently explore the
+                                                    hyperparameter space based on prior probability models.
+                                                </p>
+                                            </div>
+                                        </div>
 
-function createAccordion(accordionId, data) {
+                                        <!-- Bayesian Tuner: Probabilistic Modeling -->
+                                        <div class="card">
+                                            <div class="card-header" style="background-color: #007bff; color: white;">
+                                                <h5 class="card-title">Probabilistic Modeling</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
+                                                    2 <span style="text-align: left;color: #007bff; font-size: large;">
+                                                        Generate Probabilistic Model
+                                                    </span>
+                                                </p>
+                                                <p class="card-description">
+                                                    Constructs a probabilistic model to predict performance and guide
+                                                    the search towards promising hyperparameters.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Bayesian Tuner: Optimal Hyperparameter Selection -->
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
+                                                    3 <span style="text-align: left;color: #007bff; font-size: large;">
+                                                        Optimal Hyperparameter Selection
+                                                    </span>
+                                                </p>
+                                                <p class="card-description">
+                                                    Selects hyperparameters that maximize the acquisition function,
+                                                    balancing exploration and exploitation.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-lg-4">
+                                        <!-- Bayesian Tuner: Model Training and Evaluation -->
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
+                                                    4 <span style="text-align: left;color: #007bff; font-size: large;">
+                                                        Model Training and Evaluation
+                                                    </span>
+                                                </p>
+                                                <p class="card-description">
+                                                    Trains models using selected hyperparameters and evaluates their
+                                                    performance to update the probabilistic model.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Bayesian Tuner: Updating Probabilistic Model -->
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
+                                                    5 <span style="text-align: left;color: #007bff; font-size: large;">
+                                                        Updating Probabilistic Model
+                                                    </span>
+                                                </p>
+                                                <p class="card-description">
+                                                    Updates the probabilistic model with new evaluation results,
+                                                    refining predictions for subsequent trials.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Bayesian Tuner: Iterative Process -->
+                                        <div class="card">
+                                            <div class="card-header" style="background-color: #007bff; color: white;">
+                                                <h5 class="card-title">Iterative Optimization Process</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
+                                                    6 <span style="color: #007bff; font-size: large;">
+                                                        Iterate Until Convergence
+                                                    </span>
+                                                </p>
+                                                <p class="card-description">
+                                                    Continuously iterates the selection, training, evaluation, and
+                                                    update process until reaching convergence or exhausting the trial
+                                                    limit.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-8 offset-md-2 col-lg-4 offset-lg-0">
+                                        <!-- Bayesian Tuner: Final Hyperparameter Selection -->
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
+                                                    7 <span style="text-align: left;color: #007bff; font-size: large;">
+                                                        Final Hyperparameter Selection
+                                                    </span>
+                                                </p>
+                                                <p class="card-description">
+                                                    Selects the best hyperparameter configuration based on the highest
+                                                    performing trials.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Bayesian Tuner: Training Final Model -->
+                                        <div class="card">
+                                            <div class="card-header" style="background-color: #007bff; color: white;">
+                                                <h5 class="card-title">Training the Final Model</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
+                                                    8 <span style="text-align: left;color: #007bff; font-size: large;">
+                                                        Train Final Model
+                                                    </span>
+                                                </p>
+                                                <p class="card-description">
+                                                    Trains the final model using the best hyperparameter set discovered
+                                                    during the Bayesian optimization process.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    // targetElement.appendChild(tabPane);
+  };
+
+function createAccordionBayesian(accordionId, data) {
     // Create a row for the accordion
     
     // Create the accordion container inside the row
@@ -911,13 +1022,226 @@ function createAccordion(accordionId, data) {
     return accordionContainer;
 };
 
-function createAndUpdateTunerBayesian(data, callback){
+function createAndUpdateTunerBayesian(data){
     const casualnexContainer = document.getElementById('tuner-explanation-div');
     createDynamicTabsBayesian(casualnexContainer);
     Object.entries(data).forEach(function ([key, value]) {
         console.log(key, value)
-        const accordionDiv = createAccordion(key, value);
+        const accordionDiv = createAccordionBayesian(key, value);
         casualnexContainer.appendChild(accordionDiv);
+    })
+};
+
+function createFigureCardWithAccordionGreedy(value) {
+    const card = document.createElement('div');
+    card.classList.add('col-md-12', 'figure-card');
+    card.style.padding = '20px';
+    
+    const tabHeader = document.createElement('h5');
+    tabHeader.textContent = `Trial ${value["trial_id"]}`;
+    tabHeader.classList.add('card-title');
+
+    const cardHeader = document.createElement('div');
+    cardHeader.classList.add('card-header');
+    cardHeader.style.background = 'white';
+
+    cardHeader.appendChild(tabHeader);
+
+    const cardContent = document.createElement('div');
+    cardContent.classList.add('card');
+
+    const cardBody = document.createElement('div');
+    cardBody.classList.add('card-body');
+    // Create a unique ID for the graph container using the trial_id
+    const graphContainerId = `graphContainer${value["trial_id"]}`;
+    // Create a container for the Vis.js graph
+    const graphContainer = document.createElement('div');
+    graphContainer.style.height = '600px'; // Set a height for the graph
+    graphContainer.style.width = '100%';
+    graphContainer.style.background = '#001521';
+    graphContainer.id = graphContainerId; // Assign the unique ID
+    cardBody.appendChild(graphContainer);
+
+
+    const jsonData = JSON.parse(value['casualnex_graph_path']);
+
+
+    // Convert the JSON data into vis.js format
+    // You may need to adapt this part based on the structure of your JSON data
+    var nodes = jsonData.nodes;
+    var edges = jsonData.edges;
+
+    var nodeString = nodes.replace(/'/g, '"');
+    nodeString = nodeString.replace(/True/g, 'true');
+    nodeString = nodeString.replace(/False/g, 'false');
+    var edgeString = edges.replace(/'/g, '"');
+    edgeString = edgeString.replace(/True/g, 'true');
+    edgeString = edgeString.replace(/False/g, 'false');
+
+// Parse the JSON string into a JavaScript array
+    const nodeFormat = JSON.parse(nodeString);
+    const edgeFormat = JSON.parse(edgeString);
+
+        // Create data object for vis.js
+        var data = {
+            nodes: nodeFormat,
+            edges: edgeFormat
+        };
+
+        // Create options for the graph (customize as needed)
+        var options = {
+            layout: {
+                hierarchical: {
+                    direction: "UD",
+                    sortMethod: "directed"
+                }
+            }
+        };
+
+    const network = new vis.Network(graphContainer, data, options);
+    
+
+
+    const accordionSection = document.createElement('div');
+    accordionSection.classList.add('collapse');
+    accordionSection.setAttribute('id', `collapse${value["trial_id"]}`);
+    accordionSection.setAttribute('data-parent', '.figure-card');
+  
+    const accordionCardBody = document.createElement('div');
+    accordionCardBody.classList.add('card-body');
+    
+    // Create the first row div
+    const firstRowDiv = document.createElement('div');
+    firstRowDiv.classList.add('row');
+
+    // Create the first column div inside the first row
+    const firstColDiv = document.createElement('div');
+    firstColDiv.classList.add('col-md-12');
+
+    // Create the paragraph element with card text
+    const paragraph = document.createElement('p');
+    paragraph.classList.add('card-text');
+    paragraph.textContent = `Hyper parameter selected in this trial is `;
+
+    const boldText = document.createElement('strong');
+    boldText.textContent = value['hp_names'];
+
+    // Append the bold text to the paragraph
+    paragraph.appendChild(boldText);
+
+    // Continue with the rest of the paragraph text
+    const additionalText = document.createTextNode(' as it has the highest probability');
+paragraph.appendChild(additionalText);
+
+    // Append paragraph to the first column div
+    firstColDiv.appendChild(paragraph);
+
+    // Append the first column div to the first row
+    firstRowDiv.appendChild(firstColDiv);
+
+    // Append the first row to the outer div
+    accordionCardBody.appendChild(firstRowDiv);
+
+    // Create the second row div
+    const secondRowDiv = document.createElement('div');
+    secondRowDiv.classList.add('row');
+
+    // Create the second column div inside the second row
+    const secondColDiv = document.createElement('div');
+    secondColDiv.classList.add('col-md-12');
+
+        // Create a table element
+    const table = document.createElement('table');
+    table.classList.add('table'); // Add Bootstrap class for styling, if using Bootstrap
+
+    // Create table header
+    const thead = document.createElement('thead');
+    const headerRow = document.createElement('tr');
+
+    // Create and append the 'Key' header
+    const keyHeader = document.createElement('th');
+    keyHeader.textContent = 'Node';
+    headerRow.appendChild(keyHeader);
+
+    // Create and append the 'Value' header
+    const valueHeader = document.createElement('th');
+    valueHeader.textContent = 'Probability';
+    headerRow.appendChild(valueHeader);
+
+    // Append the header row to the table header
+    thead.appendChild(headerRow);
+
+    // Append the table header to the table
+    table.appendChild(thead);
+
+    // Create table body and append rows
+    const tbody = document.createElement('tbody');
+
+    var probabilities = value['probabilities']
+    // Iterate over the object to create rows
+    for (const [key, value] of Object.entries(probabilities)) {
+        // Create a table row
+        const row = document.createElement('tr');
+
+        // Create a cell for the key
+        const keyCell = document.createElement('td');
+        keyCell.textContent = key;
+
+        // Create a cell for the value
+        const valueCell = document.createElement('td');
+        valueCell.textContent = value;
+
+        // Append cells to the row
+        row.appendChild(keyCell);
+        row.appendChild(valueCell);
+
+        // Append row to the table body
+        tbody.appendChild(row);
+    }
+
+    // Append the table body to the table
+    table.appendChild(tbody);
+
+    // Append the table to the secondColDiv
+    secondColDiv.appendChild(table);
+
+    // Append the second column div to the second row
+    secondRowDiv.appendChild(secondColDiv);
+
+    // Append the second row to the outer div
+    accordionCardBody.appendChild(secondRowDiv);
+
+  
+    accordionSection.appendChild(accordionCardBody);
+  
+    const accordionButton = document.createElement('button');
+    accordionButton.classList.add('btn', 'btn-link');
+    accordionButton.setAttribute('data-toggle', 'collapse');
+    accordionButton.setAttribute('data-target', `#collapse${value["trial_id"]}`);
+    accordionButton.setAttribute('aria-expanded', 'true');
+    accordionButton.setAttribute('aria-controls', `collapse${value["trial_id"]}`);
+    accordionButton.textContent = 'Details';
+  
+    cardBody.appendChild(accordionButton);
+    cardBody.appendChild(accordionSection);
+  
+    
+    cardContent.appendChild(cardBody);
+    card.appendChild(cardHeader);
+    card.appendChild(cardContent);
+    
+
+    return card;
+
+};
+
+function createAndUpdateTunerGreedy(data){
+    const casualnexContainer = document.getElementById('tuner-explanation-div');
+    createDynamicTabsGreedy(casualnexContainer);
+    Object.entries(data).forEach(function ([key, value]) {
+        console.log(key, value)
+        const figureCard = createFigureCardWithAccordionGreedy(value);
+        casualnexContainer.appendChild(figureCard);
     })
 };
 
@@ -933,10 +1257,16 @@ socket.on('evaluation', (data) => {
 });
 
 socket.on('initial', (data) => {
-    console.log(data);
-    project_name = data["project_name"]
-    train_file_path = data["x"]
-    update_training_ui(data)
+    if ("end_time" in data){
+        update_training_ui_end(data)
+    }
+    else{
+        project_name = data["project_name"]
+        train_file_path = data["x"]
+        update_training_ui_start(data)
+        // start_get_request()
+    }
+    
 });
 
 socket.on('update', (data) => {
@@ -948,9 +1278,12 @@ socket.on('update', (data) => {
             const finalArchImageUrl = `/get_final_image/final_model`;
             const tValue = 'test_model';
             if (!(tValue in models)) {
-                createTabElement('arch', 'Architecture', '#final-arch-card-ul');
-                createAndAppendTabPaneFinalArch('arch', finalArchImageUrl, '#final-arch-card');
-                models[tValue] = finalArchImageUrl;
+                const $imageElementPreProcess = $('<p>', {
+                    html: `<img class="card-img-top" src="${finalArchImageUrl}" alt="Model Image" style="max-width: 100%; max-height: 100%;"></br`,
+                });
+                $('#final-arch-card').append($imageElementPreProcess);
+
+                models[tValue] = finalArchImageUrl
 
             }
         }
@@ -960,7 +1293,7 @@ socket.on('update', (data) => {
             if (!(tValue in models)) {
                 // call element here to add
                 const $imageElementPreProcess = $('<p>', {
-                    html: `<img src="${finalArchImageUrl}" alt="Model Image" style="max-width: 100%; max-height: 100%;"></br`,
+                    html: `<img class="card-img-top" src="${finalArchImageUrl}" alt="Model Image" style="max-width: 100%; max-height: 100%;"></br`,
                 });
                 $('#preprocessing-arch-card').append($imageElementPreProcess);
 
@@ -973,7 +1306,7 @@ socket.on('update', (data) => {
             if (!(tValue in models)) {
                 // call element here to add
                 const $imageElementDense = $('<p>', {
-                    html: `<img src="${finalArchImageUrl}" alt="Model Image" style="max-width: 100%; max-height: 100%;">`,
+                    html: `<img class="card-img-top" src="${finalArchImageUrl}" alt="Model Image" style="max-width: 100%; max-height: 100%;">`,
                 });
                 $('#dense-arch-card').append($imageElementDense);
                 models[tValue] = finalArchImageUrl
@@ -993,7 +1326,6 @@ socket.on('update', (data) => {
                             trialValue: trialValue,
                             value: observation.value,
                             step: observation.step
-
                         };
                     });
                     newValues[metricName] = observations;
@@ -1001,27 +1333,18 @@ socket.on('update', (data) => {
             }
         };
         if (Object.keys(newValues).length > 0) {
-            // console.log("Sending to funtion")
-            // console.log(newValues)
             bestValues = updateBestValues(bestValues, newValues);
-            // console.log(bestValues);  // Corrected variable name to "bestValues"
         };
 
         const imageUrl = `/get_image/${encodeURIComponent(trialValue)}/model`;
-        if (!(trialValue in trials)) {
-            var element = document.getElementById(trialValue);
-            var elementTabPane = document.getElementById(`tab-${trialValue}`);
-            if (element) {
-                element.parentNode.removeChild(element);
-            }
-            if (elementTabPane) {
-                elementTabPane.parentNode.removeChild(elementTabPane);
-            }
-            createAndAppendTabPaneCarousel(trialValue, imageUrl, '#arch-carousel', data["values"], data["metrics"]);
-        }
+        
+            // createAndAppendTabPaneCarousel(trialValue, imageUrl, '#arch-carousel', data["values"], data["metrics"]);
+        addTrialToTable(trialValue, imageUrl, data["values"], data["metrics"])
+        
 
     }
 });
+
 document.addEventListener('DOMContentLoaded', function() {
     // Get all elements with class="dropdown-btn" and loop through them
     var dropdown = document.getElementsByClassName("dropdown-btn");
@@ -1051,49 +1374,118 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+   
     const explorePreprocessingbutton = document.getElementById("explore-preprocessing");
     const exploreTunerButton = document.getElementById('explore-tuner');
-    // const exploreFeatures = document.getElementById("explore-features");
-    // const closeAppButton = document.getElementById('disconnect-button');
-    // const igGraphButton = document.getElementById('ig-graph-button');
-    // const aleGraphButton = document.getElementById('ale-graph-button');
+    const closeAppButton = document.getElementById('disconnect-button');
+    const igGraphButton = document.getElementById('ig-graph-button');
+    const aleGraphButton = document.getElementById('ale-graph-button');
+    // const testAPI = document.getElementById('test-api');
     
-    // document.getElementById("learnMoreButton").addEventListener("click", function(event) {
-    //     console.log("in here");
-    //     event.preventDefault(); // Prevent the default anchor behavior
-    
-    //     // Deactivate current active tab and tab content
-    //     document.querySelector('.nav-link.active').classList.remove('active', 'show');
-    //     document.querySelector('.tab-pane.active').classList.remove('active', 'show');
-    
-    //     // Activate the tabtwo tab and content
-    //     document.querySelector('a[data-target="#tabtwo"]').classList.add('active', 'show');
-    //     document.getElementById("tabtwo").classList.add('active', 'show');
-    // });
+    closeAppButton.addEventListener('click', () => {
+        window.location.href = '/close_app'; // Send a request to the server to close the Flask app
+    });
 
+    document.body.addEventListener('click', async function(event) {
+        // Check if the clicked element has the desired class
+        if (event.target && event.target.classList.contains('tensor-api-class')) {
+            const buttonId = event.target.id;
+            console.log('Clicked button ID:', buttonId);
+            
+            const tabId = buttonId.split('-')[1];
+            const numberPart = formatNumberPart(buttonId);
+            const pathList = createPathList(numberPart);
+
+            const formData1 = new FormData();
+            formData1.append('tag', 'epoch_accuracy');
+            pathList.forEach(value => formData1.append("runs", value));
+
+            const formData2 = new FormData();
+            formData2.append('tag', 'epoch_loss');
+            pathList.forEach(value => formData2.append("runs", value));
     
-    // closeAppButton.addEventListener('click', () => {
-    //     window.location.href = '/close_app'; // Send a request to the server to close the Flask app
-    // });
+            try {
+                const accuracyData = await postData('http://127.0.0.1:8082/proxy/data/plugin/scalars/scalars_multirun', formData1);
+                const lossData = await postData('http://127.0.0.1:8082/proxy/data/plugin/scalars/scalars_multirun', formData2);
+                console.log(accuracyData);
+                console.log(lossData);
+                plotGraph(`accuracy-${tabId}`, 'Accuracy Data', accuracyData);
+                plotGraph(`loss-${tabId}`, 'Loss Data', lossData);
 
-    // exploreFeatures.addEventListener("click", function () {
-    //     // Make an AJAX request to your Flask-RESTful API endpoint
-    //     var targetDiv = document.getElementById('explore-features-div');
-    //     var offsetTop = targetDiv.offsetTop;
+            } catch (error) {
+                console.error('Error during fetch:', error);
+            }
+        }
+    });
 
-    //     // Scroll the window to the target div
-    //     window.scrollTo({ top: offsetTop, behavior: 'smooth' });
-    // });
+    function plotGraph(containerId, title, dataSets) {
+        // Create an array to hold the traces
+        const container = document.getElementById(containerId);
+        container.innerHTML = '';
+        const traces = [];
+    
+        // Iterate over each key in the dataSets object
+        for (const key in dataSets) {
+            if (dataSets.hasOwnProperty(key)) {
+                const dataSet = dataSets[key];
+                const trace = {
+                    x: dataSet.map(item => item[1]), // Extract epoch
+                    y: dataSet.map(item => item[2]), // Extract value
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    name: key // Use the key as the trace name
+                };
+                traces.push(trace);
+            }
+        }
+    
+        const layout = {
+            title: title,
+            xaxis: { title: 'Epoch' },
+            yaxis: { title: 'Value' },
+            autosize: true, 
+            margin: { l: 150, r: 150, b: 150, t: 50 },
+            legend: {
+                orientation: 'h', // Set legend orientation to horizontal
+                x: 0, // Horizontal position
+                y: -0.3, // Vertical position (negative to move it below the plot area)
+                xanchor: 'left',
+                yanchor: 'top'
+            }        };
+        
+        const config = {
+            responsive: true // Make the plot responsive to window size changes
+        };
+    
+        Plotly.newPlot(containerId, traces, layout, config);
+    };
+    
+    function formatNumberPart(buttonId) {
+        const match = buttonId.match(/\d+$/);
+        let numberPart = match ? match[0] : null;
+        return numberPart 
+    };
+    
+    function createPathList(numberPart) {
+        return [
+            numberPart + "\\execution0\\train",
+            numberPart + "\\execution0\\validation"
+        ];
+    };
+    
+    async function postData(url, formData) {
+        const response = await fetch(url, { method: 'POST', body: formData });
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    };
+    
+    
 
 
     explorePreprocessingbutton.addEventListener("click", function () {
-        // // Make an AJAX request to your Flask-RESTful API endpoint
-        // var targetDiv = document.getElementById('explore-preprocessing-div');
-        // var offsetTop = targetDiv.offsetTop;
-
-        // // Scroll the window to the target div
-        // window.scrollTo({ top: offsetTop, behavior: 'smooth' });
-        
+        document.getElementById("explore-preprocessing").setAttribute("disabled", "");
         const url = '/explore_preprocessing/?project_name=' + encodeURIComponent(project_name) + '&train_file_path=' + encodeURIComponent(train_file_path);
         fetch(url, {
                 method: 'POST',
@@ -1114,12 +1506,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     exploreTunerButton.addEventListener("click", function () {
-
-        // var targetDiv = document.getElementById('explore-tuner-div');
-        // var offsetTop = targetDiv.offsetTop;
-
-        // // Scroll the window to the target div
-        // window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+        document.getElementById("explore-tuner").setAttribute("disabled", "");
         const url = '/explore_tuner/?project_name=' + encodeURIComponent(project_name);
         fetch(url, {
             method: 'POST',
@@ -1134,94 +1521,82 @@ document.addEventListener("DOMContentLoaded", function () {
                 return response.json(); // Parse the response as JSON
             })
             .then(data => {
+                console.log("Tuner Explanation received");
                 console.log(data)
-                if(data['00']["tuner"] == "greedy"){
-                    createAndUpdateTunerGreedy(data, initializeElement) ;
+                let firstKey = Object.keys(data)[0];
+                if(data[firstKey]["tuner"] == "greedy"){
+                    createAndUpdateTunerGreedy(data) ;
                 }
                 else{
-                    createAndUpdateTunerBayesian(data, initializeElement);
+                    createAndUpdateTunerBayesian(data);
                 }
-                
-
             });
-        // fetch('/return_html')
-        // .then(response => response.text())
-        // .then(data => {
+    });
 
-        //     var htmlContent = document.getElementById('tuner-explanation-div');
-        //     var iframe = document.createElement('iframe');
-        //     iframe.style.width = '100%';
-        //     iframe.style.height = '99%';
-        //     iframe.scrolling = 'no';
-        //     iframe.srcdoc = data;
-        //     htmlContent.appendChild(iframe);
+    igGraphButton.addEventListener("click", function () {
 
-        // })
-        // .catch(error => {
-        //     console.error('Error:', error);
-        // });
+        var num_rows = document.getElementById('igGraphInputField').value;
+        if (num_rows.trim() === '') {
+            alert('Please enter number of rows next time');
+            num_rows = 5
+        }
+        const explanation_type = 'IG'
+        const url = '/load_data/?project_name=' + encodeURIComponent(project_name) + '&train_file_path=' + encodeURIComponent(train_file_path) + '&explanation_type=' + encodeURIComponent(explanation_type) + '&num_rows=' + encodeURIComponent(num_rows);
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json(); 
+            })
+            .then(data => {
+                const chartContainer = document.getElementById("ig-graph");
+                var chartData = JSON.parse(data);
 
-
+                var config = {
+                    responsive: true,
+                    displayModeBar: false, // Ensure the mode bar is displayed
+                    modeBarButtonsToRemove: ['zoom2d', 'zoomIn2d', 'zoomOut2d', 'autoScale2d', 'resetScale2d']
+                };
+                
+                Plotly.newPlot(chartContainer, chartData, config);
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
 
     });
 
- 
+    aleGraphButton.addEventListener("click", function () {
+        const explanation_type = 'ALE'
+        const url = '/load_data/?project_name=' + encodeURIComponent(project_name) + '&train_file_path=' + encodeURIComponent(train_file_path) + '&explanation_type=' + encodeURIComponent(explanation_type);
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json(); 
+            })
+            .then(data => {
+                const chartContainer = document.getElementById("ale-graph");
+                var chartData = JSON.parse(data);
+                Plotly.newPlot(chartContainer, chartData, { responsive: true });
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
 
-    // igGraphButton.addEventListener("click", function () {
-
-    //     fetch('/load_data_ig', {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },
-    //     })
-    //         .then(response => {
-    //             if (!response.ok) {
-    //                 throw new Error('Network response was not ok');
-    //             }
-    //             return response.json(); // Parse the response as JSON
-    //         })
-    //         .then(data => {
-    //             // Work with the JSON data here
-    //             // Render the chart using Plotly
-    //             const chartContainer = document.getElementById("ig-graph");
-    //             var chartData = JSON.parse(data);
-    //             Plotly.newPlot(chartContainer, chartData, { responsive: true });
-    //         })
-    //         .catch(error => {
-    //             // Handle errors
-    //             console.error('There was a problem with the fetch operation:', error);
-    //         });
-
-    // });
-
-    // aleGraphButton.addEventListener("click", function () {
-
-    //     fetch('/load_data_ale', {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },
-    //     })
-    //         .then(response => {
-    //             if (!response.ok) {
-    //                 throw new Error('Network response was not ok');
-    //             }
-    //             return response.json(); // Parse the response as JSON
-    //         })
-    //         .then(data => {
-    //             // Work with the JSON data here
-    //             // Render the chart using Plotly
-    //             const chartContainer = document.getElementById("ale-graph");
-    //             var chartData = JSON.parse(data);
-    //             Plotly.newPlot(chartContainer, chartData, { responsive: true });
-    //         })
-    //         .catch(error => {
-    //             // Handle errors
-    //             console.error('There was a problem with the fetch operation:', error);
-    //         });
-
-    // });
+    });
 
     document.addEventListener('DOMContentLoaded', function() {
         // Get all elements with class="dropdown-btn" and loop through them
@@ -1258,3 +1633,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+

@@ -41,6 +41,14 @@ class Wrappers:
         self.set_pre_information(start_time =  datetime.now().strftime("%H:%M:%S"))
         # self.pre_information["dataset_figure"] = Dataset().generate_dataset_distribution(self.pre_information["x"])
         self.api.publish_data(self.pre_information, "pre_information")
+
+        
+    def send_end_information(self):
+        """
+        Send End-Information to the API.
+        """
+        # self.pre_information["dataset_figure"] = Dataset().generate_dataset_distribution(self.pre_information["x"])
+        self.api.publish_data({"end_time" : datetime.now().strftime("%H:%M:%S")}, "pre_information")
     
     def set_pre_information(self, *args, **kwargs):
         """
@@ -92,8 +100,10 @@ class Wrappers:
         # self.y_label = kwargs['y']
 
         fit_ret = self.clk.fit(*args, **kwargs)
+        self.send_end_information()
         self.generate_model_architectures()
         self.evaluation_metrics()
+        
 
         return fit_ret
 

@@ -1,6 +1,7 @@
 /structured_data_classifier
 /text_classifier
 /auto_model
+/image_classifier
 /structured_data_classifier
 /structured_data_regressor
 /logs

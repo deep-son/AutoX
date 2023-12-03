@@ -87,6 +87,15 @@
   display: block;
 }
 
+.plot-container {
+  width: 95%;   /* Adjust width as needed */
+  height: 500px; 
+  overflow:hidden;/* Adjust height as needed */
+}
+
+.modal-xxl {
+  max-width: 95%; /* or any other size */
+}
 
 #navbar {
     margin-left: 250px;
@@ -212,3 +221,10 @@
 .category{
   font-family: inherit;
 }
+
+.blurred-image {
+  filter: blur(0px);
+}
+
+
+

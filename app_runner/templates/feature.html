@@ -1,0 +1,98 @@
+<div class="row">
+    <div class="col-md-12">
+        <nav aria-label="breadcrumb" role="navigation">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Explanations</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Features</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<div id="explore-feature-div">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-3">
+                <img class="card-img-top blurred-image" src="{{url_for('static', filename='img/feature-1.png')}}"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">Explore Features</h4>
+                    <p class="card-text">This section offers comprehensive explanations of the model's features.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row" style="margin-bottom: 40px;">
+                                <div class="col-md-12">
+                                    <p class="text-secondary" style="font-size: large;">
+                                        Integrated Gradients
+                                        <b data-toggle="tooltip"
+                                            title="How much does each feature contribute to the model prediction"
+                                            data-placement="right" data-animation="true" data-delay="100"><i
+                                                class="fa-solid fa-circle-info"></i></b>
+                                    </p>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="img" id="ig-graph" style="overflow: hidden;">
+                                                <div class="form-group">
+                                                    <label for="igGraphInputField">Enter the number of data
+                                                        points for which you want to calculate integrated
+                                                        gradients</label>
+                                                    <input type="text" class="form-control" id="igGraphInputField"
+                                                        aria-describedby="igdesc"
+                                                        placeholder="Enter number of data points">
+                                                    <small id="igdesc" class="form-text text-muted">Tip: Choose
+                                                        a
+                                                        number between 2 and 10 to ensure optimal visibility of
+                                                        integrated gradients</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-secondary" type="button" id="ig-graph-button">Get
+                                                Graph</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top:40px; margin-bottom: 40px;">
+                                <div class="col-md-12">
+                                    <p class="text-secondary" style="font-size: large;">
+                                        Accumulated Local Effects
+                                        <b data-toggle="tooltip"
+                                            title="How does model prediction vary with respect to features of interest"
+                                            data-placement="right" data-animation="true" data-delay="100"><i
+                                                class="fa-solid fa-circle-info"></i></b>
+                                    </p>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="img" id="ale-graph" style=" overflow: hidden;">
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-secondary" type="button" id="ale-graph-button">Get
+                                                Graph</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="row">
+                                <div class="col-md-12">
+                                    <p class="text-secondary">
+                                        <b data-toggle="tooltip"
+                                            title="How much does each feature contribute to the model prediction"
+                                            data-placement="right" data-animation="true" data-delay="100">Anchors</b>
+                                    </p>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

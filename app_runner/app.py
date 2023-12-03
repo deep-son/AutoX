@@ -20,8 +20,12 @@ from flask_restful import Api, Resource, reqparse
 import plotly.graph_objects as go
 from tensorflow.keras.models import load_model
 from tensorflow.keras.models import Model
-from alibi.explainers import IntegratedGradients
-from alibi.explainers import ALE, plot_ale
+
+import jsonify
+import requests
+
+from features import FeatureModels
+
 
 app = Flask(__name__)
 socketio = SocketIO(app)
@@ -34,6 +38,29 @@ logging.basicConfig(filename='app.log', level=logging.DEBUG, format=log_format)
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/proxy/<path:path>', methods=['GET', 'POST', 'PUT', 'DELETE'])
+def proxy(path):
+    # Target URL to TensorBoard
+    tensorboard_url = f'http://localhost:6006/{path}'
+    raw_body = request.get_data(as_text=True)
+
+    # Forward the request to TensorBoard and retrieve the response
+    if request.method == 'GET':
+        response = requests.get(tensorboard_url, headers=request.headers)
+    elif request.method in ['POST', 'PUT', 'DELETE']:
+        response = requests.request(
+            method=request.method,
+            url=tensorboard_url,
+            headers={key: value for key, value in request.headers.items() if key != 'Host'},
+            data=raw_body  # pass the decoded data
+        )
+    try:
+        # Try to return JSON response
+        return response.json(), response.status_code
+    except ValueError:
+        # If response is not JSON, return raw response
+        return response.content, response.status_code
 
     
 # Define a Flask-RESTful resource for getting images
@@ -77,10 +104,8 @@ class UpdateDataResource(Resource):
 
 
 class SendInitialInfo(Resource):
-
     def post(self):
         args = request.get_json()
-        print(args)
         socketio.emit('initial',args) 
         return {"message": "Data updated successfully"}, 200
     
@@ -89,127 +114,41 @@ class UpdateEvaluationResource(Resource):
         args = request.get_json()
         socketio.emit('evaluation',args)
 
-class ExploreModelIG(Resource):
-    
-    def seperate_model_index(self,model):
-        layer_names = [layer.name for layer in model.layers]
-        for index, name in enumerate(layer_names):
-            if 'dense' in name:
-                return index - 1
+class ExploreFeatures(Resource):
 
-           
-    def plot_importance(self,feat_imp, feat_names):
-        """
-        Create a horizontal bar chart of feature effects, sorted by their magnitude.
-        """
-        # Sort feature importance and feature names
-
-        df = pd.DataFrame(data=feat_imp, columns=feat_names).sort_values(by=0, axis='columns')
-        feat_imp, feat_names = df.values[0], df.columns
-
-        # Create a horizontal bar chart
-        fig = go.Figure(go.Bar(
-            x=feat_imp,
-            y=feat_names,
-            orientation='h',
-        ))
-
-        # Customize the layout
-        fig.update_layout(
-            title=f'What does each feature contribute to the model prediction?',
-            xaxis_title=f'Feature effects for class XYZ',
-            yaxis=dict(tickfont=dict(size=15)),
-            xaxis=dict(titlefont=dict(size=15)),
-            title_font=dict(size=18),
-            height=500,  # Adjust the height as needed
-            width=800,   # Adjust the width as needed
-        )
-
-        return fig
-    
+    def __init__(self):
+        self.feat = None
+        
     def post(self):
         try:
-            model = load_model('D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\structured_data_classifier\\best_model', custom_objects=ak.CUSTOM_OBJECTS)
+            logging.info("Status: Received Request for Explore Features")
+            project_name = request.args.get('project_name')
+            train_file_path = request.args.get('train_file_path')
+            explanation_type = request.args.get('explanation_type')
 
-            index = self.seperate_model_index(model) 
-            preprocessing_model = Model(inputs=model.input, outputs=model.layers[index].output)
-            dense_model = Model(inputs=model.layers[index+1].input, outputs=model.output) 
+            try:
+                num_rows = int(request.args.get('num_rows'))
+            except:
+                num_rows = 5
+
+            if hasattr(self.feat, 'project_name'):
+                logging.info("already initailized")
+            else:
+                self.feat = FeatureModels(project_name, train_file_path)
             
-            x_train = pd.read_csv('D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\structured_data_classifier\\x_train.csv')
-            x_train = x_train.drop(["survived"], axis=1)
-
-            input_data = np.array(x_train.iloc[1,:]).tolist()
-            explain_data = np.array(x_train.iloc[1,:])
-
-
-            output = preprocessing_model.predict(input_data)
+            if explanation_type == 'IG':
+                graph = self.feat.plot_integrated_gradients(num_rows)
+                return graph
             
+            elif explanation_type == 'ALE':
+                graph = self.feat.plot_accumulated_local_effects()
+                return graph
 
-            def round_value(x):
-                return np.where(x>0.5,1.0,0.0)[0]
-
-
-            target_fn = partial(round_value)
-            
-            ig  = IntegratedGradients(dense_model, n_steps=100, target_fn=target_fn )
-
-            explanation = ig.explain(output)
-            attributions = explanation.data['attributions'][0]
-            # Print or analyze the attribution scores as needed
-            print(attributions)
-
-            figure = self.plot_importance(attributions, x_train.columns)
-
-            chart_json = figure.to_json()
-
-            return chart_json
-        
         except Exception as e:
-            print("Error here")
-            print(e)
+            logging.error(f"An error occurred: {e}")
+            logging.error(traceback.format_exc())
 
-class ExploreModelALE(Resource):
-    
-    def seperate_model_index(self,model):
-        layer_names = [layer.name for layer in model.layers]
-        for index, name in enumerate(layer_names):
-            if 'dense' in name:
-                return index - 1
-    
-    def post(self):
-        try:
-            model = load_model('D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\structured_data_classifier\\best_model', custom_objects=ak.CUSTOM_OBJECTS)
 
-            index = self.seperate_model_index(model) 
-            preprocessing_model = Model(inputs=model.input, outputs=model.layers[index].output)
-            dense_model = Model(inputs=model.layers[index+1].input, outputs=model.output) 
-            
-            x_train = pd.read_csv('D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\structured_data_classifier\\x_train.csv')
-            x_train = x_train.drop(["survived"], axis=1)
-
-            input_data = np.array(x_train.iloc[1,:]).tolist()
-            explain_data = np.array(x_train.iloc[1,:])
-
-            output = preprocessing_model.predict(input_data)
-            
-            def pred(x):
-                predictions = dense_model.predict(x)
-                final_predictions = (predictions > 0.5).astype(int)
-                return final_predictions
-
-            # Model is a binary classifier so we only take the first model output corresponding to "good" class probability.
-            ale = ALE(pred, feature_names=x_train.columns)
-            exp = ale.explain(output)
-
-            figure = self.plot_ale(exp, x_train.columns)
-
-            chart_json = figure.to_json()
-
-            return chart_json
-        
-        except Exception as e:
-            print("Error here")
-            print(e)
 
 class ExplorePreprocessing(Resource):
     def seperate_model_index(self,model):
@@ -220,14 +159,14 @@ class ExplorePreprocessing(Resource):
 
     def post(self):
         try:
-            logging.info("Status: Received Request")
+            logging.info("Status: Received Request for Preprocessing Explanation")
             project_name = request.args.get('project_name')
             train_file_path = request.args.get('train_file_path')
             
             current_directory = os.path.dirname(os.path.abspath(__file__))
             model_directory = os.path.dirname(current_directory)
             best_model_path = os.path.join(model_directory, project_name, 'best_model')
-            print(best_model_path)
+
             model = load_model(best_model_path, custom_objects=ak.CUSTOM_OBJECTS)
             
             index = self.seperate_model_index(model) 
@@ -295,7 +234,7 @@ class ExploreTuner(Resource):
     
     def post(self):
         try:
-            logging.info("Status: Received Request")
+            logging.info("Status: Received Request for Tuner Explanation")
             project_name = request.args.get('project_name')
             current_directory = os.path.dirname(os.path.abspath(__file__))
             model_directory = os.path.dirname(current_directory)
@@ -391,7 +330,19 @@ class ExploreTuner(Resource):
                         data["casualnex_graph_path"] = viz.to_json()
 
                         data.pop('trie_json', "Not found")
+
+
+                        # preprocess probabilities
+
+                        node_names = data.pop('node_hp_name', "Not found")
+                        probabilities = data.pop('probabilities', "Not found")
+
+                        prob_values = {}
+                        for i,j in zip(node_names,probabilities):
+                            if i is not None:
+                                prob_values[i] = j
                         
+                        data["probabilities"] = prob_values
                         self.json_package[data["trial_id"]] = data
 
                     except Exception as e:
@@ -422,12 +373,6 @@ class ExploreTuner(Resource):
             print("Error here")
             print(e)
 
-class HTMLFile(Resource):
-    def get(self):
-        with open("D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\output.json", "r") as json_file:
-            data = json.load(json_file)
-            # Process the data from the JSON file
-            return data
 
 # Define a Flask-RESTful resource for closing the app
 @app.route('/close_app', methods=['GET'])
@@ -440,12 +385,10 @@ api.add_resource(GetImageResource, '/get_image/<path:image_path>/<image_name>')
 api.add_resource(GetFinalImageResource, '/get_final_image/<path:image_type>')
 api.add_resource(UpdateDataResource, '/update_data')
 api.add_resource(UpdateEvaluationResource, '/update_evaluation')
-api.add_resource(ExploreModelIG, '/load_data_ig')
-api.add_resource(ExploreModelALE, '/load_data_ale')
+api.add_resource(ExploreFeatures, '/load_data/')
 api.add_resource(ExplorePreprocessing, '/explore_preprocessing/') 
 api.add_resource(ExploreTuner, '/explore_tuner/') 
 api.add_resource(SendInitialInfo, '/pre_information')
-api.add_resource(HTMLFile, '/return_html')
 
 
 @socketio.on('connect')
@@ -453,5 +396,5 @@ def handle_connect():
     print("Websocket connected")
 
 if __name__ == '__main__':
-    socketio.run(app, host='127.0.0.1', port=8082, debug=True)
+    socketio.run(app, host='127.0.0.1', port=8082, debug=True , use_reloader=False)
 # , use_reloader=False

@@ -1,17 +1,27 @@
-
+<div class="row">
+    <div class="col-md-12">
+        <nav aria-label="breadcrumb" role="navigation">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Explanations</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Preprocessing</li>
+            </ol>
+        </nav>
+    </div>
+</div>
 <div id="explore-preprocessing-div">
     <div class="row">
         <div class="col-md-12">
-            <p class="text-primary">
-            <h6>Explore PreProcessing</h6>
-            <div class="col-md-2" id="preprocessing-arch-card">
-                <button class="btn btn-primary btn-sm" type="button" id="explore-preprocessing">Explore
-                    Preprocessing</button>
+            <div class="card mb-3">
+                <img class="card-img-top blurred-image"
+                    src="{{ url_for('static', filename='img/preprocessing-1.png') }}" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">Explore Preprocessing</h4>
+                    <p class="card-text">This section provides an opportunity to delve into the preprocessing steps implemented by the highest-performing model.</p>
+                    <button class="btn btn-secondary btn-sm" type="button" id="explore-preprocessing" >Explore</button>
+                    <p class="card-text"><small class="text-muted">The 'Explore' button will become active after the completion of the training process</small></p>
+                </div>
             </div>
-            </p>
         </div>
-    </div>
-    <div class="row">
         <div class="col-md-12">
             <section class="card"
                 style="min-height: 110px; height:auto; padding: 20px; background-color: #f4f4f4; border: 1px solid #ccc; border-radius: 5px;">

@@ -5,29 +5,42 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        type="text/css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.standalone.min.css">
-    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
+    
+    <!-- Font Awesome (latest version) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/now-ui-kit.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/nucleo-icons.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}" type="text/css">
-    <!-- <script src="{{ url_for('static', filename='js/navbar-ontop.js') }}"></script> -->
-    <link rel="icon" href="https://templates.pingendo.com/assets/Pingendo_favicon.ico">
-    <title>AutoML Explainability</title>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="{{ url_for('static', filename='js/common.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/backend.js') }}"></script>
 
+    <!-- Bootstrap Datepicker CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.standalone.min.css">
+    
+    <!-- vis-network -->
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+
+    <!-- default-passive-events -->
+    <script src="https://unpkg.com/default-passive-events"></script>
+
+    <!-- Now UI Kit, Nucleo Icons, Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/now-ui-kit.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nucleo-icons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+
+    <title>AutoML Explainability</title>
+
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Socket.IO -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js"></script>
+
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- Backend JS -->
+    <script src="{{ url_for('static', filename='js/backend.js') }}"></script>
 </head>
+
 
 <body>
     <div id="sidebar">
@@ -44,14 +57,14 @@
             <div class="dropdown-container">
                 <a href="#preprocessing-section">Preprocessing</a>
                 <a href="#tuner-section">Tuner</a>
-                <a href="#architecture-section">Features</a>
+                <a href="#feature-section">Features</a>
             </div>
         </div>
         <a href="">Benchmark</a>
     </div>
     <div id="navbar">
         <div class="navbar-content">
-            <a href="/" class="brand-logo">MyApp</a>
+            <a href="/" class="brand-logo">AutoX</a>
             <nav class="navbar-nav">
                 <!-- <a href="/dashboard">Dashboard</a>
                     <a href="/settings">Settings</a>
@@ -60,6 +73,7 @@
             <div class="navbar-user">
                 <!-- <img src="path_to_profile_image.jpg" alt="User" class="user-image">
                     <span class="user-name">John Doe</span> -->
+                    <button class="btn btn-secondary rounded btn-sm" type="button" id="disconnect-button" >Disconnect</button>
             </div>
         </div>
     </div>
@@ -80,6 +94,9 @@
         </div>
         <div id="tuner-section" class="content-section" style="padding: 1rem;">
             {% include 'tuner.html' %}
+        </div>
+        <div id="feature-section" class="content-section" style="padding: 1rem;">
+            {% include 'feature.html' %}
         </div>
 
 

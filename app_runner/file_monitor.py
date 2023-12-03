@@ -16,17 +16,16 @@ class MyHandler(FileSystemEventHandler):
         self.trials = {}
         self.generator = ModelGenerator()
         self.FLASK_API_URL = "http://127.0.0.1:8082/update_data"
+        self.STATUS = False
 
     def on_any_event(self, event):
-        # Triggered when a new file is created in the monitored directory
         if not event.is_directory:
             file_path = event.src_path
-            # logging.info(f"New file created: {file_path}")
-
             if "trial_" in file_path:
                 # logging.info(file_path)
                 if "trial_mid" in file_path.split()[-1]:
                     logging.info(file_path)
+                    self.STATUS = True
                     arch_status, model_path = self.generator.create_model_architecture(file_path)
                     logging.info(f"Arch_status {arch_status} and model path {model_path}")
                     if arch_status:
@@ -47,16 +46,16 @@ class MyHandler(FileSystemEventHandler):
                         except json.JSONDecodeError as e:
                             logging.info(f"Error decoding JSON: {e}")
                     
-                
-            keywords = ["test_model", "preprocessing_model", "dense_model"]
-            if any(keyword in file_path for keyword in keywords):
-                logging.info(file_path)
-                message_data = {
-                    "data": {
-                        "filepath": file_path
+            if self.STATUS:   
+                keywords = ["test_model", "preprocessing_model", "dense_model"]
+                if any(keyword in file_path for keyword in keywords):
+                    logging.info(file_path)
+                    message_data = {
+                        "data": {
+                            "filepath": file_path
+                        }
                     }
-                }
-                self.publish_data(message_data)
+                    self.publish_data(message_data)
 
     def publish_data(self, message_data): 
         response = requests.post(self.FLASK_API_URL, json=message_data)
@@ -79,7 +78,7 @@ if __name__ == "__main__":
 
     try:
         while True:
-            time.sleep(1)
+            time.sleep(0.1)
     except KeyboardInterrupt:
         observer.stop()
 

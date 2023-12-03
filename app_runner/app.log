@@ -2174,3 +2174,855 @@ AttributeError: 'TensorShape' object has no attribute 'numpy'
 2023-11-20 02:48:37,869 [INFO] - Status: Received Request
 2023-11-20 02:51:45,036 [INFO] - Status: Received Request
 2023-11-20 02:55:33,222 [INFO] - Status: Received Request
+2023-11-20 13:06:47,017 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-20 13:06:59,359 [WARNING] -  * Debugger is active!
+2023-11-20 13:06:59,367 [INFO] -  * Debugger PIN: 500-968-498
+2023-11-20 13:10:32,533 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\__init__.py', reloading
+2023-11-20 13:10:36,822 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-20 13:11:19,809 [WARNING] -  * Debugger is active!
+2023-11-20 13:11:19,815 [INFO] -  * Debugger PIN: 500-968-498
+2023-11-20 14:14:33,051 [INFO] - Status: Received Request
+2023-11-20 17:35:12,869 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\file_monitor.py', reloading
+2023-11-20 17:36:12,723 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-20 17:36:40,425 [WARNING] -  * Debugger is active!
+2023-11-20 17:36:40,433 [INFO] -  * Debugger PIN: 500-968-498
+2023-11-20 17:37:15,216 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\utils\\data_utils.py', reloading
+2023-11-20 17:37:15,840 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\pipeline.py', reloading
+2023-11-20 17:37:18,310 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-20 17:37:51,336 [WARNING] -  * Debugger is active!
+2023-11-20 17:37:51,341 [INFO] -  * Debugger PIN: 500-968-498
+2023-11-20 17:38:01,854 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\functools.py', reloading
+2023-11-20 17:38:02,172 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\__init__.py', reloading
+2023-11-20 17:38:02,322 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\causalnex\\structure\\structuremodel.py', reloading
+2023-11-20 17:38:02,577 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\causalnex\\plots\\__init__.py', reloading
+2023-11-20 17:38:04,273 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-20 18:03:26,843 [INFO] - Status: Received Request
+2023-11-20 18:08:24,368 [INFO] - Status: Received Request
+2023-11-20 18:09:10,209 [WARNING] - 5 out of the last 5 calls to <function PreprocessingLayer.make_adapt_function.<locals>.adapt_step at 0x00000228CCA23940> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2023-11-20 18:09:10,260 [INFO] - CategoricalToNumerical:{'null_graph': '{"data":[{"alignmentgroup":"True","hovertemplate":"Number of Nulls=%{x}\\u003cbr\\u003eColumns=%{y}\\u003cextra\\u003e\\u003c\\u002fextra\\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"h","showlegend":false,"textposition":"auto","x":[0,0,0,0,0,0,0,0,0,0],"xaxis":"x","y":["survived","sex","age","n_siblings_spouses","parch","fare","class","deck","embark_town","alone"],"yaxis":"y","type":"bar"}],"layout":{"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Number of Nulls"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Columns"}},"legend":{"tracegroupgap":0},"title":{"text":"Number of Nulls in DataFrame Columns"},"barmode":"relative"}}', 'feature_type': {'survived': 'numerical', 'sex': 'categorical', 'age': 'numerical', 'n_siblings_spouses': 'numerical', 'parch': 'numerical', 'fare': 'numerical', 'class': 'categorical', 'deck': 'categorical', 'embark_town': 'categorical', 'alone': 'categorical'}, 'encoded_dict': {'sex': {'male': '1', 'female': '2'}, 'class': {'Third': '1', 'First': '3', 'Second': '2'}, 'deck': {'unknown': '1', 'C': '6', 'G': '2', 'A': '8', 'B': '7', 'D': '5', 'F': '3', 'E': '4'}, 'embark_town': {'Southampton': '2', 'Cherbourg': '4', 'Queenstown': '3', 'unknown': '1'}, 'alone': {'n': '2', 'y': '1'}}}
+2023-11-20 18:09:10,261 [INFO] - normalization:{}
+2023-11-20 18:09:10,261 [INFO] - Done: Returned
+2023-11-20 18:10:03,239 [INFO] - Status: Received Request
+2023-11-20 18:14:34,325 [INFO] - Status: Received Request
+2023-11-20 18:15:20,712 [INFO] - Status: Received Request
+2023-11-20 18:17:18,318 [INFO] - Status: Received Request
+2023-11-20 18:21:33,570 [INFO] - Status: Received Request
+2023-11-20 18:34:30,173 [INFO] - Status: Received Request
+2023-11-20 18:59:06,717 [INFO] - Status: Received Request
+2023-11-20 19:29:55,673 [INFO] - Status: Received Request
+2023-11-20 19:30:10,275 [WARNING] - 6 out of the last 6 calls to <function PreprocessingLayer.make_adapt_function.<locals>.adapt_step at 0x00000228D4250B80> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2023-11-20 19:30:13,109 [INFO] - CategoricalToNumerical:{'null_graph': '{"data":[{"alignmentgroup":"True","hovertemplate":"Number of Nulls=%{x}\\u003cbr\\u003eColumns=%{y}\\u003cextra\\u003e\\u003c\\u002fextra\\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"h","showlegend":false,"textposition":"auto","x":[0,0,0,0,0,0,0,0,0,0],"xaxis":"x","y":["survived","sex","age","n_siblings_spouses","parch","fare","class","deck","embark_town","alone"],"yaxis":"y","type":"bar"}],"layout":{"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Number of Nulls"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Columns"}},"legend":{"tracegroupgap":0},"title":{"text":"Number of Nulls in DataFrame Columns"},"barmode":"relative"}}', 'feature_type': {'survived': 'numerical', 'sex': 'categorical', 'age': 'numerical', 'n_siblings_spouses': 'numerical', 'parch': 'numerical', 'fare': 'numerical', 'class': 'categorical', 'deck': 'categorical', 'embark_town': 'categorical', 'alone': 'categorical'}, 'encoded_dict': {'sex': {'male': '1', 'female': '2'}, 'class': {'Third': '1', 'First': '3', 'Second': '2'}, 'deck': {'unknown': '1', 'C': '6', 'G': '2', 'A': '8', 'B': '7', 'D': '5', 'F': '3', 'E': '4'}, 'embark_town': {'Southampton': '2', 'Cherbourg': '4', 'Queenstown': '3', 'unknown': '1'}, 'alone': {'n': '2', 'y': '1'}}}
+2023-11-20 19:30:13,109 [INFO] - normalization:{}
+2023-11-20 19:30:13,109 [INFO] - Done: Returned
+2023-11-20 19:35:28,509 [INFO] - Status: Received Request
+2023-11-20 19:35:53,562 [INFO] - CategoricalToNumerical:{'null_graph': '{"data":[{"alignmentgroup":"True","hovertemplate":"Number of Nulls=%{x}\\u003cbr\\u003eColumns=%{y}\\u003cextra\\u003e\\u003c\\u002fextra\\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"h","showlegend":false,"textposition":"auto","x":[0,0,0,0,0,0,0,0,0,0],"xaxis":"x","y":["survived","sex","age","n_siblings_spouses","parch","fare","class","deck","embark_town","alone"],"yaxis":"y","type":"bar"}],"layout":{"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Number of Nulls"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Columns"}},"legend":{"tracegroupgap":0},"title":{"text":"Number of Nulls in DataFrame Columns"},"barmode":"relative"}}', 'feature_type': {'survived': 'numerical', 'sex': 'categorical', 'age': 'numerical', 'n_siblings_spouses': 'numerical', 'parch': 'numerical', 'fare': 'numerical', 'class': 'categorical', 'deck': 'categorical', 'embark_town': 'categorical', 'alone': 'categorical'}, 'encoded_dict': {'sex': {'male': '1', 'female': '2'}, 'class': {'Third': '1', 'First': '3', 'Second': '2'}, 'deck': {'unknown': '1', 'C': '6', 'G': '2', 'A': '8', 'B': '7', 'D': '5', 'F': '3', 'E': '4'}, 'embark_town': {'Southampton': '2', 'Cherbourg': '4', 'Queenstown': '3', 'unknown': '1'}, 'alone': {'n': '2', 'y': '1'}}}
+2023-11-20 19:35:53,562 [INFO] - normalization:{}
+2023-11-20 19:35:53,562 [INFO] - Done: Returned
+2023-11-20 19:36:48,367 [INFO] - Status: Received Request
+2023-11-26 17:06:40,350 [INFO] - Status: Received Request
+2023-11-26 17:10:37,583 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-26 17:10:54,590 [WARNING] -  * Debugger is active!
+2023-11-26 17:10:54,746 [INFO] -  * Debugger PIN: 500-968-498
+2023-11-26 17:11:07,739 [INFO] - Status: Received Request
+2023-11-26 17:11:09,474 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\engine\\training.py', reloading
+2023-11-26 17:11:09,563 [WARNING] - Model was constructed with shape (None, 9) for input KerasTensor(type_spec=TensorSpec(shape=(None, 9), dtype=tf.string, name='input_1'), name='input_1', description="created by layer 'input_1'"), but it was called on an input with incompatible shape (None,).
+2023-11-26 17:11:11,246 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-26 17:11:30,054 [WARNING] -  * Debugger is active!
+2023-11-26 17:11:30,060 [INFO] -  * Debugger PIN: 500-968-498
+2023-11-26 17:11:43,608 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\flask_restful\\reqparse.py', reloading
+2023-11-26 17:11:45,155 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-26 17:12:00,369 [WARNING] -  * Debugger is active!
+2023-11-26 17:12:00,375 [INFO] -  * Debugger PIN: 500-968-498
+2023-11-26 17:13:23,963 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\causalnex\\plots\\__init__.py', reloading
+2023-11-26 17:13:25,499 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-26 17:13:46,591 [WARNING] -  * Debugger is active!
+2023-11-26 17:13:46,596 [INFO] -  * Debugger PIN: 500-968-498
+2023-11-26 17:14:18,416 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\IPython\\core\\interactiveshell.py', reloading
+2023-11-26 17:14:18,417 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\IPython\\core\\async_helpers.py', reloading
+2023-11-26 17:14:18,432 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\ipykernel\\zmqshell.py', reloading
+2023-11-26 17:14:18,450 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\ipykernel\\ipkernel.py', reloading
+2023-11-26 17:14:18,460 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\ipykernel\\kernelbase.py', reloading
+2023-11-26 17:14:18,462 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\asyncio\\events.py', reloading
+2023-11-26 17:14:18,495 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\asyncio\\base_events.py', reloading
+2023-11-26 17:14:18,498 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tornado\\platform\\asyncio.py', reloading
+2023-11-26 17:14:18,515 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\ipykernel\\kernelapp.py', reloading
+2023-11-26 17:14:18,537 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\traitlets\\config\\application.py', reloading
+2023-11-26 17:14:18,538 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\ipykernel_launcher.py', reloading
+2023-11-26 17:14:18,539 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\runpy.py', reloading
+2023-11-26 17:14:20,135 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-26 17:14:43,716 [WARNING] -  * Debugger is active!
+2023-11-26 17:14:43,722 [INFO] -  * Debugger PIN: 500-968-498
+2023-11-26 17:15:19,426 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\__init__.py', reloading
+2023-11-26 17:15:20,001 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app_runners.py', reloading
+2023-11-26 17:15:21,656 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-26 17:16:08,227 [WARNING] -  * Debugger is active!
+2023-11-26 17:16:08,590 [INFO] -  * Debugger PIN: 500-968-498
+2023-11-26 17:29:02,259 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\alibi\\explainers\\integrated_gradients.py', reloading
+2023-11-26 17:29:09,122 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-26 17:29:34,204 [WARNING] -  * Debugger is active!
+2023-11-26 17:29:34,209 [INFO] -  * Debugger PIN: 500-968-498
+2023-11-26 17:30:19,937 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\engine\\functional.py', reloading
+2023-11-26 17:30:22,198 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-26 17:30:43,330 [WARNING] -  * Debugger is active!
+2023-11-26 17:30:43,343 [INFO] -  * Debugger PIN: 500-968-498
+2023-11-26 19:22:23,457 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\framework\\constant_op.py', reloading
+2023-11-26 19:22:54,250 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-26 19:23:24,741 [WARNING] -  * Debugger is active!
+2023-11-26 19:23:24,746 [INFO] -  * Debugger PIN: 500-968-498
+2023-11-26 19:30:29,781 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\pandas\\core\\frame.py', reloading
+2023-11-26 19:30:29,783 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\pandas\\core\\internals\\construction.py', reloading
+2023-11-26 19:30:31,384 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-26 19:30:54,365 [WARNING] -  * Debugger is active!
+2023-11-26 19:30:54,370 [INFO] -  * Debugger PIN: 500-968-498
+2023-11-26 20:05:07,176 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\os.py', reloading
+2023-11-26 20:05:23,899 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-26 20:05:52,911 [WARNING] -  * Debugger is active!
+2023-11-26 20:05:52,917 [INFO] -  * Debugger PIN: 500-968-498
+2023-11-26 20:06:08,246 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\plotly\\__init__.py', reloading
+2023-11-26 20:06:10,136 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-26 20:06:26,215 [WARNING] -  * Debugger is active!
+2023-11-26 20:06:26,221 [INFO] -  * Debugger PIN: 500-968-498
+2023-11-26 20:06:28,158 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\__init__.py', reloading
+2023-11-26 20:06:28,247 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras_nlp\\__init__.py', reloading
+2023-11-26 20:06:28,252 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\utils\\utils.py', reloading
+2023-11-26 20:06:29,148 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-26 20:06:46,988 [WARNING] -  * Debugger is active!
+2023-11-26 20:06:46,993 [INFO] -  * Debugger PIN: 500-968-498
+2023-11-26 20:07:03,535 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-11-26 20:07:03,535 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-11-26 20:07:03,538 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-11-26 20:07:05,184 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-26 20:41:49,125 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-26 20:42:13,482 [WARNING] -  * Debugger is active!
+2023-11-26 20:42:13,486 [INFO] -  * Debugger PIN: 500-968-498
+2023-11-26 20:44:44,910 [INFO] - Status: Received Request for Explore Features
+2023-11-26 20:45:11,645 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\features.py', reloading
+2023-11-26 20:45:11,646 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\features.py', reloading
+2023-11-26 20:45:11,647 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\features.py', reloading
+2023-11-26 20:45:13,944 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-26 20:45:40,707 [WARNING] -  * Debugger is active!
+2023-11-26 20:45:40,711 [INFO] -  * Debugger PIN: 500-968-498
+2023-11-26 20:45:48,566 [INFO] - Status: Received Request for Explore Features
+2023-11-26 20:45:51,596 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\keras\\engine\\training.py', reloading
+2023-11-26 20:45:51,944 [WARNING] - It looks like you are passing a model with a scalar output and target is set to `None`.If your model is a regression model this will produce correct attributions. If your model is a classification model, targets for each datapoint must be defined. Not defining the target may lead to incorrect values for the attributions.Targets can be either the true classes or the classes predicted by the model.
+2023-11-26 20:45:53,041 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-26 20:46:11,649 [WARNING] -  * Debugger is active!
+2023-11-26 20:46:11,654 [INFO] -  * Debugger PIN: 500-968-498
+2023-11-26 20:46:15,294 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-11-26 20:46:15,294 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-11-26 20:46:15,295 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-11-26 20:46:16,801 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-11-26 20:46:34,175 [WARNING] -  * Debugger is active!
+2023-11-26 20:46:34,179 [INFO] -  * Debugger PIN: 500-968-498
+2023-11-26 20:47:27,121 [INFO] - Status: Received Request for Explore Features
+2023-11-26 20:47:28,909 [WARNING] - It looks like you are passing a model with a scalar output and target is set to `None`.If your model is a regression model this will produce correct attributions. If your model is a classification model, targets for each datapoint must be defined. Not defining the target may lead to incorrect values for the attributions.Targets can be either the true classes or the classes predicted by the model.
+2023-11-26 22:32:45,897 [INFO] - Status: Received Request for Explore Features
+2023-11-26 22:33:07,240 [WARNING] - It looks like you are passing a model with a scalar output and target is set to `None`.If your model is a regression model this will produce correct attributions. If your model is a classification model, targets for each datapoint must be defined. Not defining the target may lead to incorrect values for the attributions.Targets can be either the true classes or the classes predicted by the model.
+2023-11-26 22:33:38,836 [INFO] - Status: Received Request for Explore Features
+2023-11-26 22:34:42,216 [WARNING] - It looks like you are passing a model with a scalar output and target is set to `None`.If your model is a regression model this will produce correct attributions. If your model is a classification model, targets for each datapoint must be defined. Not defining the target may lead to incorrect values for the attributions.Targets can be either the true classes or the classes predicted by the model.
+2023-11-26 22:49:48,246 [INFO] - Status: Received Request for Explore Features
+2023-11-26 22:49:49,653 [WARNING] - It looks like you are passing a model with a scalar output and target is set to `None`.If your model is a regression model this will produce correct attributions. If your model is a classification model, targets for each datapoint must be defined. Not defining the target may lead to incorrect values for the attributions.Targets can be either the true classes or the classes predicted by the model.
+2023-11-26 22:50:04,573 [INFO] - Status: Received Request for Explore Features
+2023-11-26 22:50:05,832 [WARNING] - 5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000001DA5D413AF0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2023-11-26 22:50:05,863 [WARNING] - It looks like you are passing a model with a scalar output and target is set to `None`.If your model is a regression model this will produce correct attributions. If your model is a classification model, targets for each datapoint must be defined. Not defining the target may lead to incorrect values for the attributions.Targets can be either the true classes or the classes predicted by the model.
+2023-11-26 22:51:52,543 [INFO] - Status: Received Request for Explore Features
+2023-11-26 22:51:53,559 [WARNING] - 6 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000001DA59A3A700> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2023-11-26 22:51:53,570 [WARNING] - It looks like you are passing a model with a scalar output and target is set to `None`.If your model is a regression model this will produce correct attributions. If your model is a classification model, targets for each datapoint must be defined. Not defining the target may lead to incorrect values for the attributions.Targets can be either the true classes or the classes predicted by the model.
+2023-11-26 22:52:11,882 [INFO] - Status: Received Request for Explore Features
+2023-11-26 22:52:13,311 [WARNING] - It looks like you are passing a model with a scalar output and target is set to `None`.If your model is a regression model this will produce correct attributions. If your model is a classification model, targets for each datapoint must be defined. Not defining the target may lead to incorrect values for the attributions.Targets can be either the true classes or the classes predicted by the model.
+2023-11-26 22:57:56,356 [INFO] - Status: Received Request for Explore Features
+2023-11-26 22:58:47,006 [INFO] - Status: Received Request for Explore Features
+2023-11-26 22:59:36,999 [INFO] - Status: Received Request for Explore Features
+2023-11-26 23:00:15,096 [INFO] - Status: Received Request for Explore Features
+2023-11-26 23:02:21,869 [INFO] - Status: Received Request for Explore Features
+2023-11-26 23:02:23,140 [ERROR] - An error occurred: cannot do positional indexing on RangeIndex with these indexers [3] of type str
+2023-11-26 23:02:23,181 [ERROR] - Traceback (most recent call last):
+  File "D:\Courses\Master_Thesis\automl_exp\MT_Code\app_runner\app.py", line 117, in post
+    if explanation_type == 'IG':
+  File "D:\Courses\Master_Thesis\automl_exp\MT_Code\app_runner\features.py", line 127, in plot_integrated_gradients
+    input_data = np.array(x_train.iloc[1:num_rows,:]).tolist()
+  File "C:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\pandas\core\indexing.py", line 1067, in __getitem__
+    return self._getitem_tuple(key)
+  File "C:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\pandas\core\indexing.py", line 1567, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+  File "C:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\pandas\core\indexing.py", line 924, in _getitem_tuple_same_dim
+    retval = getattr(retval, self.name)._getitem_axis(key, axis=i)
+  File "C:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\pandas\core\indexing.py", line 1602, in _getitem_axis
+    return self._get_slice_axis(key, axis=axis)
+  File "C:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\pandas\core\indexing.py", line 1637, in _get_slice_axis
+    labels._validate_positional_slice(slice_obj)
+  File "C:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\pandas\core\indexes\base.py", line 4212, in _validate_positional_slice
+    self._validate_indexer("positional", key.stop, "iloc")
+  File "C:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\pandas\core\indexes\base.py", line 6591, in _validate_indexer
+    raise self._invalid_indexer(form, key)
+TypeError: cannot do positional indexing on RangeIndex with these indexers [3] of type str
+
+2023-11-26 23:07:01,529 [INFO] - Status: Received Request for Explore Features
+2023-11-26 23:07:03,727 [WARNING] - It looks like you are passing a model with a scalar output and target is set to `None`.If your model is a regression model this will produce correct attributions. If your model is a classification model, targets for each datapoint must be defined. Not defining the target may lead to incorrect values for the attributions.Targets can be either the true classes or the classes predicted by the model.
+2023-11-26 23:07:11,369 [INFO] - Status: Received Request for Explore Features
+2023-11-26 23:07:12,272 [WARNING] - It looks like you are passing a model with a scalar output and target is set to `None`.If your model is a regression model this will produce correct attributions. If your model is a classification model, targets for each datapoint must be defined. Not defining the target may lead to incorrect values for the attributions.Targets can be either the true classes or the classes predicted by the model.
+2023-11-26 23:07:40,397 [INFO] - Status: Received Request for Explore Features
+2023-11-26 23:07:41,632 [WARNING] - It looks like you are passing a model with a scalar output and target is set to `None`.If your model is a regression model this will produce correct attributions. If your model is a classification model, targets for each datapoint must be defined. Not defining the target may lead to incorrect values for the attributions.Targets can be either the true classes or the classes predicted by the model.
+2023-11-26 23:12:28,715 [INFO] - Status: Received Request for Explore Features
+2023-11-26 23:12:29,612 [WARNING] - It looks like you are passing a model with a scalar output and target is set to `None`.If your model is a regression model this will produce correct attributions. If your model is a classification model, targets for each datapoint must be defined. Not defining the target may lead to incorrect values for the attributions.Targets can be either the true classes or the classes predicted by the model.
+2023-11-26 23:14:18,576 [INFO] - Status: Received Request for Explore Features
+2023-11-26 23:14:20,089 [WARNING] - 5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000002BEA5CDFCA0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2023-11-26 23:14:20,114 [WARNING] - It looks like you are passing a model with a scalar output and target is set to `None`.If your model is a regression model this will produce correct attributions. If your model is a classification model, targets for each datapoint must be defined. Not defining the target may lead to incorrect values for the attributions.Targets can be either the true classes or the classes predicted by the model.
+2023-11-26 23:14:51,457 [INFO] - Status: Received Request for Explore Features
+2023-11-26 23:14:52,432 [WARNING] - 6 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000002BEA25A6DC0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2023-11-26 23:14:52,444 [WARNING] - It looks like you are passing a model with a scalar output and target is set to `None`.If your model is a regression model this will produce correct attributions. If your model is a classification model, targets for each datapoint must be defined. Not defining the target may lead to incorrect values for the attributions.Targets can be either the true classes or the classes predicted by the model.
+2023-11-26 23:21:04,911 [INFO] - Status: Received Request
+2023-11-26 23:25:21,177 [INFO] - Status: Received Request for Explore Features
+2023-11-26 23:25:22,749 [WARNING] - It looks like you are passing a model with a scalar output and target is set to `None`.If your model is a regression model this will produce correct attributions. If your model is a classification model, targets for each datapoint must be defined. Not defining the target may lead to incorrect values for the attributions.Targets can be either the true classes or the classes predicted by the model.
+2023-11-26 23:27:33,200 [INFO] - Status: Received Request for Explore Features
+2023-11-26 23:28:01,422 [WARNING] - It looks like you are passing a model with a scalar output and target is set to `None`.If your model is a regression model this will produce correct attributions. If your model is a classification model, targets for each datapoint must be defined. Not defining the target may lead to incorrect values for the attributions.Targets can be either the true classes or the classes predicted by the model.
+2023-11-26 23:28:07,504 [INFO] - Status: Received Request for Explore Features
+2023-11-26 23:28:08,360 [WARNING] - It looks like you are passing a model with a scalar output and target is set to `None`.If your model is a regression model this will produce correct attributions. If your model is a classification model, targets for each datapoint must be defined. Not defining the target may lead to incorrect values for the attributions.Targets can be either the true classes or the classes predicted by the model.
+2023-11-27 02:49:05,275 [INFO] - Status: Received Request for Explore Features
+2023-11-27 02:49:08,042 [ERROR] - An error occurred: pred() missing 1 required positional argument: 'x'
+2023-11-27 02:49:08,067 [ERROR] - Traceback (most recent call last):
+  File "D:\Courses\Master_Thesis\automl_exp\MT_Code\app_runner\app.py", line 121, in post
+    graph = self.feat.plot_accumulated_local_effects()
+  File "D:\Courses\Master_Thesis\automl_exp\MT_Code\app_runner\features.py", line 228, in plot_accumulated_local_effects
+    exp = ale.explain(preprocessing_output)
+  File "C:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\alibi\explainers\ale.py", line 164, in explain
+    pred = np.atleast_2d(self.predictor(X[0].reshape(1, -1)))
+TypeError: pred() missing 1 required positional argument: 'x'
+
+2023-11-27 02:53:02,208 [INFO] - Status: Received Request for Explore Features
+2023-11-27 02:53:21,153 [INFO] - Status: Received Request for Explore Features
+2023-11-27 02:53:22,081 [WARNING] - It looks like you are passing a model with a scalar output and target is set to `None`.If your model is a regression model this will produce correct attributions. If your model is a classification model, targets for each datapoint must be defined. Not defining the target may lead to incorrect values for the attributions.Targets can be either the true classes or the classes predicted by the model.
+2023-11-27 13:56:43,985 [INFO] - Status: Received Request for Explore Features
+2023-11-27 13:57:14,800 [WARNING] - It looks like you are passing a model with a scalar output and target is set to `None`.If your model is a regression model this will produce correct attributions. If your model is a classification model, targets for each datapoint must be defined. Not defining the target may lead to incorrect values for the attributions.Targets can be either the true classes or the classes predicted by the model.
+2023-11-27 13:57:26,334 [INFO] - Status: Received Request for Explore Features
+2023-11-27 13:57:27,290 [WARNING] - It looks like you are passing a model with a scalar output and target is set to `None`.If your model is a regression model this will produce correct attributions. If your model is a classification model, targets for each datapoint must be defined. Not defining the target may lead to incorrect values for the attributions.Targets can be either the true classes or the classes predicted by the model.
+2023-11-27 13:57:30,407 [INFO] - Status: Received Request for Explore Features
+2023-11-27 13:57:31,321 [WARNING] - 5 out of the last 385 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000001A5761F2C10> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2023-11-27 13:58:19,420 [INFO] - Status: Received Request for Tuner Explanation
+2023-11-27 14:43:43,906 [INFO] - Status: Received Request for Tuner Explanation
+2023-11-27 20:37:49,583 [INFO] - Status: Received Request for Tuner Explanation
+2023-11-27 20:54:09,872 [INFO] - Status: Received Request for Tuner Explanation
+2023-11-27 20:55:10,317 [INFO] - Status: Received Request for Tuner Explanation
+2023-11-27 20:57:24,177 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-01 17:02:07,183 [INFO] - Status: Received Request for Preprocessing Explanation
+2023-12-01 17:02:19,912 [WARNING] - 5 out of the last 5 calls to <function PreprocessingLayer.make_adapt_function.<locals>.adapt_step at 0x000001893C7CB040> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2023-12-01 17:02:19,930 [INFO] - CategoricalToNumerical:{'null_graph': '{"data":[{"alignmentgroup":"True","hovertemplate":"Number of Nulls=%{x}\\u003cbr\\u003eColumns=%{y}\\u003cextra\\u003e\\u003c\\u002fextra\\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"h","showlegend":false,"textposition":"auto","x":[0,0,0,0,0,0,0,0,0,0],"xaxis":"x","y":["survived","sex","age","n_siblings_spouses","parch","fare","class","deck","embark_town","alone"],"yaxis":"y","type":"bar"}],"layout":{"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Number of Nulls"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Columns"}},"legend":{"tracegroupgap":0},"title":{"text":"Number of Nulls in DataFrame Columns"},"barmode":"relative"}}', 'feature_type': {'survived': 'numerical', 'sex': 'categorical', 'age': 'numerical', 'n_siblings_spouses': 'numerical', 'parch': 'numerical', 'fare': 'numerical', 'class': 'categorical', 'deck': 'categorical', 'embark_town': 'categorical', 'alone': 'categorical'}, 'encoded_dict': {'sex': {'male': '1', 'female': '2'}, 'class': {'Third': '1', 'First': '3', 'Second': '2'}, 'deck': {'unknown': '1', 'C': '6', 'G': '2', 'A': '8', 'B': '7', 'D': '5', 'F': '3', 'E': '4'}, 'embark_town': {'Southampton': '2', 'Cherbourg': '4', 'Queenstown': '3', 'unknown': '1'}, 'alone': {'n': '2', 'y': '1'}}}
+2023-12-01 17:02:19,947 [INFO] - normalization:{}
+2023-12-01 17:02:19,947 [INFO] - Done: Returned
+2023-12-01 17:02:37,337 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-01 17:10:47,909 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-01 17:29:08,229 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-01 17:29:44,961 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-01 17:31:55,592 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-01 17:32:33,864 [INFO] - Status: Received Request for Preprocessing Explanation
+2023-12-01 17:35:03,625 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-01 17:36:40,496 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-01 17:37:05,691 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-01 17:41:48,758 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-01 18:21:15,212 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-01 18:22:17,521 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-01 18:22:54,784 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-01 18:24:28,168 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-01 18:29:22,396 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-01 18:48:26,151 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-01 18:50:44,498 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-02 10:55:27,365 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-02 11:15:08,546 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-02 11:37:15,826 [INFO] - Status: Received Request for Preprocessing Explanation
+2023-12-02 11:38:32,399 [WARNING] - 5 out of the last 5 calls to <function PreprocessingLayer.make_adapt_function.<locals>.adapt_step at 0x000001C93FD1F310> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2023-12-02 11:38:32,437 [INFO] - CategoricalToNumerical:{'null_graph': '{"data":[{"alignmentgroup":"True","hovertemplate":"Number of Nulls=%{x}\\u003cbr\\u003eColumns=%{y}\\u003cextra\\u003e\\u003c\\u002fextra\\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"h","showlegend":false,"textposition":"auto","x":[0,0,0,0,0,0,0,0,0,0],"xaxis":"x","y":["survived","sex","age","n_siblings_spouses","parch","fare","class","deck","embark_town","alone"],"yaxis":"y","type":"bar"}],"layout":{"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Number of Nulls"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Columns"}},"legend":{"tracegroupgap":0},"title":{"text":"Number of Nulls in DataFrame Columns"},"barmode":"relative"}}', 'feature_type': {'survived': 'numerical', 'sex': 'categorical', 'age': 'numerical', 'n_siblings_spouses': 'numerical', 'parch': 'numerical', 'fare': 'numerical', 'class': 'categorical', 'deck': 'categorical', 'embark_town': 'categorical', 'alone': 'categorical'}, 'encoded_dict': {'sex': {'male': '1', 'female': '2'}, 'class': {'Third': '1', 'First': '3', 'Second': '2'}, 'deck': {'unknown': '1', 'C': '6', 'G': '2', 'A': '8', 'B': '7', 'D': '5', 'F': '3', 'E': '4'}, 'embark_town': {'Southampton': '2', 'Cherbourg': '4', 'Queenstown': '3', 'unknown': '1'}, 'alone': {'n': '2', 'y': '1'}}}
+2023-12-02 11:38:32,437 [INFO] - normalization:{'normalization/mean:0': {'shape': '(9,)', 'data': [1.3460923433303833, 29.63130760192871, 0.5454546213150024, 0.3795853555202484, 34.385398864746094, 1.6586922407150269, 1.6267942190170288, 1.3700157403945923, 1.4066987037658691]}, 'normalization/variance:0': {'shape': '(9,)', 'data': [0.226312518119812, 156.29588317871094, 1.3228939771652222, 0.6278448700904846, 2976.158447265625, 0.6299204230308533, 1.8989949226379395, 0.4117325246334076, 0.24129483103752136]}, 'normalization/count:0': {'shape': '()', 'data': 627}}
+2023-12-02 11:38:32,437 [INFO] - Done: Returned
+2023-12-02 11:39:14,286 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-02 11:39:50,025 [INFO] - Status: Received Request for Explore Features
+2023-12-02 11:40:32,307 [WARNING] - It looks like you are passing a model with a scalar output and target is set to `None`.If your model is a regression model this will produce correct attributions. If your model is a classification model, targets for each datapoint must be defined. Not defining the target may lead to incorrect values for the attributions.Targets can be either the true classes or the classes predicted by the model.
+2023-12-02 11:40:51,500 [INFO] - Status: Received Request for Explore Features
+2023-12-02 11:43:28,297 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-02 11:44:32,353 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-02 11:45:21,806 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-02 13:40:54,839 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 13:40:57,101 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 288
+2023-12-02 13:44:36,662 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 13:44:50,832 [WARNING] -  * Debugger is active!
+2023-12-02 13:44:50,837 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 13:45:48,501 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 13:45:51,027 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 288
+2023-12-02 13:46:19,417 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 13:46:21,511 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 288
+2023-12-02 14:01:45,805 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\python\\framework\\op_def_registry.py', reloading
+2023-12-02 14:02:24,386 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:02:49,111 [WARNING] -  * Debugger is active!
+2023-12-02 14:02:49,216 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:11:05,371 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:11:05,436 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:11:38,629 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:12:04,443 [WARNING] -  * Debugger is active!
+2023-12-02 14:12:04,446 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:15:36,971 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:15:40,215 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 14:15:40,223 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\requests\\models.py', reloading
+2023-12-02 14:15:40,224 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\json\\__init__.py', reloading
+2023-12-02 14:15:40,225 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\json\\decoder.py', reloading
+2023-12-02 14:15:41,587 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:15:58,330 [WARNING] -  * Debugger is active!
+2023-12-02 14:15:58,333 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:16:29,111 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:16:31,214 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 14:19:05,633 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:19:07,693 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 14:19:07,723 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:19:09,751 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 14:19:30,379 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:19:32,412 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 14:19:32,421 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:19:34,457 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 14:21:19,559 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:21:19,560 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:21:19,561 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:21:19,637 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:21:21,149 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:21:48,890 [WARNING] -  * Debugger is active!
+2023-12-02 14:21:48,894 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:24:29,621 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:24:29,622 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:24:29,622 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:24:31,161 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:24:47,565 [WARNING] -  * Debugger is active!
+2023-12-02 14:24:47,568 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:24:55,408 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:24:57,583 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 14:25:45,564 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:25:47,717 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 14:25:47,725 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:25:49,757 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 14:26:53,709 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:26:53,710 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:26:53,711 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:26:55,829 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:27:17,780 [WARNING] -  * Debugger is active!
+2023-12-02 14:27:17,786 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:27:24,393 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:27:26,477 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 14:28:10,704 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:28:10,705 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:28:10,706 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:28:12,773 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:28:26,273 [WARNING] -  * Debugger is active!
+2023-12-02 14:28:26,276 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:28:44,698 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:28:46,760 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 14:28:46,761 [INFO] - Status: Received Request for Preprocessing Explanation
+2023-12-02 14:28:46,767 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:28:48,876 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 14:28:48,877 [INFO] - Status: Received Request for Preprocessing Explanation
+2023-12-02 14:29:40,305 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:29:40,306 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:29:40,307 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:29:41,336 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:29:55,386 [WARNING] -  * Debugger is active!
+2023-12-02 14:29:55,390 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:30:50,856 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:30:50,857 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:30:50,858 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:30:52,246 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:31:06,569 [WARNING] -  * Debugger is active!
+2023-12-02 14:31:06,573 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:31:10,390 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:31:12,457 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 14:31:12,458 [INFO] - <Response [200]>
+2023-12-02 14:31:29,559 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\werkzeug\\user_agent.py', reloading
+2023-12-02 14:31:30,839 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:31:49,133 [WARNING] -  * Debugger is active!
+2023-12-02 14:31:49,137 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:31:57,324 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:31:59,385 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 14:31:59,385 [INFO] - <Response [200]>
+2023-12-02 14:31:59,392 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:32:01,456 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 14:32:01,457 [INFO] - <Response [400]>
+2023-12-02 14:32:16,943 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:32:16,944 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:32:16,945 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:32:18,440 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:32:41,126 [WARNING] -  * Debugger is active!
+2023-12-02 14:32:41,131 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:32:44,713 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:32:44,724 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:32:44,725 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:32:46,176 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:33:02,195 [WARNING] -  * Debugger is active!
+2023-12-02 14:33:02,199 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:33:09,723 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:33:11,769 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 14:33:11,777 [INFO] - {'tag': 'epoch_accuracy', 'runs': '00\\execution0\\train'}
+2023-12-02 14:33:11,779 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:33:13,798 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 14:34:52,236 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\requests\\api.py', reloading
+2023-12-02 14:34:52,542 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:34:52,543 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:34:52,546 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:34:52,546 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:34:54,257 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:35:20,054 [WARNING] -  * Debugger is active!
+2023-12-02 14:35:20,060 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:35:35,945 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:35:35,946 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:35:35,947 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:35:37,338 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:35:53,827 [WARNING] -  * Debugger is active!
+2023-12-02 14:35:53,833 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:36:05,365 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:36:07,623 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 14:36:07,631 [INFO] - {'tag': 'epoch_accuracy', 'runs': '00\\execution0\\train'}
+2023-12-02 14:36:07,632 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:36:09,808 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 14:39:46,178 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:39:48,342 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 14:39:48,348 [INFO] - {'tag': 'epoch_accuracy', 'runs': '00\\execution0\\validation'}
+2023-12-02 14:39:48,349 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:39:50,516 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 14:41:08,498 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:41:10,721 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 14:41:10,728 [INFO] - {'tag': 'epoch_accuracy', 'runs': '00execution0\x0balidation'}
+2023-12-02 14:41:10,730 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:41:12,840 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 14:41:20,991 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\tensorflow\\__init__.py', reloading
+2023-12-02 14:41:22,875 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:41:37,902 [WARNING] -  * Debugger is active!
+2023-12-02 14:41:37,906 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:47:01,074 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:47:01,078 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:47:01,079 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:47:03,595 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:47:19,841 [WARNING] -  * Debugger is active!
+2023-12-02 14:47:19,846 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:49:54,591 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:49:54,591 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:49:54,592 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:49:56,478 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:50:13,308 [WARNING] -  * Debugger is active!
+2023-12-02 14:50:13,313 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:50:27,894 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:50:27,895 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:50:27,896 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:50:29,469 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:52:22,660 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:52:42,469 [WARNING] -  * Debugger is active!
+2023-12-02 14:52:42,472 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:53:12,505 [INFO] - b''
+2023-12-02 14:53:12,508 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\flask\\app.py', reloading
+2023-12-02 14:53:12,509 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\flask_restful\\__init__.py', reloading
+2023-12-02 14:53:12,511 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\flask\\wrappers.py', reloading
+2023-12-02 14:53:14,028 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:53:34,091 [WARNING] -  * Debugger is active!
+2023-12-02 14:53:34,095 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:55:28,886 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:55:28,887 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:55:28,887 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:55:30,703 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:55:49,512 [WARNING] -  * Debugger is active!
+2023-12-02 14:55:49,517 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:55:50,711 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:55:50,712 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:55:50,712 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:55:52,490 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:56:12,445 [WARNING] -  * Debugger is active!
+2023-12-02 14:56:12,450 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:56:20,603 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:56:24,384 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 14:56:24,422 [INFO] - {'tag': 'epoch_accuracy', 'runs': '00\\execution0\\validation'}
+2023-12-02 14:56:24,425 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:56:26,573 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 14:57:30,602 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:57:30,603 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:57:30,604 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:57:32,597 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:57:47,150 [WARNING] -  * Debugger is active!
+2023-12-02 14:57:47,154 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:57:48,587 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\flask\\globals.py', reloading
+2023-12-02 14:57:50,094 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:58:07,892 [WARNING] -  * Debugger is active!
+2023-12-02 14:58:07,895 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:58:14,980 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:58:17,232 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 14:58:17,239 [INFO] - {'tag': 'epoch_accuracy', 'runs': '00\\execution0\\validation'}
+2023-12-02 14:58:17,239 [INFO] - {'tag': 'epoch_accuracy', 'runs': '00\\execution0\\validation'}
+2023-12-02 14:58:17,241 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 14:58:19,274 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 14:58:49,425 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:58:49,425 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:58:49,426 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:58:50,458 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:59:05,028 [WARNING] -  * Debugger is active!
+2023-12-02 14:59:05,031 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 14:59:06,396 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:59:06,397 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:59:06,398 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 14:59:07,990 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 14:59:22,059 [WARNING] -  * Debugger is active!
+2023-12-02 14:59:22,062 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 15:00:19,151 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:00:21,453 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 15:00:21,460 [INFO] - <Request 'http://127.0.0.1:8082/proxy/data/plugin/scalars/scalars_multirun' [POST]>
+2023-12-02 15:00:21,461 [INFO] - {'tag': 'epoch_accuracy', 'runs': '00\\execution0\\validation'}
+2023-12-02 15:00:21,463 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:00:23,770 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 15:02:21,796 [INFO] - <Request 'http://127.0.0.1:8082/proxy/data/plugin/scalars/scalars_multirun' [POST]>
+2023-12-02 15:02:45,671 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 15:02:45,672 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 15:02:45,673 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 15:02:47,135 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 15:03:06,620 [WARNING] -  * Debugger is active!
+2023-12-02 15:03:06,624 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 15:03:18,742 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:03:20,927 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 15:03:20,934 [INFO] - <Request 'http://127.0.0.1:8082/proxy/data/plugin/scalars/scalars_multirun' [POST]>
+2023-12-02 15:03:20,935 [INFO] - b'{"tag":"epoch_accuracy","runs":"00\\\\execution0\\\\validation"}'
+2023-12-02 15:03:20,942 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\requests\\sessions.py', reloading
+2023-12-02 15:03:20,947 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\json\\encoder.py', reloading
+2023-12-02 15:03:22,749 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 15:03:36,797 [WARNING] -  * Debugger is active!
+2023-12-02 15:03:36,801 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 15:05:19,442 [INFO] - <Request 'http://127.0.0.1:8082/proxy/data/plugin/scalars/scalars_multirun' [POST]>
+2023-12-02 15:05:19,443 [INFO] - b'----------------------------122408438038028265061162\r\nContent-Disposition: form-data; name="tag"\r\n\r\nepoch_accuracy\r\n----------------------------122408438038028265061162\r\nContent-Disposition: form-data; name="runs"\r\n\r\n00\\execution0\\train\r\n----------------------------122408438038028265061162\r\nContent-Disposition: form-data; name="runs"\r\n\r\n00\\execution0\\validation\r\n----------------------------122408438038028265061162--\r\n'
+2023-12-02 15:06:44,971 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 15:06:44,971 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 15:06:44,972 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 15:06:47,120 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 15:07:14,287 [WARNING] -  * Debugger is active!
+2023-12-02 15:07:14,292 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 15:07:23,373 [INFO] - <Request 'http://127.0.0.1:8082/proxy/data/plugin/scalars/scalars_multirun' [POST]>
+2023-12-02 15:07:59,882 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 15:07:59,898 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 15:07:59,899 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 15:07:59,899 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 15:08:01,107 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 15:08:16,417 [WARNING] -  * Debugger is active!
+2023-12-02 15:08:16,422 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 15:08:17,287 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 15:08:17,305 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 15:08:17,306 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 15:08:18,440 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 15:08:34,756 [WARNING] -  * Debugger is active!
+2023-12-02 15:08:34,761 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 15:08:50,270 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:08:52,458 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 15:08:52,466 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:08:54,599 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 15:09:13,236 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:09:16,076 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 447
+2023-12-02 15:09:22,903 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:09:25,174 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 447
+2023-12-02 15:09:39,670 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:09:41,758 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 15:09:41,766 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:09:43,866 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 15:10:59,424 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:11:01,582 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 15:11:14,262 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:11:16,370 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 15:18:55,688 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:18:57,942 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 15:19:10,232 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:19:12,419 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 447
+2023-12-02 15:23:10,213 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:23:12,415 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 15:23:12,424 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:23:14,502 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 15:25:51,886 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:25:53,976 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 447
+2023-12-02 15:30:03,023 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:30:05,098 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 15:30:05,126 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:30:07,418 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 15:31:00,048 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:31:02,092 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 15:31:02,100 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:31:04,131 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 15:32:18,864 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:32:20,893 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 15:32:33,230 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:32:35,260 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 15:32:45,705 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:32:47,800 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 15:34:10,454 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:34:12,551 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 15:35:36,651 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:35:38,730 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 15:35:38,737 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:35:40,793 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 15:36:00,750 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:36:02,780 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 15:36:02,787 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:36:04,911 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 400 72
+2023-12-02 15:37:22,807 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:37:24,979 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 447
+2023-12-02 15:40:01,351 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:40:03,438 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 15:40:03,502 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:40:05,724 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 447
+2023-12-02 15:44:21,693 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:44:23,721 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 15:44:23,731 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:44:27,430 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 37260
+2023-12-02 15:45:12,659 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:45:14,697 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 329
+2023-12-02 15:45:14,701 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-02 15:45:14,845 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:45:17,037 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 37260
+2023-12-02 15:47:07,745 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\__init__.py', reloading
+2023-12-02 15:47:07,870 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\tasks\\__init__.py', reloading
+2023-12-02 15:47:07,951 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\tasks\\structured_data.py', reloading
+2023-12-02 15:47:17,574 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 15:47:46,404 [WARNING] -  * Debugger is active!
+2023-12-02 15:47:46,412 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 15:48:22,482 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\autokeras\\auto_model.py', reloading
+2023-12-02 15:48:24,121 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 15:48:44,054 [WARNING] -  * Debugger is active!
+2023-12-02 15:48:44,067 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 15:49:01,673 [INFO] -  * Detected change in 'C:\\Users\\Deepanshu\\anaconda3\\envs\\automl\\Lib\\site-packages\\traitlets\\traitlets.py', reloading
+2023-12-02 15:49:03,432 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 15:49:32,601 [WARNING] -  * Debugger is active!
+2023-12-02 15:49:32,974 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 15:49:36,190 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 15:49:36,191 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 15:49:36,191 [INFO] -  * Detected change in 'D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\app_runner\\app.py', reloading
+2023-12-02 15:49:38,174 [INFO] -  * Restarting with watchdog (windowsapi)
+2023-12-02 15:50:05,405 [WARNING] -  * Debugger is active!
+2023-12-02 15:50:05,410 [INFO] -  * Debugger PIN: 379-562-551
+2023-12-02 15:52:39,133 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:52:41,861 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 71
+2023-12-02 15:52:41,875 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:52:45,506 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 1536
+2023-12-02 15:53:05,142 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:53:07,716 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 71
+2023-12-02 15:53:07,724 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:53:11,115 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 2537
+2023-12-02 15:53:24,972 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:53:27,021 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 79
+2023-12-02 15:53:27,029 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:53:30,949 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 2931
+2023-12-02 15:53:48,829 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:53:50,884 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 95
+2023-12-02 15:53:50,897 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:53:53,372 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 4221
+2023-12-02 15:54:23,665 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:54:25,794 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 109
+2023-12-02 15:54:25,807 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:54:27,951 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 5365
+2023-12-02 15:56:31,938 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:56:34,000 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 109
+2023-12-02 15:56:34,090 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 15:56:36,300 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 6042
+2023-12-02 23:54:11,153 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 23:54:15,236 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 151
+2023-12-02 23:54:15,661 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-02 23:54:18,495 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 2596
+2023-12-03 00:37:47,537 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 00:37:51,470 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 342
+2023-12-03 00:38:37,797 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 00:38:39,996 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 151
+2023-12-03 01:10:24,324 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:10:31,439 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:10:32,053 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:10:34,664 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:10:47,938 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:10:50,109 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:10:50,303 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:10:52,803 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:11:02,783 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:11:05,090 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:11:05,416 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:11:07,600 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:11:20,617 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:11:22,757 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:11:22,832 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:11:25,022 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:11:40,950 [INFO] - Status: Received Request for Preprocessing Explanation
+2023-12-03 01:13:15,075 [WARNING] - 5 out of the last 5 calls to <function PreprocessingLayer.make_adapt_function.<locals>.adapt_step at 0x000002002B168CA0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2023-12-03 01:13:15,249 [INFO] - CategoricalToNumerical:{'null_graph': '{"data":[{"alignmentgroup":"True","hovertemplate":"Number of Nulls=%{x}\\u003cbr\\u003eColumns=%{y}\\u003cextra\\u003e\\u003c\\u002fextra\\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"h","showlegend":false,"textposition":"auto","x":[0,0,0,0,0,0,0,0,0,0],"xaxis":"x","y":["survived","sex","age","n_siblings_spouses","parch","fare","class","deck","embark_town","alone"],"yaxis":"y","type":"bar"}],"layout":{"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Number of Nulls"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Columns"}},"legend":{"tracegroupgap":0},"title":{"text":"Number of Nulls in DataFrame Columns"},"barmode":"relative"}}', 'feature_type': {'survived': 'numerical', 'sex': 'categorical', 'age': 'numerical', 'n_siblings_spouses': 'numerical', 'parch': 'numerical', 'fare': 'numerical', 'class': 'categorical', 'deck': 'categorical', 'embark_town': 'categorical', 'alone': 'categorical'}, 'encoded_dict': {'sex': {'male': '1', 'female': '2'}, 'class': {'Third': '1', 'First': '3', 'Second': '2'}, 'deck': {'unknown': '1', 'C': '6', 'G': '2', 'A': '8', 'B': '7', 'D': '5', 'F': '3', 'E': '4'}, 'embark_town': {'Southampton': '2', 'Cherbourg': '4', 'Queenstown': '3', 'unknown': '1'}, 'alone': {'n': '2', 'y': '1'}}}
+2023-12-03 01:13:15,249 [INFO] - normalization:{}
+2023-12-03 01:13:15,249 [INFO] - Done: Returned
+2023-12-03 01:13:15,980 [INFO] - Status: Received Request for Tuner Explanation
+2023-12-03 01:13:16,449 [INFO] - Status: Received Request for Explore Features
+2023-12-03 01:13:50,430 [WARNING] - It looks like you are passing a model with a scalar output and target is set to `None`.If your model is a regression model this will produce correct attributions. If your model is a classification model, targets for each datapoint must be defined. Not defining the target may lead to incorrect values for the attributions.Targets can be either the true classes or the classes predicted by the model.
+2023-12-03 01:14:09,355 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:14:11,485 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:14:11,492 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:14:13,612 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:25:33,160 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:25:35,887 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:25:35,903 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:25:38,221 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:32:50,956 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:32:53,301 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:32:53,323 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:32:55,538 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:34:04,636 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:34:06,878 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:34:22,650 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:34:24,821 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:35:36,730 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:35:38,899 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 109
+2023-12-03 01:36:00,264 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:36:03,033 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:37:00,735 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:37:02,957 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:37:10,296 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:37:12,395 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:37:23,969 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:37:26,310 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:37:39,471 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:37:41,732 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:38:02,923 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:38:05,177 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 109
+2023-12-03 01:38:51,184 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:38:53,269 [DEBUG] - http://localhost:6006 "GET /data/runs HTTP/1.1" 200 109
+2023-12-03 01:39:05,253 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:39:08,331 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 980
+2023-12-03 01:40:11,523 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:40:13,828 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:40:13,871 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:40:16,070 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 01:40:37,555 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:40:39,973 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 824
+2023-12-03 01:40:40,055 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:40:42,811 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 1143
+2023-12-03 01:41:17,122 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:41:19,379 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 806
+2023-12-03 01:41:19,481 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:41:21,925 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 1129
+2023-12-03 01:48:51,905 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 01:48:54,305 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 1852
+2023-12-03 02:09:20,817 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:09:23,889 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 365
+2023-12-03 02:09:24,079 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:09:26,332 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 428
+2023-12-03 02:10:32,299 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:10:34,946 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 588
+2023-12-03 02:10:35,034 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:10:37,212 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 764
+2023-12-03 02:12:39,661 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:12:42,254 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 809
+2023-12-03 02:12:42,555 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:12:45,402 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 1134
+2023-12-03 02:15:53,296 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:15:55,549 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 1037
+2023-12-03 02:15:55,664 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:15:58,024 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 1453
+2023-12-03 02:19:15,139 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:19:17,349 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 192
+2023-12-03 02:19:17,442 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:19:19,710 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 221
+2023-12-03 02:20:12,805 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:20:15,392 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 345
+2023-12-03 02:20:15,467 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:20:17,530 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 422
+2023-12-03 02:20:30,916 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:20:33,255 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 345
+2023-12-03 02:20:33,338 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:20:35,664 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 422
+2023-12-03 02:20:57,406 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:20:59,465 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 375
+2023-12-03 02:20:59,578 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:21:01,756 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 425
+2023-12-03 02:24:11,550 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:24:13,911 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 351
+2023-12-03 02:24:14,060 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:24:16,225 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 427
+2023-12-03 02:24:25,707 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:24:27,952 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 351
+2023-12-03 02:24:27,974 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:24:30,268 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 427
+2023-12-03 02:25:42,148 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:25:44,478 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 329
+2023-12-03 02:25:44,570 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:25:46,854 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 420
+2023-12-03 02:25:46,875 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:25:49,104 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 320
+2023-12-03 02:25:49,216 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:25:51,381 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 427
+2023-12-03 02:30:20,151 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:30:22,500 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 582
+2023-12-03 02:30:22,565 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:30:24,860 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 782
+2023-12-03 02:30:38,999 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:30:41,170 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 582
+2023-12-03 02:30:41,200 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:30:43,573 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 782
+2023-12-03 02:31:05,320 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:31:07,601 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 597
+2023-12-03 02:31:07,632 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:31:09,978 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 789
+2023-12-03 02:31:45,249 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:31:47,664 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 767
+2023-12-03 02:31:47,913 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:31:50,065 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 1130
+2023-12-03 02:32:13,615 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:32:15,835 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 818
+2023-12-03 02:32:15,915 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:32:18,005 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 1130
+2023-12-03 02:32:18,077 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:32:20,163 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 818
+2023-12-03 02:32:20,285 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:32:22,459 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 1130
+2023-12-03 02:34:05,634 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:34:08,042 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 1064
+2023-12-03 02:34:08,477 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:34:10,940 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 1485
+2023-12-03 02:34:49,146 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:34:51,354 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 1040
+2023-12-03 02:34:51,421 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:34:53,639 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 1517
+2023-12-03 02:35:00,315 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:35:02,553 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 1160
+2023-12-03 02:35:02,596 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:35:04,705 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 1496
+2023-12-03 02:35:55,641 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:35:58,625 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 241
+2023-12-03 02:35:59,212 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:36:02,354 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 429
+2023-12-03 02:36:31,999 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:36:34,233 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 360
+2023-12-03 02:36:34,304 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:36:36,717 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 429
+2023-12-03 02:37:48,197 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:37:50,400 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 360
+2023-12-03 02:37:50,409 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:37:52,593 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 429
+2023-12-03 02:37:54,785 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:37:56,824 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 358
+2023-12-03 02:37:56,864 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:37:58,924 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 428
+2023-12-03 02:38:27,611 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:38:29,677 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 364
+2023-12-03 02:38:29,743 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:38:31,960 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 436
+2023-12-03 02:39:10,660 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:39:12,760 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 300
+2023-12-03 02:39:12,797 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:39:14,934 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 420
+2023-12-03 02:42:22,408 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:42:24,584 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 22
+2023-12-03 02:42:25,431 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:42:27,656 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 196
+2023-12-03 02:42:45,670 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:42:47,877 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 355
+2023-12-03 02:42:47,910 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:42:50,133 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 441
+2023-12-03 02:43:40,755 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:43:42,861 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 345
+2023-12-03 02:43:42,880 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:43:44,921 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 429
+2023-12-03 02:44:49,243 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:44:51,355 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 347
+2023-12-03 02:44:51,385 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:44:53,495 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 433
+2023-12-03 02:45:59,818 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:46:02,029 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 150
+2023-12-03 02:46:02,102 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:46:04,163 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 156
+2023-12-03 02:46:24,048 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:46:26,126 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 374
+2023-12-03 02:46:26,187 [DEBUG] - Starting new HTTP connection (1): localhost:6006
+2023-12-03 02:46:28,290 [DEBUG] - http://localhost:6006 "POST /data/plugin/scalars/scalars_multirun HTTP/1.1" 200 430

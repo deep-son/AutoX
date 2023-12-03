@@ -1,23 +1,37 @@
+<div class="row">
+    <div class="col-md-12">
+        <nav aria-label="breadcrumb" role="navigation">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item" aria-current="page">Explanations</li>
+                <li class="breadcrumb-item active" aria-current="page">Tuner</li>
+            </ol>
+        </nav>
+    </div>
+</div>
 <div id="explore-tuner-div">
     <div class="row">
         <div class="col-md-12">
-            <p class="text-primary">
-            <h6>Explore Tuner</h6>
-            <div class="col-md-2" id="dense-arch-card">
-                <button class="btn btn-primary btn-sm" type="button" id="explore-tuner">Explore
-                    Tuner</button>
-            </div>
-            </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <section class="card"
-                style="min-height:200px; height:auto; padding: 20px; background-color: #f4f4f4; border: 1px solid #ccc; border-radius: 5px;">
-                <div class="row" id="tuner-explanation-div" style="width: 100%; height: 100%; overflow: auto;">
-                </div>
+            <div class="card mb-3">
+                <img class="card-img-top blurred-image" src="{{ url_for('static', filename='img/tuner-1.png') }}"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">Explore Tuner</h4>
+                    <p class="card-text">This section offers insights into the tuner and the steps employed by the model
+                        during its development</p>
+                    <button class="btn btn-secondary btn-sm" type="button" id="explore-tuner">Explore</button>
 
+                    <p class="card-text"><small class="text-muted">The 'Explore' button will become active after the
+                            completion of the training process</small></p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-12">
+            <section class="card">
+                <div class="row" id="tuner-explanation-div" style="overflow: auto;">
+                </div>
             </section>
         </div>
+        
     </div>
 </div>
