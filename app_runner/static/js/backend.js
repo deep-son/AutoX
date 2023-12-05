@@ -2,8 +2,9 @@ const socket = io.connect('http://127.0.0.1:8082');
 var trials = {};
 var models = {};
 var bestValues = {};
-var project_name = "structured_data_classifier"
-var train_file_path = "C:\\Users\\Deepanshu\\.keras\\datasets\\train.csv"
+var project_name = "structured_data_classifier";
+var train_file_path = "C:\\Users\\Deepanshu\\.keras\\datasets\\train.csv";
+var target_name = "survived";
 
 
 function createArchModal(tabId, imageUrl){
@@ -166,7 +167,7 @@ function createGraphModal(tabId){
         <div class="modal-dialog modal-xxl" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Epoch Graphs</h5>
+                    <h5 class="modal-title">Epoch Graphs</h5></br>
                 <button class="btn btn-secondary tensor-api-class" type="button" id="btn-${tabId}" aria-expanded="false">
                     Refresh
                 </button>
@@ -231,13 +232,19 @@ function addTrialToTable(tabId, imageUrl, values, metrics){
     }
     else{
         const existingRow = document.getElementById(`row-${tabId}`);
+
+        const existingModal = document.getElementById(`metric-${tabId}`);
+
+        // If the modal already exists, remove it
+        if (existingModal) {
+            existingModal.parentNode.removeChild(existingModal);
+        }
         const metricAnchor = createMetricModal(tabId, metrics);
         const metricCell = existingRow.cells[3];
         metricCell.innerHTML = '';
         metricCell.appendChild(metricAnchor);
     }
 }
-
 
 function createAndAppendTabPaneFinalArch(tabId, imageUrl, cardID) {
     const $tabPane = $('<div>', {
@@ -260,7 +267,6 @@ function createAndAppendTabPaneFinalArch(tabId, imageUrl, cardID) {
     $(cardID).append($tabPane);
 
 };
-
 
 function updateBestValuesDisplay(Values) {
     // Start the table with Now UI classes
@@ -319,7 +325,6 @@ function createEvaluationElements(data) {
     Plotly.newPlot(roc_container, chartData, { responsive: true });
 };
 
-
 function update_training_ui_start(data) {
     $('#training-task').text(data['task'])
     $('#training-start-time').text(data['start_time']);
@@ -336,7 +341,7 @@ function update_training_ui_end(data) {
 function displayNormalizationDataWithAccordion(data) {
     if (Object.keys(data).length === 0) {
         var div = document.createElement('div');
-        div.textContent = 'Normalization is not used in this model';
+        div.textContent = 'Normalization in Preprocessing is not used in this model';
         return div;
 
     };
@@ -387,7 +392,6 @@ function displayNormalizationDataWithAccordion(data) {
         accordion.append(card);
     });
 
-    // Append the accordion to the preprocessing-explanation-div
     
     return accordion
 };
@@ -395,7 +399,11 @@ function displayNormalizationDataWithAccordion(data) {
 function updatePlot(id, data){
     var element = document.getElementById(id);
     var chartData = JSON.parse(data);
-    Plotly.newPlot(element, chartData, {  responsive: true });
+    var config = {
+        displayModeBar: false,
+    };
+    
+    Plotly.newPlot(element, chartData,{}, {modeBarButtonsToRemove: ['toImage']});
 }
 
 function createTable(data) {
@@ -460,34 +468,32 @@ function createAndUpdatePreprocessing(data, callback){
                     .addClass('row mt-3 hidden-row cat-to-num-div')
                     .attr('data-option', key);
 
-                    const icon = $('<i>')
-                    .addClass('fas fa-info-circle'); // Font Awesome classes for the icon
                   
-                  // Set up tooltip from Now UI Kit for the icon
-                  icon.attr('data-toggle', 'tooltip');
-                  icon.attr('data-placement', 'top');
-                  icon.attr('title', 'Explanation for NaN in dataset');
-                  icon.attr('data-original-title', 'Explanation for NaN in dataset'); // Needed for Now UI Kit
-                  
-                  const col1 = $('<div>').addClass('col-md-12');
-                  const card1 = $('<div>').addClass('card');
-                  const cardHeader1 = $('<div>').addClass('card-header').append(icon); // Append the icon to the card header
-                  const h4_1 = $('<h4>').text('NaN in dataset');
-                  const cardBody1 = $('<div>').addClass('card-body');
-                  
-                  const chartContainer1 = $('<div>').attr('id', 'chart-container-1');
-                  cardBody1.append(chartContainer1);
-                  cardHeader1.append(h4_1);
-                  card1.append(cardHeader1).append(cardBody1);
-                  col1.append(card1);
+                const col1 = $('<div>').addClass('col-md-12');
+                const card1 = $('<div>').addClass('card');
+                const cardHeader1 = $('<div>').addClass('card-header')
+                const h4_1 = $('<h4>').text('NaN in dataset');
+                const p1 = $('<p>').addClass('card-text')
+                                .text('Should the dataset contain any NaNs, AutoKeras will automatically substitute them with a randomly selected value from the respective column');
+                const cardBody1 = $('<div>').addClass('card-body');
+                
+                const chartContainer1 = $('<div>').attr('id', 'chart-container-1');
+                cardBody1.append(chartContainer1);
+                cardHeader1.append(h4_1);
+                cardHeader1.append(p1);
+                card1.append(cardHeader1).append(cardBody1);
+                col1.append(card1);
 
                 const col2 = $('<div>').addClass('col-md-12');
                 const card2 = $('<div>').addClass('card');
                 const cardHeader2 = $('<div>').addClass('card-header');
                 const h4_2 = $('<h4>').text('Encoding Details');
+                const p2 = $('<p>').addClass('card-text').text('AutoKeras converts categorical columns to numbers using the tf.keras.layers.StringLookup() function. It doesn\'t use One-hot-encoding or other types of encoding methods.');
+                
                 const cardBody2 = $('<div>').addClass('card-body').text('Add another chart here');
                 
                 cardHeader2.append(h4_2);
+                cardHeader2.append(p2);
                 card2.append(cardHeader2).append(cardBody2);
                 col2.append(card2);
 
@@ -537,209 +543,268 @@ function createAndUpdatePreprocessing(data, callback){
 
 };
 
-
 function createDynamicTabsGreedy(targetElement) {
     targetElement.innerHTML = `
     <div class="col-md-12">
-            <div class="col-md-12">
-                <div class="card mb-4">
-                    <ul
-                        class="nav nav-tabs px-1 py-3  bg-light flex-column flex-lg-row justify-content-md-center text-center">
-                        <li class="nav-item">
-                            <a class="nav-link active show" href="" data-toggle="tab" data-target="#tabone">
-                                Bayesian</a>
-                            <!-- <i class="now-ui-icons travel_info mr-1"></i> -->
-                        </li>
-                        <li class="nav-item ">
-                            <a href="" class="nav-link" data-toggle="tab" data-target="#tabtwo">
-                                Description</a>
-                        </li>
-                    </ul>
-                    <div class="card-body">
-                        <div class="tab-content mt-2">
-                            <div class="tab-pane fade text-center active show" id="tabone" role="tabpanel">
-                                <div class="info info-hover">
-                                    <h4 class="info-title">Your Current Tuner:<p style="color: #f96332;">Bayesian</p>
-                                    </h4>
-                                    <!-- Greedy Tuner Information Section with Creative Styling -->
-                                    <div class="info-section"
-                                        style="background-color: #f4f5f7; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
-                                        <h4 class="info-title" style="color: #32325d; margin-top: 10px ;">Bayesian Tuner
-                                            in
-                                            AutoKeras</h4>
-                                        <div class="description" style="color: #525f7f;">
-                                            <strong>Smart Prediction: </strong> Learns from past evaluations for optimal
-                                            hyperparameter choices. </br>
-                                            <strong>Balanced Search:</strong> Efficiently navigates between exploring
-                                            and exploiting hyperparameters.</br>
-                                            <strong>Adaptive Tuning:</strong> Customizes search based on results and
-                                            prior knowledge.</br>
-                                        </div>
-                                        <a href="#tabtwo" style="margin:20px ;" class="btn btn-primary"
-                                            id="learnMoreButton">Learn More</a>
+    <div class="col-md-12">
+        <div class="card mb-4">
+            <ul class="nav nav-tabs px-1 py-3  bg-light flex-column flex-lg-row justify-content-md-center text-center">
+                <li class="nav-item">
+                    <a class="nav-link active show" href="" data-toggle="tab" data-target="#tabone">
+                        Greedy</a>
+                    <!-- <i class="now-ui-icons travel_info mr-1"></i> -->
+                </li>
+                <li class="nav-item ">
+                    <a href="" class="nav-link" data-toggle="tab" data-target="#tabtwo">
+                        Description</a>
+                </li>
+            </ul>
+            <div class="card-body">
+                <div class="tab-content mt-2">
+                    <div class="tab-pane fade text-center active show" id="tabone" role="tabpanel">
+                        <div class="info info-hover">
+                            <h4 class="info-title">Your Current Tuner:</h4>
+                            <h3 class="info-title blink"><p style="color: #f96332;">Greedy</p>
+                            </h3>
+                            <!-- Greedy Tuner Information Section with Creative Styling -->
+                            <div class="info-section"
+                                style="background-color: #f4f5f7; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+                                <h4 class="info-title " style="color: #32325d; margin-top: 10px ;">Greedy
+                                    in
+                                    AutoKeras</h4>
+                                <div class="description" style="color: #525f7f;">
+                                    <strong>Incremental Refinement: </strong> Gradually improves hyperparameters for better performance.</br>
+                                    <strong>Efficiency Oriented: </strong> Targets promising hyperparameters for faster results.</br>
+                                    <strong>Real-time Adaptation: </strong> Adjusts strategy based on immediate feedback.</br>
+                                </div>
+                                <a href="#tabtwo" style="margin:20px ;" class="btn btn-primary"
+                                    id="learnMoreButton">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade text-center" id="tabtwo" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Note: Greedy Tuner works by optimizing one hyperparameter at a time; i.e only
+                                        one hyperparameter value is optimized with every new Trial.
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="tab-pane fade text-center" id="tabtwo" role="tabpanel">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Note: Bayesian tuner works on the history of previous trial, if the
-                                                numer of trials are not enough to fit a probabilistic model, then it
-                                                would do a random sampling.
-                                            </div>
-                                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header" style="background-color: #f96332; color: white;">
+                                        <h5 class="card-title">Trial Initialization Process</h5>
                                     </div>
+                                    <div class="card-body">
+                                        <p style="text-align: left;color: #f96332;; font-size: x-large;">
+                                            1 <span style="color: #f96332;; font-size: large;">
+                                                Start Trial
+                                            </span>
+                                        </p>
+                                        <p class="card-description">
+                                            The autokeras is designed to start a new trial phase once the old trial is
+                                            completed.
+                                            This ensures continuous progress and efficient
+                                            utilization of resources.
+                                        </p>
+                                        <ul style="text-align: left;">
+                                            <li><strong>Current Trial Check</strong>: Verifies if the ongoing number of
+                                                trials is below the maximum trial threshold.</li>
+                                            <li><strong>Automatic Initiation</strong>: If conditions are met, a new
+                                                trial begins.
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <!-- <div class="card-footer">
+                                        <button type="button" class="btn btn-info btn-round">Learn More</button>
+                                    </div> -->
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6 col-lg-4">
-                                        <!-- Bayesian Tuner: Trial Initialization -->
-                                        <div class="card">
-                                            <div class="card-header" style="background-color: #007bff; color: white;">
-                                                <h5 class="card-title">Trial Initialization Process</h5>
-                                            </div>
-                                            <div class="card-body">
-                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
-                                                    1 <span style="text-align: left;color: #007bff; font-size: large;">
-                                                        Start Bayesian Trial
-                                                    </span>
-                                                </p>
-                                                <p class="card-description">
-                                                    Initializes a Bayesian trial to efficiently explore the
-                                                    hyperparameter space based on prior probability models.
-                                                </p>
-                                            </div>
-                                        </div>
+                                <div class="card" data-background-color="black">
+                                    <div class="card-body content-danger">
+                                        <p style="text-align: left;color: #f96332;; font-size: x-large;">
+                                            2 <span style="color: #f96332;; font-size: large;">
+                                                Populate Hyperspace
+                                            </span>
+                                        </p>
+                                        <h6 class="category-social">
+                                            Understanding Hyperspace
+                                        </h6>
+                                        <p class="card-description">
 
-                                        <!-- Bayesian Tuner: Probabilistic Modeling -->
-                                        <div class="card">
-                                            <div class="card-header" style="background-color: #007bff; color: white;">
-                                                <h5 class="card-title">Probabilistic Modeling</h5>
-                                            </div>
-                                            <div class="card-body">
-                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
-                                                    2 <span style="text-align: left;color: #007bff; font-size: large;">
-                                                        Generate Probabilistic Model
-                                                    </span>
-                                                </p>
-                                                <p class="card-description">
-                                                    Constructs a probabilistic model to predict performance and guide
-                                                    the search towards promising hyperparameters.
-                                                </p>
-                                            </div>
-                                        </div>
+                                        <ul style="text-align: left;">
+                                            <li>This phase involves exploring the possibilities of untested
+                                                hyperparameters,
+                                                identifying potential candidates for optimal performance.</li>
+                                            <li>Autokeras however has a starting template for each of the tasks.
+                                            </li>
 
-                                        <!-- Bayesian Tuner: Optimal Hyperparameter Selection -->
-                                        <div class="card">
-                                            <div class="card-body text-center">
-                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
-                                                    3 <span style="text-align: left;color: #007bff; font-size: large;">
-                                                        Optimal Hyperparameter Selection
-                                                    </span>
-                                                </p>
-                                                <p class="card-description">
-                                                    Selects hyperparameters that maximize the acquisition function,
-                                                    balancing exploration and exploitation.
-                                                </p>
-                                            </div>
+                                        </ul>
+                                        </p>
+                                        <div class="card-footer text-center">
+                                            <a href="#" data-toggle="modal" data-target="#modal-initial-hps"
+                                                class="btn btn-default btn-round">See the initial
+                                                hyperspace</a>
                                         </div>
                                     </div>
 
-                                    <div class="col-md-6 col-lg-4">
-                                        <!-- Bayesian Tuner: Model Training and Evaluation -->
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
-                                                    4 <span style="text-align: left;color: #007bff; font-size: large;">
-                                                        Model Training and Evaluation
-                                                    </span>
-                                                </p>
-                                                <p class="card-description">
-                                                    Trains models using selected hyperparameters and evaluates their
-                                                    performance to update the probabilistic model.
-                                                </p>
-                                            </div>
-                                        </div>
+                                </div>
 
-                                        <!-- Bayesian Tuner: Updating Probabilistic Model -->
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
-                                                    5 <span style="text-align: left;color: #007bff; font-size: large;">
-                                                        Updating Probabilistic Model
-                                                    </span>
-                                                </p>
-                                                <p class="card-description">
-                                                    Updates the probabilistic model with new evaluation results,
-                                                    refining predictions for subsequent trials.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <!-- Bayesian Tuner: Iterative Process -->
-                                        <div class="card">
-                                            <div class="card-header" style="background-color: #007bff; color: white;">
-                                                <h5 class="card-title">Iterative Optimization Process</h5>
-                                            </div>
-                                            <div class="card-body">
-                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
-                                                    6 <span style="color: #007bff; font-size: large;">
-                                                        Iterate Until Convergence
-                                                    </span>
-                                                </p>
-                                                <p class="card-description">
-                                                    Continuously iterates the selection, training, evaluation, and
-                                                    update process until reaching convergence or exhausting the trial
-                                                    limit.
-                                                </p>
-                                            </div>
-                                        </div>
+                                <div class="card card-blog">
+                                    <div class="card-header" style="background-color: #f96332; color: white;">
+                                        <h5 class="card-title">Trie</h5>
                                     </div>
+                                    <div class="card-body text-center">
 
-                                    <div class="col-md-8 offset-md-2 col-lg-4 offset-lg-0">
-                                        <!-- Bayesian Tuner: Final Hyperparameter Selection -->
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
-                                                    7 <span style="text-align: left;color: #007bff; font-size: large;">
-                                                        Final Hyperparameter Selection
-                                                    </span>
-                                                </p>
-                                                <p class="card-description">
-                                                    Selects the best hyperparameter configuration based on the highest
-                                                    performing trials.
-                                                </p>
-                                            </div>
-                                        </div>
+                                        <p style="text-align: left;color: #f96332;; font-size: x-large;">
+                                            3 <span style="color: #f96332;; font-size: large;">
+                                                Initializing the Hyperparameter Trie
+                                            </span>
+                                        </p>
+                                        <p class="card-description">
+                                            A <span class="text-danger">Trie structure</span> is crafted
+                                            for each hyperparameter space, where each node of the Trie is indicates a
+                                            hyperparameter
+                                        </p>
 
-                                        <!-- Bayesian Tuner: Training Final Model -->
-                                        <div class="card">
-                                            <div class="card-header" style="background-color: #007bff; color: white;">
-                                                <h5 class="card-title">Training the Final Model</h5>
-                                            </div>
-                                            <div class="card-body">
-                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
-                                                    8 <span style="text-align: left;color: #007bff; font-size: large;">
-                                                        Train Final Model
-                                                    </span>
-                                                </p>
-                                                <p class="card-description">
-                                                    Trains the final model using the best hyperparameter set discovered
-                                                    during the Bayesian optimization process.
-                                                </p>
-                                            </div>
+                                        <div class="card-footer text-center">
+                                            <a href="https://en.wikipedia.org/wiki/Trie"
+                                                class="btn btn-default btn-round">More About Trie</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
+                            <div class="col-md-6">
+                                <div class="card card-blog">
+                                    <div class="card-body">
+                                        <p style="text-align: left;color: #f96332;; font-size: x-large;">
+                                            4 <span style="color: #f96332;; font-size: large;">
+                                                Selecting Hyperparameters and Inserting in Trie
+                                            </span>
+                                        </p>
+                                        <p class="card-description">
+                                            This step involves selecting the set of best hyperparameters from the
+                                            previous trials.
+                                        </p>
+                                        <p class="card-description" style="color: #333; text-align: left;">
+                                            For example, if hyperparameter
+                                            'structured_data_block_1/dense_block_1/dropout' is selected it is
+                                            represented in the Trie as follows:
+                                        <ul style="text-align: left;">
+                                            <li>Parent Node: structured_data_block_1</li>
+                                            <li>Child Node (of the Parent): dense_block_1</li>
+                                            <li>Sub-child Node: dropout</li>
+                                        </ul>
+                                        </p>
+                                        <div class="card-footer text-center">
+                                            <a href="#card-0" class="btn btn-default btn-round">See Trie for your runs</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card-blog">
+                                    <div class="card-body">
+                                        <p style="text-align: left;color: #f96332;; font-size: x-large;">
+                                            5 <span style="color: #f96332;; font-size: large;">
+                                                Converting to Probabilities
+                                            </span>
+                                        </p>
+                                        <p class="card-description">
+                                        <ul style="text-align: left;">
+                                            <li>Each node in the trie gets a probability, which depends upon the number
+                                                of leaves of a node eg. <code>probabilities = np.array([1 / node.num_leaves for node in all_nodes])</code></li>
+                                            <li>More leaves or children, lesser the chance of getting selected</li>
+                                            <li>A node is selected randomly with the given probabilities in mind</li>
+                                        </ul>
+                                        </p>
+                                        <div class="card-footer text-center">
+                                            <a href="#card-0" class="btn btn-default btn-round">See Probabilities below</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" style="background-color: #f96332; color: white;">
+                                        <h5 class="card-title">Best Hyperparameter Value</h5>
+                                    </div>
+                                    <div class="card-body">
+
+                                        <p style="text-align: left;color: #f96332;; font-size: x-large;">
+                                            6 <span style="color: #f96332;; font-size: large;">
+                                                Getting a value for the hyperparameter
+                                            </span>
+                                        </p>
+                                        <ul style="text-align: left; color:black;">
+                                            <li><strong>Retrieval of Best Hyperparameter value:</strong> Begins by
+                                                fetching
+                                                the best hyperparameter value from previous tuning iterations.</li>
+                                            <li><strong>Unique Set Generation:</strong> Iteratively generates new sets
+                                                of hyperparameters, ensuring uniqueness in each iteration.</li>
+                                            <li><strong>Random Sampling with Checks:</strong> Employs random sampling
+                                                for hyperparameter values, incorporating checks to avoid repeats.</li>
+                                            <li><strong>Collision Handling:</strong> Includes a mechanism to count and
+                                                limit 'collisions'—instances of generating previously tried
+                                                combinations.</li>
+                                            <li><strong>Threshold for Collision:</strong> If the process exceeds a
+                                                predefined number of collisions, it stops, preventing infinite loops.
+                                            </li>
+                                            <li><strong>Outcome:</strong> Returns a unique set of hyperparameter value
+                                                if
+                                                successful; aborts the process if it hits the collision limit and return
+                                                the current best value.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-initial-hps" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Initial Hyperparameter Space</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="code-block">
+                    <pre><code class="language-python">
+                                    STRUCTURED_DATA_CLASSIFIER = [
+                                    {
+                                        "structured_data_block_1/normalize": True,
+                                        "structured_data_block_1/dense_block_1/num_layers": 2,
+                                        "structured_data_block_1/dense_block_1/use_batchnorm": False,
+                                        "structured_data_block_1/dense_block_1/dropout": 0,
+                                        "structured_data_block_1/dense_block_1/units_0": 32,
+                                        "structured_data_block_1/dense_block_1/units_1": 32,
+                                        "classification_head_1/dropout": 0.0,
+                                        "optimizer": "adam",
+                                        "learning_rate": 0.001,
+                                    }
+                                ]
+                                </code></pre>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+    
     `;
     const learnMoreButton = document.getElementById('learnMoreButton');
     
@@ -763,207 +828,284 @@ function createDynamicTabsBayesian(targetElement) {
     // var tabPane = document.createEl++ement("div");
     targetElement.innerHTML = `
     <div class="col-md-12">
-            <div class="col-md-12">
-                <div class="card mb-4">
-                    <ul
-                        class="nav nav-tabs px-1 py-3  bg-light flex-column flex-lg-row justify-content-md-center text-center">
-                        <li class="nav-item">
-                            <a class="nav-link active show" href="" data-toggle="tab" data-target="#tabone">
-                                Bayesian</a>
-                            <!-- <i class="now-ui-icons travel_info mr-1"></i> -->
-                        </li>
-                        <li class="nav-item ">
-                            <a href="" class="nav-link" data-toggle="tab" data-target="#tabtwo">
-                                Description</a>
-                        </li>
-                    </ul>
-                    <div class="card-body">
-                        <div class="tab-content mt-2">
-                            <div class="tab-pane fade text-center active show" id="tabone" role="tabpanel">
-                                <div class="info info-hover">
-                                    <h4 class="info-title">Your Current Tuner:<p style="color: #f96332;">Bayesian</p>
-                                    </h4>
-                                    <!-- Greedy Tuner Information Section with Creative Styling -->
-                                    <div class="info-section"
-                                        style="background-color: #f4f5f7; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
-                                        <h4 class="info-title" style="color: #32325d; margin-top: 10px ;">Bayesian Tuner
-                                            in
-                                            AutoKeras</h4>
-                                        <div class="description" style="color: #525f7f;">
-                                            <strong>Smart Prediction: </strong> Learns from past evaluations for optimal
-                                            hyperparameter choices. </br>
-                                            <strong>Balanced Search:</strong> Efficiently navigates between exploring
-                                            and exploiting hyperparameters.</br>
-                                            <strong>Adaptive Tuning:</strong> Customizes search based on results and
-                                            prior knowledge.</br>
-                                        </div>
-                                        <a href="#tabtwo" style="margin:20px ;" class="btn btn-primary"
-                                            id="learnMoreButton">Learn More</a>
+    <div class="col-md-12">
+        <div class="card mb-4">
+            <ul class="nav nav-tabs px-1 py-3  bg-light flex-column flex-lg-row justify-content-md-center text-center">
+                <li class="nav-item">
+                    <a class="nav-link active show" href="" data-toggle="tab" data-target="#tabone">
+                        Bayesian</a>
+                    <!-- <i class="now-ui-icons travel_info mr-1"></i> -->
+                </li>
+                <li class="nav-item ">
+                    <a href="" class="nav-link" data-toggle="tab" data-target="#tabtwo">
+                        Description</a>
+                </li>
+            </ul>
+            <div class="card-body">
+                <div class="tab-content mt-2">
+                    <div class="tab-pane fade text-center active show" id="tabone" role="tabpanel">
+                        <div class="info info-hover">
+                            <h4 class="info-title">Your Current Tuner:</h4>
+                            <h5 class="info-title blink">
+                                <p style="color: #f96332;">Bayesian</p>
+                            </h5>
+
+
+                            <div class="info-section"
+                                style="background-color: #f4f5f7; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+                                <h4 class="info-title" style="color: #32325d; margin-top: 10px ;">Bayesian Tuner
+                                    in
+                                    AutoKeras</h4>
+                                <div class="description" style="color: #525f7f;">
+                                    <strong>Smart Prediction: </strong> Learns from past evaluations for optimal
+                                    hyperparameter choices. </br>
+                                    <strong>Balanced Search:</strong> Efficiently navigates between exploring
+                                    and exploiting hyperparameters.</br>
+                                    <strong>Adaptive Tuning:</strong> Customizes search based on results and
+                                    prior knowledge.</br>
+                                </div>
+                                <a href="#tabtwo" style="margin:20px ;" class="btn btn-primary"
+                                    id="learnMoreButton">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade text-center" id="tabtwo" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <p>Note: The Bayesian tuner relies on the history of previous trials. If the
+                                            number of trials is insufficient to fit a Gaussian process regressor, it
+                                            resorts to random sampling. By default, AutoKeras uses thrice the
+                                            dimensionality of the hyperspace as the default number of random points.</p>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="tab-pane fade text-center" id="tabtwo" role="tabpanel">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Note: Bayesian tuner works on the history of previous trial, if the
-                                                numer of trials are not enough to fit a probabilistic model, then it
-                                                would do a random sampling.
-                                            </div>
-                                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <!-- Bayesian Tuner: Trial Initialization -->
+                                <div class="card">
+                                    <div class="card-header" style="background-color: #007bff; color: white;">
+                                        <h5 class="card-title">Trial Initialization Process</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p style="text-align: left;color: #007bff; font-size: x-large;">
+                                            1 <span style="text-align: left;color: #007bff; font-size: large;">
+                                                Start Trial
+                                            </span>
+                                        </p>
+                                        <p class="card-description">
+                                            Initializes a trial to efficiently explore the
+                                            hyperparameter space based on prior probability models.
+                                        </p>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6 col-lg-4">
-                                        <!-- Bayesian Tuner: Trial Initialization -->
-                                        <div class="card">
-                                            <div class="card-header" style="background-color: #007bff; color: white;">
-                                                <h5 class="card-title">Trial Initialization Process</h5>
-                                            </div>
-                                            <div class="card-body">
-                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
-                                                    1 <span style="text-align: left;color: #007bff; font-size: large;">
-                                                        Start Bayesian Trial
-                                                    </span>
-                                                </p>
-                                                <p class="card-description">
-                                                    Initializes a Bayesian trial to efficiently explore the
-                                                    hyperparameter space based on prior probability models.
-                                                </p>
-                                            </div>
-                                        </div>
+                                <div class="card" data-background-color="black">
+                                    <div class="card-body content-danger">
+                                        <p style="text-align: left;color:#007bff; font-size: x-large;">
+                                            2 <span style="color: #007bff; font-size: large;">
+                                                Populate Hyperspace
+                                            </span>
+                                        </p>
+                                        <h6 class="category-social">
+                                            Understanding Hyperspace
+                                        </h6>
+                                        <p class="card-description">
 
-                                        <!-- Bayesian Tuner: Probabilistic Modeling -->
-                                        <div class="card">
-                                            <div class="card-header" style="background-color: #007bff; color: white;">
-                                                <h5 class="card-title">Probabilistic Modeling</h5>
-                                            </div>
-                                            <div class="card-body">
-                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
-                                                    2 <span style="text-align: left;color: #007bff; font-size: large;">
-                                                        Generate Probabilistic Model
-                                                    </span>
-                                                </p>
-                                                <p class="card-description">
-                                                    Constructs a probabilistic model to predict performance and guide
-                                                    the search towards promising hyperparameters.
-                                                </p>
-                                            </div>
-                                        </div>
+                                        <ul style="text-align: left;">
+                                            <li>This phase involves exploring the possibilities of untested
+                                                hyperparameters,
+                                                identifying potential candidates for optimal performance.</li>
+                                            <li>Autokeras however has a starting template for each of the tasks.
+                                            </li>
 
-                                        <!-- Bayesian Tuner: Optimal Hyperparameter Selection -->
-                                        <div class="card">
-                                            <div class="card-body text-center">
-                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
-                                                    3 <span style="text-align: left;color: #007bff; font-size: large;">
-                                                        Optimal Hyperparameter Selection
-                                                    </span>
-                                                </p>
-                                                <p class="card-description">
-                                                    Selects hyperparameters that maximize the acquisition function,
-                                                    balancing exploration and exploitation.
-                                                </p>
-                                            </div>
+                                        </ul>
+                                        </p>
+                                        <div class="card-footer text-center">
+                                            <a href="#" data-toggle="modal" data-target="#modal-initial-hps"
+                                                class="btn btn-default btn-round">See the initial
+                                                hyperspace</a>
                                         </div>
                                     </div>
 
-                                    <div class="col-md-6 col-lg-4">
-                                        <!-- Bayesian Tuner: Model Training and Evaluation -->
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
-                                                    4 <span style="text-align: left;color: #007bff; font-size: large;">
-                                                        Model Training and Evaluation
-                                                    </span>
-                                                </p>
-                                                <p class="card-description">
-                                                    Trains models using selected hyperparameters and evaluates their
-                                                    performance to update the probabilistic model.
-                                                </p>
-                                            </div>
+                                </div>
+                                <div class="card" data-background-color="black">
+                                    <div class="card-body content-danger">
+                                        <p style="text-align: left; color: #007bff; font-size: x-large;">
+                                            3 <span style="color: #007bff; font-size: large;">Check if enough Points are
+                                                available</span>
+                                        </p>
+                                        <h6 class="category-social">Understanding Decision Making</h6>
+                                        <p class="card-description">
+                                            By Default Autokeras uses 3 times the dimensionality of the space as the
+                                            default number of Hyperparameter points.
+                                        </p>
+                                        <div class="code-block">
+                                            <code>
+                                        num_initial_points = self.num_initial_points or max(3 * dimensions, 3)
+                                        if len(completed_trials) < num_initial_points:
+                                            return self._random_populate_space()
+                                            </code>
                                         </div>
-
-                                        <!-- Bayesian Tuner: Updating Probabilistic Model -->
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
-                                                    5 <span style="text-align: left;color: #007bff; font-size: large;">
-                                                        Updating Probabilistic Model
-                                                    </span>
-                                                </p>
-                                                <p class="card-description">
-                                                    Updates the probabilistic model with new evaluation results,
-                                                    refining predictions for subsequent trials.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <!-- Bayesian Tuner: Iterative Process -->
-                                        <div class="card">
-                                            <div class="card-header" style="background-color: #007bff; color: white;">
-                                                <h5 class="card-title">Iterative Optimization Process</h5>
-                                            </div>
-                                            <div class="card-body">
-                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
-                                                    6 <span style="color: #007bff; font-size: large;">
-                                                        Iterate Until Convergence
-                                                    </span>
-                                                </p>
-                                                <p class="card-description">
-                                                    Continuously iterates the selection, training, evaluation, and
-                                                    update process until reaching convergence or exhausting the trial
-                                                    limit.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-8 offset-md-2 col-lg-4 offset-lg-0">
-                                        <!-- Bayesian Tuner: Final Hyperparameter Selection -->
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
-                                                    7 <span style="text-align: left;color: #007bff; font-size: large;">
-                                                        Final Hyperparameter Selection
-                                                    </span>
-                                                </p>
-                                                <p class="card-description">
-                                                    Selects the best hyperparameter configuration based on the highest
-                                                    performing trials.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <!-- Bayesian Tuner: Training Final Model -->
-                                        <div class="card">
-                                            <div class="card-header" style="background-color: #007bff; color: white;">
-                                                <h5 class="card-title">Training the Final Model</h5>
-                                            </div>
-                                            <div class="card-body">
-                                                <p style="text-align: left;color: #007bff; font-size: x-large;">
-                                                    8 <span style="text-align: left;color: #007bff; font-size: large;">
-                                                        Train Final Model
-                                                    </span>
-                                                </p>
-                                                <p class="card-description">
-                                                    Trains the final model using the best hyperparameter set discovered
-                                                    during the Bayesian optimization process.
-                                                </p>
-                                            </div>
-                                        </div>
+                                        <p>
+                                            The variable <code>num_initial_points</code> is set to either
+                                            <code>max(3 * dimensions, 3)</code> or a specified value, where
+                                            <code>dimensions</code> refers to the length of all the hyperparameters that
+                                            have been tried so far. If the number of completed trials is less than
+                                            <code>num_initial_points</code>, random tuning occurs, where a random
+                                            hyperparameter is selected for the current trial. Otherwise, the Bayesian
+                                            Process continues.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-6 col-lg-4">
+                                <!-- Bayesian Tuner: Model Training and Evaluation -->
+                                <div class="card">
+                                    <div class="card-header" style="background-color: #007bff; color: white;">
+                                        <h5 class="card-title">Bayesian Tuner</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p style="text-align: left; color: #007bff; font-size: x-large;">
+                                            4 <span style="color: #007bff; font-size: large;">Vectorize Trials</span>
+                                        </p>
+                                        <p class="card-description">
+                                            Trials are vectorized because the Bayesian process operates exclusively in a
+                                            euclidean space and hyperparameters are not in euclidean space.
+                                        </p>
+                                        <p class="card-description">
+                                            The vectorization process involves translating hyperparameter (HP) values
+                                            into the continuous space [0, 1], there are fixed rules defined to convert int_hp, float_hp and fixed_hp to Additionally, scores are calculated by
+                                            adding the mean and standard deviation from the Gaussian process regressor
+                                            for the continuous hyperparameter values of each trial:
+                                        </p>
+                                        <div class="code-block">
+                                            <pre><code>
+                                        y_h_mean, y_h_std = self.gpr.predict(x_h, return_std=True)
+                                        score = y_h_mean[0] + y_h_std[0]
+                                            </code></pre>
+                                        </div>
+                                        <p class="card-description">
+                                            These vector values and scores from all trials are then compiled together to
+                                            form two arrays: <code>x = appended_vector</code> and
+                                            <code>y = appended_score</code>, which are used in the Bayesian optimization
+                                            process.
+                                        </p>
+                                    </div>
+                                </div>
 
+
+                                <div class="card">
+                                    <div class="card-header" style="background-color: #007bff; color: white;">
+                                        <h5 class="card-title">Upper Confidence Bound Computation</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p style="text-align: left; color: #007bff; font-size: x-large;">
+                                            5 <span style="color: #007bff; font-size: large;">Optimizing the
+                                                Hyperparameters</span>
+                                        </p>
+                                        <p class="card-description">
+                                            The function computes the upper confidence bound for given hyperparameter
+                                            values. This involves predicting the mean and standard deviation using a
+                                            Gaussian process regressor and adjusting the confidence level with a beta
+                                            parameter.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8 offset-md-2 col-lg-4 offset-lg-0">
+                                <!-- Bayesian Tuner: Final Hyperparameter Selection -->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <p style="text-align: left; color: #007bff; font-size: x-large;">
+                                            6 <span style="color: #007bff; font-size: large;">Optimizing Trial
+                                                Parameters</span>
+                                        </p>
+                                        <p class="card-description">
+                                            Multiple restarts are used to optimize the hyperparameter values, seeking
+                                            the minimum of the upper confidence bound. The best hyperparameters are
+                                            identified based on the lowest score achieved during optimization.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" style="background-color: #007bff; color: white;">
+                                        <h5 class="card-title">Model Fitting and Decision Making</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p style="text-align: left; color: #007bff; font-size: x-large;">
+                                            7 <span style="color: #007bff; font-size: large;">Finalizing the Optimal
+                                                Hyperparameters</span>
+                                        </p>
+                                        <p class="card-description">
+                                            After iterating through trials, the optimal set of hyperparameters is
+                                            finalized based on the Gaussian process regressor's predictions. This
+                                            set is used for subsequent model training and evaluations.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-initial-hps" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Initial Hyperparameter Space</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="code-block">
+                    <pre><code class="language-python">
+                                    STRUCTURED_DATA_CLASSIFIER = [
+                                    {
+                                        "structured_data_block_1/normalize": True,
+                                        "structured_data_block_1/dense_block_1/num_layers": 2,
+                                        "structured_data_block_1/dense_block_1/use_batchnorm": False,
+                                        "structured_data_block_1/dense_block_1/dropout": 0,
+                                        "structured_data_block_1/dense_block_1/units_0": 32,
+                                        "structured_data_block_1/dense_block_1/units_1": 32,
+                                        "classification_head_1/dropout": 0.0,
+                                        "optimizer": "adam",
+                                        "learning_rate": 0.001,
+                                    }
+                                ]
+                                </code></pre>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
     `;
-    // targetElement.appendChild(tabPane);
+    const learnMoreButton = document.getElementById('learnMoreButton');
+    
+    // button for tuner description
+    learnMoreButton.addEventListener("click", function(event) {
+        console.log("in here");
+        event.preventDefault(); // Prevent the default anchor behavior
+    
+        // Deactivate current active tab and tab content
+        document.querySelector('.nav-link.active').classList.remove('active', 'show');
+        document.querySelector('.tab-pane.active').classList.remove('active', 'show');
+    
+        // Activate the tabtwo tab and content
+        document.querySelector('a[data-target="#tabtwo"]').classList.add('active', 'show');
+        document.getElementById("tabtwo").classList.add('active', 'show');
+    });
   };
 
 function createAccordionBayesian(accordionId, data) {
@@ -1012,7 +1154,7 @@ function createAccordionBayesian(accordionId, data) {
     if (data && Array.isArray(data)) {
         data.forEach(content => addToAccordion(content));
     } else {
-        addToAccordion('<p>No data provided</p>');
+        addToAccordion('<p>Not enough Trials to do Bayesian Optimization, selecting hyperparameters randomly</p>');
     }
 
     // Append the card to the accordion div
@@ -1034,6 +1176,7 @@ function createAndUpdateTunerBayesian(data){
 
 function createFigureCardWithAccordionGreedy(value) {
     const card = document.createElement('div');
+    card.id = `card-${value["trial_id"]}`
     card.classList.add('col-md-12', 'figure-card');
     card.style.padding = '20px';
     
@@ -1100,8 +1243,6 @@ function createFigureCardWithAccordionGreedy(value) {
 
     const network = new vis.Network(graphContainer, data, options);
     
-
-
     const accordionSection = document.createElement('div');
     accordionSection.classList.add('collapse');
     accordionSection.setAttribute('id', `collapse${value["trial_id"]}`);
@@ -1128,10 +1269,20 @@ function createFigureCardWithAccordionGreedy(value) {
 
     // Append the bold text to the paragraph
     paragraph.appendChild(boldText);
+    
+    const additionalText1 = document.createTextNode(' with a random choice from ');
+    
+    paragraph.appendChild(additionalText1);
 
     // Continue with the rest of the paragraph text
-    const additionalText = document.createTextNode(' as it has the highest probability');
-paragraph.appendChild(additionalText);
+    const code_section = document.createElement('code');
+    code_section.textContent = 'np.random.choice(all_nodes, p=probabilities)';
+
+    paragraph.appendChild(code_section);
+
+    const additionalText2 = document.createTextNode(' with the given probabilities');
+    
+    paragraph.appendChild(additionalText2);
 
     // Append paragraph to the first column div
     firstColDiv.appendChild(paragraph);
@@ -1245,6 +1396,21 @@ function createAndUpdateTunerGreedy(data){
     })
 };
 
+function updateTime(id) {
+    const lastUpdatedElement = document.getElementById(id);
+    const currentTime = new Date();
+
+    let hours = currentTime.getHours(); // get current hours
+    let minutes = currentTime.getMinutes(); // get current minutes
+    let seconds = currentTime.getSeconds(); // get current seconds
+
+    // Format the time to ensure two digits for hours, minutes, and seconds
+    hours = hours < 10 ? '0' + hours : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    lastUpdatedElement.textContent = 'Last updated at ' + hours + ':' + minutes + ':' + seconds;
+};
 
 
 socket.on('connect', () => {
@@ -1261,9 +1427,11 @@ socket.on('initial', (data) => {
         update_training_ui_end(data)
     }
     else{
-        project_name = data["project_name"]
-        train_file_path = data["x"]
-        update_training_ui_start(data)
+        project_name = data["project_name"];
+        train_file_path = data["x"];
+        target_name = data["y"];
+        console.log(data);
+        update_training_ui_start(data);
         // start_get_request()
     }
     
@@ -1279,11 +1447,12 @@ socket.on('update', (data) => {
             const tValue = 'test_model';
             if (!(tValue in models)) {
                 const $imageElementPreProcess = $('<p>', {
-                    html: `<img class="card-img-top" src="${finalArchImageUrl}" alt="Model Image" style="max-width: 100%; max-height: 100%;"></br`,
+                    html: `<img class="card-img-top" src="${finalArchImageUrl}" alt="Model Image" style="max-width: 100%; max-height: 100%;"></br><p class="card-text"><small class="text-muted" id="lastUpdated1">Last updated 3 mins ago</small></p>`,
                 });
                 $('#final-arch-card').append($imageElementPreProcess);
 
                 models[tValue] = finalArchImageUrl
+                updateTime('lastUpdated1');
 
             }
         }
@@ -1293,11 +1462,12 @@ socket.on('update', (data) => {
             if (!(tValue in models)) {
                 // call element here to add
                 const $imageElementPreProcess = $('<p>', {
-                    html: `<img class="card-img-top" src="${finalArchImageUrl}" alt="Model Image" style="max-width: 100%; max-height: 100%;"></br`,
+                    html: `<img class="card-img-top" src="${finalArchImageUrl}" alt="Model Image" style="max-width: 100%; max-height: 100%;"></br><p class="card-text"><small class="text-muted" id="lastUpdated2">Last updated 3 mins ago</small></p>`,
                 });
                 $('#preprocessing-arch-card').append($imageElementPreProcess);
 
-                models[tValue] = finalArchImageUrl
+                models[tValue] = finalArchImageUrl;
+                updateTime('lastUpdated2');
             }
         }
         else if (final_arch.includes("dense_model")) {
@@ -1306,10 +1476,11 @@ socket.on('update', (data) => {
             if (!(tValue in models)) {
                 // call element here to add
                 const $imageElementDense = $('<p>', {
-                    html: `<img class="card-img-top" src="${finalArchImageUrl}" alt="Model Image" style="max-width: 100%; max-height: 100%;">`,
+                    html: `<img class="card-img-top" src="${finalArchImageUrl}" alt="Model Image" style="max-width: 100%; max-height: 100%;"><p class="card-text"><small class="text-muted" id="lastUpdated3">Last updated 3 mins ago</small></p>`,
                 });
                 $('#dense-arch-card').append($imageElementDense);
-                models[tValue] = finalArchImageUrl
+                models[tValue] = finalArchImageUrl;
+                updateTime('lastUpdated3');
             }
         }
     }
@@ -1345,33 +1516,7 @@ socket.on('update', (data) => {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Get all elements with class="dropdown-btn" and loop through them
-    var dropdown = document.getElementsByClassName("dropdown-btn");
-    for (var i = 0; i < dropdown.length; i++) {
-        dropdown[i].addEventListener("click", function() {
-            // Toggle between adding and removing the "show" class to dropdown content
-            this.nextElementSibling.classList.toggle("show");
-        });
-    }
-});
-document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('.content-section');
-    const sidebarLinks = document.querySelectorAll('#sidebar a');
 
-    sidebarLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            // Hide all sections
-            sections.forEach(section => section.classList.remove('active'));
-
-            // Show the clicked section
-            const sectionId = this.getAttribute('href');
-            document.querySelector(sectionId).classList.add('active');
-        });
-    });
-});
 
 document.addEventListener("DOMContentLoaded", function () {
    
@@ -1541,7 +1686,7 @@ document.addEventListener("DOMContentLoaded", function () {
             num_rows = 5
         }
         const explanation_type = 'IG'
-        const url = '/load_data/?project_name=' + encodeURIComponent(project_name) + '&train_file_path=' + encodeURIComponent(train_file_path) + '&explanation_type=' + encodeURIComponent(explanation_type) + '&num_rows=' + encodeURIComponent(num_rows);
+        const url = '/load_data/?project_name=' + encodeURIComponent(project_name) + '&train_file_path=' + encodeURIComponent(train_file_path) + '&explanation_type=' + encodeURIComponent(explanation_type) + '&num_rows=' + encodeURIComponent(num_rows) + '&target_name=' + encodeURIComponent(target_name);
         fetch(url, {
             method: 'POST',
             headers: {
@@ -1574,7 +1719,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     aleGraphButton.addEventListener("click", function () {
         const explanation_type = 'ALE'
-        const url = '/load_data/?project_name=' + encodeURIComponent(project_name) + '&train_file_path=' + encodeURIComponent(train_file_path) + '&explanation_type=' + encodeURIComponent(explanation_type);
+        const url = '/load_data/?project_name=' + encodeURIComponent(project_name) + '&train_file_path=' + encodeURIComponent(train_file_path) + '&explanation_type=' + encodeURIComponent(explanation_type) + '&target_name=' + encodeURIComponent(target_name);
         fetch(url, {
             method: 'POST',
             headers: {
@@ -1611,7 +1756,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener('DOMContentLoaded', function() {
         const sections = document.querySelectorAll('.content-section');
         const sidebarLinks = document.querySelectorAll('#sidebar a');
-        const homeSection = document.getElementById('home-section');
+        const homeSection = document.getElementById('nhome-sectio');
     
         sidebarLinks.forEach(link => {
             link.addEventListener('click', function(e) {
@@ -1633,6 +1778,108 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to filter the table
+    function filterTable(event) {
+        const filter = event.target.value.toUpperCase();
+        const rows = document.querySelector("#myTable tbody").rows;
+        
+        for (const row of rows) {
+            let text = row.textContent.toUpperCase();
+            row.style.display = text.indexOf(filter) > -1 ? "" : "none";
+        }
+    }
+    document.querySelector('#searchInput').addEventListener('keyup', filterTable, false);
+
+
+
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    for (var i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+            // Toggle between adding and removing the "show" class to dropdown content
+            this.nextElementSibling.classList.toggle("show");
+        });
+    }
+
+
+    const sections = document.querySelectorAll('.content-section');
+    const sidebarLinks = document.querySelectorAll('#sidebar a');
+
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // Hide all sections
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Show the clicked section
+            const sectionId = this.getAttribute('href');
+            document.querySelector(sectionId).classList.add('active');
+        });
+    });
+
+    // Data for the plot
+    createExamplePlotIG('igexample');
+    createExamplePlotALE('aleexample');
+
+});
+
+function createExamplePlotIG(id){
+    const divElement = document.getElementById(id);
+    const features = ["Credit Score", "Income", "Loan Amount", "Employment Years"];
+    const contributions = [0.35, 0.15, -0.25, 0.10];
+
+    // Creating the trace
+    const trace = {
+    type: 'bar',
+    x: contributions,
+    y: features,
+    orientation: 'h'
+    };
+
+    // Layout configuration
+    const layout = {
+    title: "Integrated Gradients: Loan Approval Model",
+    xaxis: { title: "Attribution Score" },
+    yaxis: { title: "Features" },
+    bargap: 0.5
+    };
+
+    // Creating the plot
+    Plotly.newPlot(divElement, [trace], layout);
+};
+
+function createExamplePlotALE(id){
+    const divElement = document.getElementById(id);
+    // Updated data for the plot (hypothetical)
+    const houseSize = [1000, 1500, 2000, 2500, 3000]; // Size in square feet
+    const houseSizeEffect = [100000, 200000, 300000, 400000, 500000]; // Corresponding average effect on price
+    
+    const numberOfBedrooms = [1, 2, 3, 4, 5]; // Number of bedrooms
+    const bedroomEffect = [300000, 305000, 310000, 305000, 300000]; // Corresponding average effect on price
+    
+    // Creating the traces
+    const sizeTrace = {
+      x: houseSize,
+      y: houseSizeEffect,
+      type: 'scatter',
+      mode: 'lines+markers',
+      name: 'Size of House',
+      line: { color: 'blue' }
+    };
+
+    // Layout configuration
+    const layout = {
+      title: 'ALE Plot: House Pricing Model',
+      xaxis: { title: 'Feature Values' },
+      yaxis: { title: 'Average Local Effect on Price' },
+      showlegend: true
+    };
+    
+    Plotly.newPlot(divElement, [sizeTrace], layout);
+
+};
 
 
 

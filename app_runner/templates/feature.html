@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <nav aria-label="breadcrumb" role="navigation">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Explanations</a></li>
+                <li class="breadcrumb-item">Explanations</li>
                 <li class="breadcrumb-item active" aria-current="page">Features</li>
             </ol>
         </nav>
@@ -29,10 +29,15 @@
                                 <div class="col-md-12">
                                     <p class="text-secondary" style="font-size: large;">
                                         Integrated Gradients
-                                        <b data-toggle="tooltip"
+                                        <!-- <b data-toggle="tooltip"
                                             title="How much does each feature contribute to the model prediction"
                                             data-placement="right" data-animation="true" data-delay="100"><i
-                                                class="fa-solid fa-circle-info"></i></b>
+                                                class="fa-solid fa-circle-info"></i></b> -->
+                                        <button type="button" class="btn btn-sm " data-toggle="modal"
+                                            data-target="#modal-IG-info"
+                                            style=" color:#ffa500 ;background-color: transparent">
+                                            <i class="fa-solid fa-circle-info" style="font-size: large;"></i>
+                                        </button>
                                     </p>
                                     <div class="row">
                                         <div class="col-md-12">
@@ -62,10 +67,15 @@
                                 <div class="col-md-12">
                                     <p class="text-secondary" style="font-size: large;">
                                         Accumulated Local Effects
-                                        <b data-toggle="tooltip"
+                                        <!-- <b data-toggle="tooltip"
                                             title="How does model prediction vary with respect to features of interest"
                                             data-placement="right" data-animation="true" data-delay="100"><i
-                                                class="fa-solid fa-circle-info"></i></b>
+                                                class="fa-solid fa-circle-info"></i></b> -->
+                                        <button type="button" class="btn btn-sm " data-toggle="modal"
+                                            data-target="#modal-ALE-info"
+                                            style=" color:#ffa500; background-color: transparent ;">
+                                            <i class="fa-solid fa-circle-info" style="font-size: large;"></i>
+                                        </button>
                                     </p>
                                     <div class="row">
                                         <div class="col-md-12">
@@ -80,18 +90,113 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="row">
-                                <div class="col-md-12">
-                                    <p class="text-secondary">
-                                        <b data-toggle="tooltip"
-                                            title="How much does each feature contribute to the model prediction"
-                                            data-placement="right" data-animation="true" data-delay="100">Anchors</b>
-                                    </p>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-IG-info" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog large" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Info - Integrated Gradients</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Integrated Gradients plot reveals the extent to which each feature contributes to the model's
+                    prediction.
+                </p>
+
+                <p>
+                    <strong>Bars:</strong> Each bar represents a feature. The length and direction of the bar (positive
+                    or negative) indicate how much and in what direction the feature influenced the prediction.
+                </p>
+
+                <ul>
+                    <li><strong>Positive Contribution:</strong> A bar extending to the right signifies a positive
+                        influence on the model's prediction, indicating an increased likelihood of a particular outcome.
+                    </li>
+                    <li><strong>Negative Contribution:</strong> Conversely, a bar extending to the left denotes a
+                        negative influence, suggesting a decreased likelihood of a particular outcome.</li>
+                </ul>
+
+                <div id="igexample">
+                    <!-- Plotly graph will be rendered here -->
+                </div>
+
+                <p>
+                    <strong>Example:</strong> Consider an Integrated Gradients plot for a model predicting loan
+                    application approval. The model evaluates features such as credit score, income, and loan amount.
+                </p>
+
+                <ul>
+                    <li><strong>X-Axis:</strong> Lists features (Credit Score, Income, Loan Amount, etc.)</li>
+                    <li><strong>Y-Axis:</strong> Shows attribution scores.</li>
+                    <li><strong>Bars:</strong> Each bar illustrates the influence of each feature on the model's
+                        decision. For instance, a long bar extending rightward for 'Credit Score' suggests a significant
+                        positive influence, indicating that higher credit scores favor loan approval. Conversely, a
+                        leftward-extending bar for 'Loan Amount' might imply that larger loan amounts reduce approval
+                        chances.</li>
+                </ul>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-ALE-info" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Info - Accumulated Local Effects</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body">
+                    <p>
+                        Accumulated Local Effects (ALE) plots show how features impact the prediction of a model on average, locally. They provide insights into the effect of a feature across its range of values.
+                    </p>
+                
+                    <p>
+                        <strong>Lines:</strong> Each line represents a feature. The slope and position of the line indicate the feature's average local effect on the prediction.
+                    </p>
+                
+                    <ul>
+                        <li><strong>Positive Effect:</strong> An upward slope indicates a positive effect, where increasing the feature value tends to increase the prediction output.</li>
+                        <li><strong>Negative Effect:</strong> A downward slope shows a negative effect, where increasing the feature value tends to decrease the prediction output.</li>
+                    </ul>
+                
+                    <div id="aleexample">
+                        <!-- Plotly graph will be rendered here -->
+                    </div>
+                
+                    <p>
+                        <strong>Example:</strong> Consider an ALE plot for a model predicting house prices. The model evaluates features such as location, size, and number of bedrooms.
+                    </p>
+                
+                    <ul>
+                        <li><strong>X-Axis:</strong> Represents different values of a feature (e.g., size of the house).</li>
+                        <li><strong>Y-Axis:</strong> Shows the average local effect of the feature on the predicted house price.</li>
+                        <li><strong>Lines:</strong> Each line reflects how changes in a feature's value impact the house price. For example, an upward slope in the 'Size' line suggests that larger houses tend to be priced higher, whereas a downward slope for 'Number of Bedrooms' might indicate that beyond a certain point, additional bedrooms do not significantly increase the house price.</li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

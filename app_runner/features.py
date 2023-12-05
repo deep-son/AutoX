@@ -6,14 +6,15 @@ import plotly.graph_objects as go
 from tensorflow.keras.models import load_model
 from tensorflow.keras.models import Model
 from alibi.explainers import IntegratedGradients
-from alibi.explainers import ALE, plot_ale
+from alibi.explainers import ALE
 
 
 class Features:
 
-    def __init__(self, project_name : 'str', train_file_path: 'str'):
+    def __init__(self, project_name : 'str', train_file_path: 'str', target_name:'str'):
         self.project_name = project_name
         self.train_file_path = train_file_path
+        self.target_name = target_name
         self.x_train =  pd.read_csv(self.train_file_path)
         current_directory = os.path.dirname(os.path.abspath(__file__))
         model_directory = os.path.dirname(current_directory)
@@ -37,7 +38,7 @@ class Features:
             if 'dense' in name:
                 return index - 1
 
-    def plot_importance_ig(self, feat_imp, feat_names):
+    def plot_importance_ig(self, feat_imp, feat_names, predictions):
         """
         Create a figure with multiple horizontal bar charts of feature effects,
         each corresponding to a row in the data, with buttons to switch between them.
@@ -46,6 +47,7 @@ class Features:
         # Create DataFrame from feature importance and names
         df = pd.DataFrame(data=feat_imp, columns=feat_names)
 
+        print(predictions)
         # Create a figure
         fig = go.Figure()
 
@@ -60,16 +62,17 @@ class Features:
                 )
             )
 
-        # Create annotations for each trace
+        # Create annotations for each trace including prediction values
         annotations = []
         for i in range(len(df)):
+            prediction_text = f'Prediction: {predictions[i]}' if i < len(predictions) else 'Prediction: N/A'
             annotation = dict(
                 xref='paper', 
                 yref='paper', 
                 x=0.5, 
                 y=-0.22, 
                 showarrow=False, 
-                text=f'Feature effects for Row {i+1}',
+                text=f'Feature effects for Row {i+1} - {prediction_text}',
                 font=dict(size=15),
                 xanchor='center',
                 yanchor='bottom',
@@ -106,7 +109,7 @@ class Features:
                 'y': 0.8,
                 'yanchor': 'top',
             }],
-            title=f'What does each feature contribute to the model prediction?',
+            title='What does each feature contribute to the model prediction?',
             yaxis=dict(tickfont=dict(size=15)),
             title_font=dict(size=18),
             height=500,  # Adjust the height as needed
@@ -123,23 +126,18 @@ class Features:
         x_additionals = exp.feature_deciles
 
         feature_names = exp.feature_names
-        # Initialize figure
+
         fig = go.Figure()
 
-        # Function to flatten the nested arrays
         flatten = lambda l: [item for sublist in l for item in sublist]
 
-        # Add traces for each feature
         for i, (y_main, x_main, x_additional, feature_name) in enumerate(zip(y_mains, x_mains, x_additionals, feature_names)):
-            
-            # Flatten the arrays for plotting
+
             y_main_flat = flatten(y_main.tolist())
             x_main_flat = x_main.tolist()
 
-            # Calculate minimum y value for x_additional markers
             y_additional = [min(y_main_flat)] * len(x_additional)
 
-            # Add main trace for feature
             fig.add_trace(go.Scatter(
                 x=x_main_flat, y=y_main_flat, mode='lines+markers',
                 name=f'{feature_name} - ale values',
@@ -148,7 +146,6 @@ class Features:
                 marker=dict(color='blue')
             ))
 
-            # Add additional trace for x-axis markers
             fig.add_trace(go.Scatter(
                 x=x_additional, y=y_additional, mode='markers',
                 name=f'{feature_name} - intervals',
@@ -156,17 +153,16 @@ class Features:
                 visible=(i==0)
             ))
 
-        # Create buttons for interactive feature selection
         buttons = []
 
         for i, feature_name in enumerate(feature_names):
             buttons.append(dict(
                 method='update',
                 label=feature_name,
-                args=[{'visible': [i==j//2 for j in range(len(feature_names)*2)]}]  # Toggle visibility
+                args=[{'visible': [i==j//2 for j in range(len(feature_names)*2)]}]  
             ))
 
-        # Update layout with buttons and title
+
         fig.update_layout(
             updatemenus=[dict(
                 type='dropdown',
@@ -185,7 +181,6 @@ class Features:
             width=800,
         )
 
-        # Set axis titles
         fig.update_xaxes(title_text='Feature Value')
         fig.update_yaxes(title_text='ALE')
 
@@ -194,28 +189,44 @@ class Features:
 
 class FeatureModels(Features):
 
-    def __init__(self, project_name : 'str', train_file_path: 'str'):
-        super().__init__(project_name, train_file_path)
+    def __init__(self, project_name : 'str', train_file_path: 'str', target_name : 'str'):
+        super().__init__(project_name, train_file_path, target_name)
 
     def plot_integrated_gradients(self, num_rows : int):
-        
-        x_train = self.x_train.drop(["survived"], axis=1)
+        num_classes = len(self.x_train[self.target_name].value_counts())
+        x_train = self.x_train.drop([self.target_name], axis=1)
         input_data = np.array(x_train.iloc[1:num_rows,:]).tolist()
-        predictions = self.model(np.array(input_data))
+
         preprocessing_output = self.preprocessing_model.predict(input_data)
-        ig  = IntegratedGradients(self.dense_model, n_steps=100)
+        
+        def target(x):
+            return np.argmax(x, axis=1)
+        
+        if num_classes>2:
+            predictions = self.model(np.array(input_data))
+            predictions = np.argmax(predictions,axis=1)
+            predictions = predictions.tolist()
+            ig  = IntegratedGradients(self.dense_model, target_fn=target ,n_steps=100)
+        else:
+            flatten = lambda l: [item for sublist in l for item in sublist]
+            predictions = self.model(np.array(input_data))
+            predictions = (predictions.numpy() > 0.5).astype(int)
+            predictions = flatten(predictions.tolist())
+
+            ig  = IntegratedGradients(self.dense_model, n_steps=100)
+
 
         explanation = ig.explain(preprocessing_output)
         attributions = explanation.data['attributions'][0]
 
-        figure = self.plot_importance_ig(attributions, x_train.columns)
+        figure = self.plot_importance_ig(attributions, x_train.columns, predictions)
         chart_json = figure.to_json()
 
         return chart_json
-
+        
 
     def plot_accumulated_local_effects(self):
-        x_train = self.x_train.drop(["survived"], axis=1)
+        x_train = self.x_train.drop([self.target_name], axis=1)
         input_data = np.array(x_train.iloc[:,:]).tolist()
         
         preprocessing_output = self.preprocessing_model.predict(input_data)
@@ -223,7 +234,6 @@ class FeatureModels(Features):
             predictions = self.dense_model.predict(x)
             return predictions
 
-        # Model is a binary classifier so we only take the first model output corresponding to "good" class probability.
         ale = ALE(pred, feature_names=x_train.columns)
         exp = ale.explain(preprocessing_output)
         

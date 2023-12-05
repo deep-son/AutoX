@@ -8,7 +8,7 @@ from datetime import datetime
 
 from app_runner.app_runners import AppRunner, FileSearchRunner
 from app_runner.model import ModelGenerator
-from app_runner.plots import Evaluation, Dataset
+from app_runner.plots import Evaluation
 from app_runner.utils import APIs
 
 
@@ -94,10 +94,6 @@ class Wrappers:
             )
         self.set_pre_information(x = kwargs['x'], y = kwargs['y'])
         self.send_pre_information()
-
-        # self.x_train = pd.read_csv(kwargs['x'])
-        # self.x_train.to_csv('D:\\Courses\\Master_Thesis\\automl_exp\\MT_Code\\structured_data_classifier\\x_train.csv', index=False)
-        # self.y_label = kwargs['y']
 
         fit_ret = self.clk.fit(*args, **kwargs)
         self.send_end_information()

@@ -3,12 +3,10 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 import pandas as pd
 import numpy as np
-from functools import partial
 import autokeras as ak
 import logging
 from causalnex.structure import StructureModel
-from causalnex.plots import plot_structure, NODE_STYLE, EDGE_STYLE
-import plotly.graph_objects as go
+from causalnex.plots import plot_structure, NODE_STYLE
 import json
 import plotly.express as px
 import tensorflow as tf
@@ -16,13 +14,13 @@ import traceback
 
 from flask import Flask, request, render_template, send_file
 from flask_socketio import SocketIO
-from flask_restful import Api, Resource, reqparse
+from flask_restful import Api, Resource
 import plotly.graph_objects as go
 from tensorflow.keras.models import load_model
 from tensorflow.keras.models import Model
 
-import jsonify
 import requests
+from plotly.subplots import make_subplots
 
 from features import FeatureModels
 
@@ -125,6 +123,7 @@ class ExploreFeatures(Resource):
             project_name = request.args.get('project_name')
             train_file_path = request.args.get('train_file_path')
             explanation_type = request.args.get('explanation_type')
+            target_name = request.args.get('target_name')
 
             try:
                 num_rows = int(request.args.get('num_rows'))
@@ -134,7 +133,7 @@ class ExploreFeatures(Resource):
             if hasattr(self.feat, 'project_name'):
                 logging.info("already initailized")
             else:
-                self.feat = FeatureModels(project_name, train_file_path)
+                self.feat = FeatureModels(project_name, train_file_path, target_name)
             
             if explanation_type == 'IG':
                 graph = self.feat.plot_integrated_gradients(num_rows)
@@ -331,9 +330,7 @@ class ExploreTuner(Resource):
 
                         data.pop('trie_json', "Not found")
 
-
-                        # preprocess probabilities
-
+                        # preprocess probabilitie
                         node_names = data.pop('node_hp_name', "Not found")
                         probabilities = data.pop('probabilities', "Not found")
 
@@ -358,8 +355,89 @@ class ExploreTuner(Resource):
                     try:
                         with open(file_path, "r") as json_file:
                             data = json.load(json_file)
-                        
-                        # data = addGraph(data)
+
+                        if "vectorized_x" in data:
+                            vectorized_x = data.pop('vectorized_x', "Not found")
+
+                            vectorized_y = data.pop('vectorized_y', "Not found")
+
+                            # Create traces for each entry in the np array as bar plots
+                            traces = []
+                            for index, array in enumerate(vectorized_x):
+                                trace = go.Bar(
+                                    y=array,
+                                    name=f'Trial {index+1}',
+                                    text=array,  # Add text labels equal to y-values
+                                    textposition='outside',  # Position text labels outside the bars
+                                )
+                                traces.append(trace)
+
+                            # Create subplots
+                            fig = make_subplots(rows=1, cols=1)
+
+                            # Add traces to subplot
+                            for trace in traces:
+                                fig.add_trace(trace, row=1, col=1)
+
+                            # Set all traces to be invisible initially
+                            for i in range(len(traces)):
+                                fig.data[i].visible = False
+
+                            # Create buttons for the dropdown menu to switch between plots
+                            buttons = []
+
+                            # Button for showing each plot
+                            for i, trace in enumerate(traces):
+                                button = dict(
+                                    label=f'Trial {i+1}',
+                                    method="update",
+                                    args=[{"visible": [j == i for j in range(len(traces))]},
+                                        {"title": f"Vectorized Trial {i} - Score on GPR: {vectorized_y[i]}"}])
+                                buttons.append(button)
+
+                            # Button to show all plots
+                            buttons.append(dict(
+                                label='Show All',
+                                method="update",
+                                args=[{"visible": [True] * len(traces)},
+                                    {"title": "All Trials"}])
+                            )
+
+                            # Update the layout with the dropdown menu
+                            fig.update_layout(
+                                updatemenus=[dict(
+                                    active=-1,
+                                    buttons=buttons,
+                                    x=0.15,
+                                    xanchor='left',
+                                    y=1.15,
+                                    yanchor='top'
+                                )],
+                                title='Select a Trial to Display its Vectorized Hyperparameters'
+                            )
+                            
+                            data["vectorized"] = fig.to_json()
+                            
+                            array = data["optimal_x"]
+
+                            # Create a bar chart
+                            trace = go.Bar(
+                                y=array,
+                                text=array,
+                                textposition='outside'
+                            )
+
+                            # Define the layout
+                            layout = go.Layout(
+                                title='Vectorized Optimal Hyperparameters',
+                                yaxis=dict(title='Value')
+                            )
+
+                            # Create the figure with the trace
+                            fig2 = go.Figure(data=[trace], layout=layout)
+                            
+                            data["optimal"] = fig2.to_json()
+
 
                         self.json_package[data["trial_id"]] = data
 
