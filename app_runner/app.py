@@ -408,9 +408,9 @@ class ExploreTuner(Resource):
                                 updatemenus=[dict(
                                     active=-1,
                                     buttons=buttons,
-                                    x=0.15,
+                                    x=1.0,
                                     xanchor='left',
-                                    y=1.15,
+                                    y=0.8,
                                     yanchor='top'
                                 )],
                                 title='Select a Trial to Display its Vectorized Hyperparameters'
@@ -429,8 +429,16 @@ class ExploreTuner(Resource):
 
                             # Define the layout
                             layout = go.Layout(
+                                margin=go.layout.Margin(
+                                l=50,  # left margin
+                                r=50,  # right margin
+                                b=50,  # bottom margin
+                                t=100,  # top margin, increase this to give more space for modebar
+                                pad=4   # padding between plot area and the edges of the 'paper'
+                                ),
                                 title='Vectorized Optimal Hyperparameters',
-                                yaxis=dict(title='Value')
+                                yaxis=dict(title='Value'),
+                                
                             )
 
                             # Create the figure with the trace

@@ -3700,3 +3700,352 @@
 2023-12-05 01:15:38,604 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0018s vs `on_train_batch_end` time: 0.0085s). Check your callbacks.
 2023-12-05 01:15:41,627 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0024s vs `on_train_batch_end` time: 0.0048s). Check your callbacks.
 2023-12-05 01:15:45,656 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0082s vs `on_train_batch_end` time: 0.0107s). Check your callbacks.
+2023-12-05 01:20:36,700 [DEBUG] - matplotlib data path: c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\matplotlib\mpl-data
+2023-12-05 01:20:36,819 [DEBUG] - CONFIGDIR=C:\Users\Deepanshu\.matplotlib
+2023-12-05 01:20:36,819 [DEBUG] - interactive is False
+2023-12-05 01:20:36,819 [DEBUG] - platform is win32
+2023-12-05 01:20:37,120 [DEBUG] - CACHEDIR=C:\Users\Deepanshu\.matplotlib
+2023-12-05 01:20:37,134 [DEBUG] - Using fontManager instance from C:\Users\Deepanshu\.matplotlib\fontlist-v330.json
+2023-12-05 01:23:12,193 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 01:23:12,225 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 01:24:00,083 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0283s vs `on_train_batch_end` time: 0.0298s). Check your callbacks.
+2023-12-05 01:24:12,338 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0038s vs `on_train_batch_end` time: 0.0443s). Check your callbacks.
+2023-12-05 01:24:22,274 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0000s vs `on_train_batch_end` time: 0.0305s). Check your callbacks.
+2023-12-05 01:24:30,384 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0035s vs `on_train_batch_end` time: 0.0279s). Check your callbacks.
+2023-12-05 01:24:39,136 [WARNING] - 5 out of the last 9 calls to <function Model.make_test_function.<locals>.test_function at 0x0000023E9AF653A0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2023-12-05 01:24:40,399 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0032s vs `on_train_batch_end` time: 0.0243s). Check your callbacks.
+2023-12-05 01:24:50,368 [WARNING] - 6 out of the last 11 calls to <function Model.make_test_function.<locals>.test_function at 0x0000023E9B49CCA0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2023-12-05 01:24:51,754 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0050s vs `on_train_batch_end` time: 0.0211s). Check your callbacks.
+2023-12-05 01:25:06,015 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0000s vs `on_train_batch_end` time: 0.0113s). Check your callbacks.
+2023-12-05 01:25:13,106 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0020s vs `on_train_batch_end` time: 0.0156s). Check your callbacks.
+2023-12-05 01:25:19,431 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0017s vs `on_train_batch_end` time: 0.0192s). Check your callbacks.
+2023-12-05 01:25:27,071 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0056s vs `on_train_batch_end` time: 0.0138s). Check your callbacks.
+2023-12-05 01:25:36,224 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0144s vs `on_train_batch_end` time: 0.0224s). Check your callbacks.
+2023-12-05 01:25:44,181 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0032s vs `on_train_batch_end` time: 0.0196s). Check your callbacks.
+2023-12-05 01:25:54,249 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0095s vs `on_train_batch_end` time: 0.0267s). Check your callbacks.
+2023-12-05 01:26:02,482 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0325s). Check your callbacks.
+2023-12-05 01:26:10,167 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0038s vs `on_train_batch_end` time: 0.0125s). Check your callbacks.
+2023-12-05 01:26:16,374 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0063s vs `on_train_batch_end` time: 0.0078s). Check your callbacks.
+2023-12-05 01:26:22,263 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0043s vs `on_train_batch_end` time: 0.0156s). Check your callbacks.
+2023-12-05 01:26:27,132 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0000s vs `on_train_batch_end` time: 0.0279s). Check your callbacks.
+2023-12-05 01:26:33,964 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0066s vs `on_train_batch_end` time: 0.0500s). Check your callbacks.
+2023-12-05 01:26:39,069 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0103s vs `on_train_batch_end` time: 0.0118s). Check your callbacks.
+2023-12-05 01:26:43,428 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0042s vs `on_train_batch_end` time: 0.0146s). Check your callbacks.
+2023-12-05 01:26:47,722 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0060s vs `on_train_batch_end` time: 0.0096s). Check your callbacks.
+2023-12-05 01:26:53,119 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0030s vs `on_train_batch_end` time: 0.0172s). Check your callbacks.
+2023-12-05 01:26:59,313 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0097s vs `on_train_batch_end` time: 0.0292s). Check your callbacks.
+2023-12-05 01:27:07,265 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0044s vs `on_train_batch_end` time: 0.0072s). Check your callbacks.
+2023-12-05 01:27:11,133 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0011s vs `on_train_batch_end` time: 0.0089s). Check your callbacks.
+2023-12-05 01:27:14,017 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0021s vs `on_train_batch_end` time: 0.0077s). Check your callbacks.
+2023-12-05 01:27:17,416 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0029s vs `on_train_batch_end` time: 0.0071s). Check your callbacks.
+2023-12-05 01:27:21,648 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0026s vs `on_train_batch_end` time: 0.0203s). Check your callbacks.
+2023-12-05 01:27:24,872 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0079s). Check your callbacks.
+2023-12-05 01:27:29,088 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0098s vs `on_train_batch_end` time: 0.0181s). Check your callbacks.
+2023-12-05 01:27:29,603 [INFO] - Oracle triggered exit
+2023-12-05 01:27:32,567 [WARNING] - Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+2023-12-05 01:27:33,210 [INFO] - Assets written to: .\structured_data_classifier\best_model\assets
+2023-12-05 01:27:33,413 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 01:27:33,421 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 01:27:38,971 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 01:27:39,007 [DEBUG] - http://127.0.0.1:8082 "POST /update_evaluation HTTP/1.1" 200 5
+2023-12-05 10:02:23,477 [DEBUG] - matplotlib data path: c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\matplotlib\mpl-data
+2023-12-05 10:02:23,523 [DEBUG] - CONFIGDIR=C:\Users\Deepanshu\.matplotlib
+2023-12-05 10:02:23,523 [DEBUG] - interactive is False
+2023-12-05 10:02:23,523 [DEBUG] - platform is win32
+2023-12-05 10:02:23,617 [DEBUG] - CACHEDIR=C:\Users\Deepanshu\.matplotlib
+2023-12-05 10:02:23,617 [DEBUG] - Using fontManager instance from C:\Users\Deepanshu\.matplotlib\fontlist-v330.json
+2023-12-05 10:03:01,632 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:03:01,637 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 10:03:12,987 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0006s vs `on_train_batch_end` time: 0.0130s). Check your callbacks.
+2023-12-05 10:03:23,179 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0037s vs `on_train_batch_end` time: 0.0172s). Check your callbacks.
+2023-12-05 10:03:28,910 [WARNING] - 5 out of the last 9 calls to <function Model.make_test_function.<locals>.test_function at 0x00000146CE330820> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2023-12-05 10:03:29,441 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0000s vs `on_train_batch_end` time: 0.0143s). Check your callbacks.
+2023-12-05 10:03:35,503 [WARNING] - 6 out of the last 11 calls to <function Model.make_test_function.<locals>.test_function at 0x00000146CE5D9A60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2023-12-05 10:03:35,930 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0039s vs `on_train_batch_end` time: 0.0341s). Check your callbacks.
+2023-12-05 10:03:40,099 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0009s vs `on_train_batch_end` time: 0.0109s). Check your callbacks.
+2023-12-05 10:03:43,645 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0016s vs `on_train_batch_end` time: 0.0298s). Check your callbacks.
+2023-12-05 10:03:48,426 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0085s vs `on_train_batch_end` time: 0.0094s). Check your callbacks.
+2023-12-05 10:03:54,067 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0127s vs `on_train_batch_end` time: 0.0127s). Check your callbacks.
+2023-12-05 10:03:58,725 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0055s vs `on_train_batch_end` time: 0.0211s). Check your callbacks.
+2023-12-05 10:04:04,056 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0034s vs `on_train_batch_end` time: 0.0096s). Check your callbacks.
+2023-12-05 10:04:08,855 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0026s vs `on_train_batch_end` time: 0.0099s). Check your callbacks.
+2023-12-05 10:04:13,164 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0006s vs `on_train_batch_end` time: 0.0099s). Check your callbacks.
+2023-12-05 10:04:17,183 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0135s). Check your callbacks.
+2023-12-05 10:04:21,679 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0030s vs `on_train_batch_end` time: 0.0089s). Check your callbacks.
+2023-12-05 10:04:25,594 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0000s vs `on_train_batch_end` time: 0.0090s). Check your callbacks.
+2023-12-05 10:04:28,449 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0051s vs `on_train_batch_end` time: 0.0169s). Check your callbacks.
+2023-12-05 10:04:31,719 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0040s vs `on_train_batch_end` time: 0.0057s). Check your callbacks.
+2023-12-05 10:04:36,965 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0041s vs `on_train_batch_end` time: 0.0123s). Check your callbacks.
+2023-12-05 10:04:41,131 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0025s vs `on_train_batch_end` time: 0.0177s). Check your callbacks.
+2023-12-05 10:04:44,591 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0017s vs `on_train_batch_end` time: 0.0214s). Check your callbacks.
+2023-12-05 10:04:48,557 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0063s vs `on_train_batch_end` time: 0.0115s). Check your callbacks.
+2023-12-05 10:04:51,982 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0039s vs `on_train_batch_end` time: 0.0097s). Check your callbacks.
+2023-12-05 10:04:55,149 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0000s vs `on_train_batch_end` time: 0.0161s). Check your callbacks.
+2023-12-05 10:04:59,926 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0008s vs `on_train_batch_end` time: 0.0162s). Check your callbacks.
+2023-12-05 10:05:04,959 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0045s vs `on_train_batch_end` time: 0.0220s). Check your callbacks.
+2023-12-05 10:05:09,471 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0048s vs `on_train_batch_end` time: 0.0207s). Check your callbacks.
+2023-12-05 10:05:12,223 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0009s vs `on_train_batch_end` time: 0.0071s). Check your callbacks.
+2023-12-05 10:05:17,002 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0018s vs `on_train_batch_end` time: 0.0166s). Check your callbacks.
+2023-12-05 10:05:27,730 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0107s). Check your callbacks.
+2023-12-05 10:05:39,576 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0022s vs `on_train_batch_end` time: 0.0100s). Check your callbacks.
+2023-12-05 10:05:40,196 [INFO] - Oracle triggered exit
+2023-12-05 10:05:45,457 [WARNING] - Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+2023-12-05 10:05:46,073 [INFO] - Assets written to: .\structured_data_classifier\best_model\assets
+2023-12-05 10:05:46,271 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:05:46,271 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 10:05:55,032 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:05:55,032 [DEBUG] - http://127.0.0.1:8082 "POST /update_evaluation HTTP/1.1" 200 5
+2023-12-05 10:07:45,132 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:07:45,134 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 10:07:48,867 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0063s vs `on_train_batch_end` time: 0.0128s). Check your callbacks.
+2023-12-05 10:07:52,390 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0008s vs `on_train_batch_end` time: 0.0103s). Check your callbacks.
+2023-12-05 10:07:57,310 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0106s). Check your callbacks.
+2023-12-05 10:08:02,904 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0014s vs `on_train_batch_end` time: 0.0112s). Check your callbacks.
+2023-12-05 10:08:07,694 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0029s vs `on_train_batch_end` time: 0.0090s). Check your callbacks.
+2023-12-05 10:08:16,594 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0013s vs `on_train_batch_end` time: 0.0116s). Check your callbacks.
+2023-12-05 10:08:22,768 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0126s vs `on_train_batch_end` time: 0.0176s). Check your callbacks.
+2023-12-05 10:08:30,047 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0017s vs `on_train_batch_end` time: 0.0289s). Check your callbacks.
+2023-12-05 10:08:36,172 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0062s vs `on_train_batch_end` time: 0.0112s). Check your callbacks.
+2023-12-05 10:09:06,438 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:09:06,438 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 10:09:11,461 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0014s vs `on_train_batch_end` time: 0.0142s). Check your callbacks.
+2023-12-05 10:09:19,483 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0183s). Check your callbacks.
+2023-12-05 10:09:26,242 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0183s). Check your callbacks.
+2023-12-05 10:09:35,748 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0000s vs `on_train_batch_end` time: 0.0157s). Check your callbacks.
+2023-12-05 10:09:43,896 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0046s vs `on_train_batch_end` time: 0.0273s). Check your callbacks.
+2023-12-05 10:09:47,218 [INFO] - Oracle triggered exit
+2023-12-05 10:09:54,164 [WARNING] - Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+2023-12-05 10:09:55,195 [INFO] - Assets written to: .\structured_data_classifier\best_model\assets
+2023-12-05 10:09:55,386 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:09:55,389 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 10:09:59,194 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:09:59,198 [DEBUG] - http://127.0.0.1:8082 "POST /update_evaluation HTTP/1.1" 200 5
+2023-12-05 10:10:39,273 [DEBUG] - matplotlib data path: c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\matplotlib\mpl-data
+2023-12-05 10:10:39,274 [DEBUG] - CONFIGDIR=C:\Users\Deepanshu\.matplotlib
+2023-12-05 10:10:39,274 [DEBUG] - interactive is False
+2023-12-05 10:10:39,274 [DEBUG] - platform is win32
+2023-12-05 10:10:39,340 [DEBUG] - CACHEDIR=C:\Users\Deepanshu\.matplotlib
+2023-12-05 10:10:39,357 [DEBUG] - Using fontManager instance from C:\Users\Deepanshu\.matplotlib\fontlist-v330.json
+2023-12-05 10:10:58,413 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:10:58,417 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 10:11:01,853 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0018s vs `on_train_batch_end` time: 0.0176s). Check your callbacks.
+2023-12-05 10:11:08,591 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0138s). Check your callbacks.
+2023-12-05 10:11:15,603 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0166s). Check your callbacks.
+2023-12-05 10:11:29,324 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0048s vs `on_train_batch_end` time: 0.0243s). Check your callbacks.
+2023-12-05 10:11:33,040 [INFO] - Oracle triggered exit
+2023-12-05 10:11:42,704 [INFO] - Assets written to: .\structured_data_classifier\best_model\assets
+2023-12-05 10:11:42,895 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:11:42,895 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 10:11:49,293 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:11:49,341 [DEBUG] - http://127.0.0.1:8082 "POST /update_evaluation HTTP/1.1" 200 5
+2023-12-05 10:25:21,566 [DEBUG] - matplotlib data path: c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\matplotlib\mpl-data
+2023-12-05 10:25:21,582 [DEBUG] - CONFIGDIR=C:\Users\Deepanshu\.matplotlib
+2023-12-05 10:25:21,582 [DEBUG] - interactive is False
+2023-12-05 10:25:21,582 [DEBUG] - platform is win32
+2023-12-05 10:25:21,645 [DEBUG] - CACHEDIR=C:\Users\Deepanshu\.matplotlib
+2023-12-05 10:25:21,645 [DEBUG] - Using fontManager instance from C:\Users\Deepanshu\.matplotlib\fontlist-v330.json
+2023-12-05 10:25:41,356 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:25:41,356 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 10:25:46,352 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0053s). Check your callbacks.
+2023-12-05 10:25:52,069 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0000s vs `on_train_batch_end` time: 0.0105s). Check your callbacks.
+2023-12-05 10:25:59,113 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0029s vs `on_train_batch_end` time: 0.0113s). Check your callbacks.
+2023-12-05 10:26:05,505 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0020s vs `on_train_batch_end` time: 0.0154s). Check your callbacks.
+2023-12-05 10:26:14,549 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0088s vs `on_train_batch_end` time: 0.0353s). Check your callbacks.
+2023-12-05 10:26:21,268 [INFO] - Oracle triggered exit
+2023-12-05 10:26:28,992 [INFO] - Assets written to: .\structured_data_classifier\best_model\assets
+2023-12-05 10:26:29,200 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:26:29,200 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 10:26:43,535 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:26:43,535 [DEBUG] - http://127.0.0.1:8082 "POST /update_evaluation HTTP/1.1" 200 5
+2023-12-05 10:29:14,262 [DEBUG] - matplotlib data path: c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\matplotlib\mpl-data
+2023-12-05 10:29:14,277 [DEBUG] - CONFIGDIR=C:\Users\Deepanshu\.matplotlib
+2023-12-05 10:29:14,277 [DEBUG] - interactive is False
+2023-12-05 10:29:14,277 [DEBUG] - platform is win32
+2023-12-05 10:29:14,372 [DEBUG] - CACHEDIR=C:\Users\Deepanshu\.matplotlib
+2023-12-05 10:29:14,381 [DEBUG] - Using fontManager instance from C:\Users\Deepanshu\.matplotlib\fontlist-v330.json
+2023-12-05 10:29:23,533 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:29:23,533 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 10:29:28,211 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0041s vs `on_train_batch_end` time: 0.0131s). Check your callbacks.
+2023-12-05 10:29:37,330 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0024s vs `on_train_batch_end` time: 0.0121s). Check your callbacks.
+2023-12-05 10:29:47,252 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0024s vs `on_train_batch_end` time: 0.0173s). Check your callbacks.
+2023-12-05 10:29:54,650 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0024s vs `on_train_batch_end` time: 0.0114s). Check your callbacks.
+2023-12-05 10:30:03,442 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0025s vs `on_train_batch_end` time: 0.0244s). Check your callbacks.
+2023-12-05 10:30:08,035 [INFO] - Oracle triggered exit
+2023-12-05 10:30:16,392 [INFO] - Assets written to: .\structured_data_classifier\best_model\assets
+2023-12-05 10:30:16,627 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:30:16,630 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 10:30:23,654 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:30:23,657 [DEBUG] - http://127.0.0.1:8082 "POST /update_evaluation HTTP/1.1" 200 5
+2023-12-05 10:33:45,011 [DEBUG] - matplotlib data path: c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\matplotlib\mpl-data
+2023-12-05 10:33:45,027 [DEBUG] - CONFIGDIR=C:\Users\Deepanshu\.matplotlib
+2023-12-05 10:33:45,027 [DEBUG] - interactive is False
+2023-12-05 10:33:45,027 [DEBUG] - platform is win32
+2023-12-05 10:33:45,090 [DEBUG] - CACHEDIR=C:\Users\Deepanshu\.matplotlib
+2023-12-05 10:33:45,090 [DEBUG] - Using fontManager instance from C:\Users\Deepanshu\.matplotlib\fontlist-v330.json
+2023-12-05 10:33:54,771 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:33:54,779 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 10:34:01,653 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0022s vs `on_train_batch_end` time: 0.0273s). Check your callbacks.
+2023-12-05 10:34:10,820 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0022s vs `on_train_batch_end` time: 0.0106s). Check your callbacks.
+2023-12-05 10:34:19,850 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0018s vs `on_train_batch_end` time: 0.0591s). Check your callbacks.
+2023-12-05 10:34:36,318 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0003s vs `on_train_batch_end` time: 0.0135s). Check your callbacks.
+2023-12-05 10:34:43,653 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0004s vs `on_train_batch_end` time: 0.0196s). Check your callbacks.
+2023-12-05 10:34:46,415 [INFO] - Oracle triggered exit
+2023-12-05 10:34:52,816 [INFO] - Assets written to: .\structured_data_classifier\best_model\assets
+2023-12-05 10:34:53,017 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:34:53,021 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 10:34:59,108 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:34:59,124 [DEBUG] - http://127.0.0.1:8082 "POST /update_evaluation HTTP/1.1" 200 5
+2023-12-05 10:36:28,319 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:36:28,350 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 10:36:34,444 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0024s vs `on_train_batch_end` time: 0.0184s). Check your callbacks.
+2023-12-05 10:36:41,792 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0023s vs `on_train_batch_end` time: 0.0087s). Check your callbacks.
+2023-12-05 10:36:48,851 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0014s vs `on_train_batch_end` time: 0.0113s). Check your callbacks.
+2023-12-05 10:36:56,470 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0024s vs `on_train_batch_end` time: 0.0217s). Check your callbacks.
+2023-12-05 10:37:02,303 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0018s vs `on_train_batch_end` time: 0.0183s). Check your callbacks.
+2023-12-05 10:37:05,395 [INFO] - Oracle triggered exit
+2023-12-05 10:37:10,795 [INFO] - Assets written to: .\structured_data_classifier\best_model\assets
+2023-12-05 10:37:10,952 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:37:10,955 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 10:37:13,829 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:37:13,839 [DEBUG] - http://127.0.0.1:8082 "POST /update_evaluation HTTP/1.1" 200 5
+2023-12-05 10:41:06,174 [DEBUG] - matplotlib data path: c:\Users\Deepanshu\anaconda3\envs\automl\lib\site-packages\matplotlib\mpl-data
+2023-12-05 10:41:06,174 [DEBUG] - CONFIGDIR=C:\Users\Deepanshu\.matplotlib
+2023-12-05 10:41:06,174 [DEBUG] - interactive is False
+2023-12-05 10:41:06,174 [DEBUG] - platform is win32
+2023-12-05 10:41:06,241 [DEBUG] - CACHEDIR=C:\Users\Deepanshu\.matplotlib
+2023-12-05 10:41:06,257 [DEBUG] - Using fontManager instance from C:\Users\Deepanshu\.matplotlib\fontlist-v330.json
+2023-12-05 10:41:16,556 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:41:16,556 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 10:41:21,868 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0114s). Check your callbacks.
+2023-12-05 10:41:28,830 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0063s vs `on_train_batch_end` time: 0.0089s). Check your callbacks.
+2023-12-05 10:41:38,477 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0040s vs `on_train_batch_end` time: 0.0349s). Check your callbacks.
+2023-12-05 10:41:46,629 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0071s vs `on_train_batch_end` time: 0.0211s). Check your callbacks.
+2023-12-05 10:41:56,999 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0070s vs `on_train_batch_end` time: 0.0113s). Check your callbacks.
+2023-12-05 10:42:03,312 [INFO] - Oracle triggered exit
+2023-12-05 10:42:12,138 [INFO] - Assets written to: .\structured_data_classifier\best_model\assets
+2023-12-05 10:42:12,312 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:42:12,312 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 10:42:17,185 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:42:17,189 [DEBUG] - http://127.0.0.1:8082 "POST /update_evaluation HTTP/1.1" 200 5
+2023-12-05 10:43:49,245 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:43:49,248 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 10:43:54,231 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0024s vs `on_train_batch_end` time: 0.0097s). Check your callbacks.
+2023-12-05 10:44:01,519 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0157s). Check your callbacks.
+2023-12-05 10:44:10,718 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0025s vs `on_train_batch_end` time: 0.0130s). Check your callbacks.
+2023-12-05 10:44:18,459 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0019s vs `on_train_batch_end` time: 0.0149s). Check your callbacks.
+2023-12-05 10:44:26,241 [WARNING] - Callback method `on_train_batch_begin` is slow compared to the batch time (batch time: 0.0001s vs `on_train_batch_begin` time: 0.0002s). Check your callbacks.
+2023-12-05 10:44:26,257 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0001s vs `on_train_batch_end` time: 0.0350s). Check your callbacks.
+2023-12-05 10:44:31,241 [INFO] - Oracle triggered exit
+2023-12-05 10:44:39,821 [INFO] - Assets written to: .\structured_data_classifier\best_model\assets
+2023-12-05 10:44:40,142 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:44:40,157 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 10:44:44,654 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:44:44,659 [DEBUG] - http://127.0.0.1:8082 "POST /update_evaluation HTTP/1.1" 200 5
+2023-12-05 10:52:30,621 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:52:30,621 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 10:52:37,009 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0012s vs `on_train_batch_end` time: 0.0125s). Check your callbacks.
+2023-12-05 10:52:44,558 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0082s vs `on_train_batch_end` time: 0.0095s). Check your callbacks.
+2023-12-05 10:52:50,921 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0026s vs `on_train_batch_end` time: 0.0120s). Check your callbacks.
+2023-12-05 10:52:57,355 [WARNING] - 5 out of the last 47 calls to <function Model.make_test_function.<locals>.test_function at 0x00000212D300B8B0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2023-12-05 10:52:57,977 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0069s vs `on_train_batch_end` time: 0.0152s). Check your callbacks.
+2023-12-05 10:53:04,621 [WARNING] - 6 out of the last 49 calls to <function Model.make_test_function.<locals>.test_function at 0x00000212CE1A1550> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2023-12-05 10:53:05,447 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0166s vs `on_train_batch_end` time: 0.0302s). Check your callbacks.
+2023-12-05 10:53:11,364 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0035s vs `on_train_batch_end` time: 0.0148s). Check your callbacks.
+2023-12-05 10:53:16,461 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0062s vs `on_train_batch_end` time: 0.0135s). Check your callbacks.
+2023-12-05 10:53:22,530 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0033s vs `on_train_batch_end` time: 0.0135s). Check your callbacks.
+2023-12-05 10:53:29,274 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0062s vs `on_train_batch_end` time: 0.0157s). Check your callbacks.
+2023-12-05 10:53:34,949 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0000s vs `on_train_batch_end` time: 0.0070s). Check your callbacks.
+2023-12-05 10:53:41,796 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0058s vs `on_train_batch_end` time: 0.0183s). Check your callbacks.
+2023-12-05 10:53:45,238 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0068s). Check your callbacks.
+2023-12-05 10:53:51,263 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0063s vs `on_train_batch_end` time: 0.0202s). Check your callbacks.
+2023-12-05 10:53:56,439 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0113s). Check your callbacks.
+2023-12-05 10:54:01,745 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0157s). Check your callbacks.
+2023-12-05 10:54:07,202 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0032s vs `on_train_batch_end` time: 0.0143s). Check your callbacks.
+2023-12-05 10:54:11,591 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0179s). Check your callbacks.
+2023-12-05 10:54:16,499 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0224s). Check your callbacks.
+2023-12-05 10:54:22,059 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0216s). Check your callbacks.
+2023-12-05 10:54:26,748 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0000s vs `on_train_batch_end` time: 0.0090s). Check your callbacks.
+2023-12-05 10:54:31,243 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0202s). Check your callbacks.
+2023-12-05 10:54:36,205 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0134s). Check your callbacks.
+2023-12-05 10:54:40,153 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0067s). Check your callbacks.
+2023-12-05 10:54:46,041 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0032s vs `on_train_batch_end` time: 0.0179s). Check your callbacks.
+2023-12-05 10:54:51,409 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0112s). Check your callbacks.
+2023-12-05 10:54:59,903 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0063s vs `on_train_batch_end` time: 0.0247s). Check your callbacks.
+2023-12-05 10:55:06,796 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0062s vs `on_train_batch_end` time: 0.0157s). Check your callbacks.
+2023-12-05 10:55:12,078 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0063s vs `on_train_batch_end` time: 0.0101s). Check your callbacks.
+2023-12-05 10:55:16,407 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0076s). Check your callbacks.
+2023-12-05 10:55:21,933 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0089s). Check your callbacks.
+2023-12-05 10:55:33,454 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0000s vs `on_train_batch_end` time: 0.0170s). Check your callbacks.
+2023-12-05 10:55:51,821 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0001s vs `on_train_batch_end` time: 0.0115s). Check your callbacks.
+2023-12-05 10:55:52,763 [INFO] - Oracle triggered exit
+2023-12-05 10:55:56,513 [INFO] - Assets written to: .\structured_data_classifier\best_model\assets
+2023-12-05 10:55:56,682 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:55:56,686 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 10:56:00,680 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 10:56:00,685 [DEBUG] - http://127.0.0.1:8082 "POST /update_evaluation HTTP/1.1" 200 5
+2023-12-05 11:01:56,395 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 11:01:56,400 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 11:02:01,337 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0026s vs `on_train_batch_end` time: 0.0125s). Check your callbacks.
+2023-12-05 11:02:12,209 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0015s vs `on_train_batch_end` time: 0.0151s). Check your callbacks.
+2023-12-05 11:02:22,234 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0012s vs `on_train_batch_end` time: 0.0246s). Check your callbacks.
+2023-12-05 11:02:33,323 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0000s vs `on_train_batch_end` time: 0.0156s). Check your callbacks.
+2023-12-05 11:02:46,705 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0047s vs `on_train_batch_end` time: 0.0210s). Check your callbacks.
+2023-12-05 11:02:56,384 [INFO] - Oracle triggered exit
+2023-12-05 11:03:08,014 [WARNING] - Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+2023-12-05 11:03:09,305 [INFO] - Assets written to: .\structured_data_classifier\best_model\assets
+2023-12-05 11:03:09,807 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 11:03:09,810 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 11:03:15,081 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 11:03:15,089 [DEBUG] - http://127.0.0.1:8082 "POST /update_evaluation HTTP/1.1" 200 5
+2023-12-05 11:07:54,687 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 11:07:54,702 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 11:08:04,748 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0062s vs `on_train_batch_end` time: 0.0172s). Check your callbacks.
+2023-12-05 11:08:12,225 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0032s vs `on_train_batch_end` time: 0.0136s). Check your callbacks.
+2023-12-05 11:08:19,139 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0052s vs `on_train_batch_end` time: 0.0157s). Check your callbacks.
+2023-12-05 11:08:26,577 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0077s vs `on_train_batch_end` time: 0.0140s). Check your callbacks.
+2023-12-05 11:08:31,785 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0047s vs `on_train_batch_end` time: 0.0120s). Check your callbacks.
+2023-12-05 11:08:38,765 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0068s vs `on_train_batch_end` time: 0.0112s). Check your callbacks.
+2023-12-05 11:08:46,687 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0041s vs `on_train_batch_end` time: 0.0112s). Check your callbacks.
+2023-12-05 11:08:53,685 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0051s vs `on_train_batch_end` time: 0.0183s). Check your callbacks.
+2023-12-05 11:08:58,888 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0020s vs `on_train_batch_end` time: 0.0096s). Check your callbacks.
+2023-12-05 11:09:05,373 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0054s vs `on_train_batch_end` time: 0.0098s). Check your callbacks.
+2023-12-05 11:09:17,928 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0063s vs `on_train_batch_end` time: 0.0200s). Check your callbacks.
+2023-12-05 11:09:24,799 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0043s vs `on_train_batch_end` time: 0.0263s). Check your callbacks.
+2023-12-05 11:09:31,987 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0036s vs `on_train_batch_end` time: 0.0134s). Check your callbacks.
+2023-12-05 11:09:38,497 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0028s vs `on_train_batch_end` time: 0.0189s). Check your callbacks.
+2023-12-05 11:09:44,472 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0012s vs `on_train_batch_end` time: 0.0136s). Check your callbacks.
+2023-12-05 11:09:50,274 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0022s vs `on_train_batch_end` time: 0.0120s). Check your callbacks.
+2023-12-05 11:09:56,752 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0058s vs `on_train_batch_end` time: 0.0109s). Check your callbacks.
+2023-12-05 11:10:01,216 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0000s vs `on_train_batch_end` time: 0.0090s). Check your callbacks.
+2023-12-05 11:10:07,130 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0020s vs `on_train_batch_end` time: 0.0202s). Check your callbacks.
+2023-12-05 11:10:12,699 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0041s vs `on_train_batch_end` time: 0.0105s). Check your callbacks.
+2023-12-05 11:10:18,786 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0112s). Check your callbacks.
+2023-12-05 11:10:26,677 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0095s vs `on_train_batch_end` time: 0.0188s). Check your callbacks.
+2023-12-05 11:10:32,018 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0004s vs `on_train_batch_end` time: 0.0150s). Check your callbacks.
+2023-12-05 11:10:39,560 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0068s vs `on_train_batch_end` time: 0.0228s). Check your callbacks.
+2023-12-05 11:10:46,332 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0047s vs `on_train_batch_end` time: 0.0113s). Check your callbacks.
+2023-12-05 11:10:53,392 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0156s vs `on_train_batch_end` time: 0.0224s). Check your callbacks.
+2023-12-05 11:10:59,815 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0040s vs `on_train_batch_end` time: 0.0293s). Check your callbacks.
+2023-12-05 11:11:07,439 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0254s vs `on_train_batch_end` time: 0.0255s). Check your callbacks.
+2023-12-05 11:11:13,576 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0112s vs `on_train_batch_end` time: 0.0179s). Check your callbacks.
+2023-12-05 11:11:31,697 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0020s vs `on_train_batch_end` time: 0.0109s). Check your callbacks.
+2023-12-05 11:11:46,398 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0008s vs `on_train_batch_end` time: 0.0072s). Check your callbacks.
+2023-12-05 11:11:47,162 [INFO] - Oracle triggered exit
+2023-12-05 11:11:55,130 [INFO] - Assets written to: .\structured_data_classifier\best_model\assets
+2023-12-05 11:11:55,487 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 11:11:55,491 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 11:11:59,993 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 11:11:59,998 [DEBUG] - http://127.0.0.1:8082 "POST /update_evaluation HTTP/1.1" 200 5
+2023-12-05 11:15:45,931 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 11:15:45,948 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 11:15:50,990 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0000s vs `on_train_batch_end` time: 0.0157s). Check your callbacks.
+2023-12-05 11:15:59,515 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0131s). Check your callbacks.
+2023-12-05 11:16:08,940 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0063s vs `on_train_batch_end` time: 0.0105s). Check your callbacks.
+2023-12-05 11:16:18,125 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0000s vs `on_train_batch_end` time: 0.0105s). Check your callbacks.
+2023-12-05 11:16:26,338 [WARNING] - Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0031s vs `on_train_batch_end` time: 0.0157s). Check your callbacks.
+2023-12-05 11:16:30,841 [INFO] - Oracle triggered exit
+2023-12-05 11:16:40,361 [INFO] - Assets written to: .\structured_data_classifier\best_model\assets
+2023-12-05 11:16:40,627 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 11:16:40,635 [DEBUG] - http://127.0.0.1:8082 "POST /pre_information HTTP/1.1" 200 47
+2023-12-05 11:16:45,376 [DEBUG] - Starting new HTTP connection (1): 127.0.0.1:8082
+2023-12-05 11:16:45,376 [DEBUG] - http://127.0.0.1:8082 "POST /update_evaluation HTTP/1.1" 200 5

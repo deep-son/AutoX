@@ -397,14 +397,48 @@ function displayNormalizationDataWithAccordion(data) {
 };
 
 function updatePlot(id, data){
+    console.log(data);
     var element = document.getElementById(id);
     var chartData = JSON.parse(data);
     var config = {
         displayModeBar: false,
     };
     
-    Plotly.newPlot(element, chartData,{}, {modeBarButtonsToRemove: ['toImage']});
+    Plotly.newPlot(element, chartData,{}, config);
 }
+
+function updatePlotBayesian(parent_id, id, data) {
+    console.log(data);
+
+    var parentElement = document.getElementById(parent_id);
+    if (!parentElement) {
+        console.error('Parent element not found');
+        return;
+    }
+
+    var element = parentElement.querySelector('#' + id);
+    if (!element) {
+        console.error('Element with ID ' + id + ' not found within parent');
+        return;
+    }
+
+    var chartData = JSON.parse(data);
+
+    var layout = {
+        // other layout properties,
+        margin: {
+          l: 50,  // left margin
+          r: 50,  // right margin
+          b: 50,  // bottom margin
+          t: 50,  // top margin, increase this to give more space for modebar
+          pad: 4
+        },
+        // other layout properties
+      };
+
+    Plotly.newPlot(element, chartData, layout);
+}
+
 
 function createTable(data) {
     const table = $('<table>').addClass('table'); // Assuming the use of Bootstrap classes for table styling
@@ -1108,10 +1142,8 @@ function createDynamicTabsBayesian(targetElement) {
     });
   };
 
-function createAccordionBayesian(accordionId, data) {
-    // Create a row for the accordion
+function createAccordionBayesian(accordionId, data, callback) {
     
-    // Create the accordion container inside the row
     const accordionContainer = document.createElement('div');
     accordionContainer.classList.add('col-md-12'); // Full width column
     
@@ -1150,17 +1182,52 @@ function createAccordionBayesian(accordionId, data) {
         cardBody.appendChild(newDiv);
     }
 
-    // Add provided data to the accordion
-    if (data && Array.isArray(data)) {
-        data.forEach(content => addToAccordion(content));
+    function addToAccordionGraphs(data) {
+        const rowDiv = document.createElement('div');
+        rowDiv.className = 'row';
+    
+        const colDiv = document.createElement('div');
+        colDiv.className = 'col-md-12';
+    
+        // Explanation for vectorized trials
+        const vectorizedDescription = document.createElement('p');
+        vectorizedDescription.textContent = 'Below are the graphs showcasing the vectorized trials. Each bar in the graph represents a hyperparameter value within the vector. The "Score" for each trial is calculated as the sum of the mean and standard deviation obtained from the Gaussian Process Regressor (GPR) prediction based on the vectorized trial values.';
+        colDiv.appendChild(vectorizedDescription);
+    
+        // Div for vectorized graph
+        const vectorizedGraph = document.createElement('div');
+        vectorizedGraph.id = 'vectorized';
+        colDiv.appendChild(vectorizedGraph);
+    
+        // Explanation for optimal hyperparameters
+        const optimalDescription = document.createElement('p');
+        optimalDescription.textContent = 'After fitting the GPR with the vectorized trials and their corresponding scores, the optimization process identified the following set of optimal vectorized hyperparameters.';
+        colDiv.appendChild(optimalDescription);
+    
+        // Div for optimal graph
+        const optimalGraph = document.createElement('div');
+        optimalGraph.id = 'optimal';
+        colDiv.appendChild(optimalGraph);
+    
+        // Explanation for conversion back to hyperparameters
+        const conversionDescription = document.createElement('p');
+        conversionDescription.textContent = 'These optimal vectorized hyperparameters are then translated back into actual hyperparameter values following specific conversion rules.';
+        colDiv.appendChild(conversionDescription);
+    
+        rowDiv.appendChild(colDiv);
+
+        cardBody.appendChild(rowDiv);
+
+    }
+
+    if (data && data.vectorized) {
+        addToAccordionGraphs(data);
     } else {
         addToAccordion('<p>Not enough Trials to do Bayesian Optimization, selecting hyperparameters randomly</p>');
     }
 
-    // Append the card to the accordion div
     accordionDiv.appendChild(cardDiv);
 
-    // Return the row instead of the accordion div
     return accordionContainer;
 };
 
@@ -1171,8 +1238,15 @@ function createAndUpdateTunerBayesian(data){
         console.log(key, value)
         const accordionDiv = createAccordionBayesian(key, value);
         casualnexContainer.appendChild(accordionDiv);
+        if (value.vectorized) {
+            updatePlotBayesian(key, 'vectorized', value.vectorized);
+        }
+        if (value.optimal) {
+            updatePlotBayesian(key, 'optimal', value.optimal);
+        }
     })
 };
+
 
 function createFigureCardWithAccordionGreedy(value) {
     const card = document.createElement('div');
